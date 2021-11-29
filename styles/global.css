@@ -1,53 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Montserrat', 'Futura', sans-serif;
+}
+
+body {
+  background-color: var(--color-primary-dark);
 }
 
 * {
   box-sizing: border-box;
+  
+  /* Color palette */
+  --color-primary-dark: #191A1B;
+  --color-primary-base: #3F93BC;
+  --color-primary-light: #90AFC5;
+  --color-secondary-dark: #763626;
+  --color-secondary-dull: #D05630;
+  --color-secondary-base: #F37249;
+  --color-highlight-dark: #342D26;
+  --color-highlight-dull: #D1A57D;
+  --color-highlight-base: #FFC368;
+  --color-grey-darkest: #323232;
+  --color-grey-dark: #555555;
+  --color-grey-base: #C0C0C0;
+  --color-grey-light: #E1E1E1;
+  --color-grey-white: #FBFBFB;
+
+  /* Font sizes */
+  /* Web */
+  --font-size-web-paragraph-large: 24px;
+  --font-size-web-paragraph-regular: 16px;
+  --font-size-web-paragraph-small: 12px;
+  --font-size-web-nav-regular: 20px;
+  /* Mobile */
+  --font-size-mobile-paragraph-large: 12px;
+  --font-size-mobile-paragraph-regular: 9px;
+  --font-size-mobile-paragraph-small: 8px;
+  --font-size-mobile-paragraph-tiny: 7px;
+
+  /* Font weights */
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
 }
 
-main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+h1 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  font-weight: normal;
 }
 
-footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+p {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  font-weight: var(--medium);
+  color: var(--color-grey-base);
 }
 
-footer img {
-  margin-left: 0.5rem;
+.text-style-web-large {
+  font-size: 24px;
+  font-weight: var(--medium);
+}
+.text-style-web-regular {
+  font-size: 16px;
+  font-weight: var(--medium);
+}
+.text-style-web-small {
+  font-size: 12px;
+  font-weight: var(--medium);
 }
 
-footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.text-style-mobile-large {
+  font-size: 12px;
+  font-weight: var(--medium);
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+.text-style-mobile-regular {
+  font-size: 9px;
+  font-weight: var(--medium);
 }
+.text-style-mobile-small {
+  font-size: 8px;
+  font-weight: var(--medium);
 
-code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+.text-style-mobile-tiny {
+  font-size: 7px;
+  font-weight: var(--regular);
 }

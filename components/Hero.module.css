@@ -1,0 +1,29 @@
+
+.hero {
+  margin-top: 50vh;
+  transform: translate(0, -50%);
+  text-align: center;
+}
+
+.title {
+  font-size: 120px;
+  font-weight: bold;
+  color: var(--color-secondary-base);
+}
+.titlePrefix {
+  color: var(--color-highlight-base);
+}
+
+.subtitle {
+  margin-bottom: -30px;
+  font-size: 28px;
+  color: var(--color-highlight-base);
+}
+
+.description {
+  color: var(--color-highlight-dull);
+}
+
+.backgroundContainer {
+  /* TODO: YOU LEFT OFF HERE */
+}
