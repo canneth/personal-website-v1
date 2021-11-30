@@ -1,8 +1,15 @@
 
+.heroContainer {
+  width: 100vw;
+  height: 960px;
+  text-align: center;
+}
+
 .hero {
+  position: absolute;
   margin-top: 50vh;
   transform: translate(0, -50%);
-  text-align: center;
+  width: 100vw;
 }
 
 .title {
@@ -22,8 +29,4 @@
 
 .description {
   color: var(--color-highlight-dull);
-}
-
-.backgroundContainer {
-  /* TODO: YOU LEFT OFF HERE */
 }
