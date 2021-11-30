@@ -12,7 +12,7 @@ function Hero() {
         <h1 className={styles.title}><span className={styles.titlePrefix}>Ca</span>nneth</h1>
         <p className={`${styles.description} text-style-web-large`}>A self-taught developer creating beautiful solutions to real-world problems</p>
         <ContactBar />
-        <Button size='large'>Resume</Button>
+        <Button for='github' text='Github' large />
       </div>
     </div>
   );

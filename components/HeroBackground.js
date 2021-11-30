@@ -7,6 +7,7 @@ function HeroBackground() {
   return (
     <div className={styles.backgroundContainer}>
       <Image
+        className={styles.backgroundSvg}
         src='/../public/hero-background.svg'
         alt='Background'
         layout='fill'

@@ -1,0 +1,10 @@
+
+.iconContainer {
+  display: inherit;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.iconSvg {
+  color: var(--color-highlight-base);
+}
