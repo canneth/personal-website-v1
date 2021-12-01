@@ -1,7 +1,10 @@
 
 .iconContainer {
+
 }
 
 .iconSvg {
   color: var(--color-highlight-base);
+  width: clamp(22px, 1.8vw, 26px);
+  height: auto;
 }

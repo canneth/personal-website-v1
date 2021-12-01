@@ -7,6 +7,9 @@
   border-radius: 6px;
   margin-top: 30px;
 }
+.button:hover {
+  cursor: pointer;
+}
 
 .iconContainer {
   margin-top: 2px;
