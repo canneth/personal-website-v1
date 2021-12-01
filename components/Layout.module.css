@@ -1,6 +1,6 @@
 
 .mainColumn {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }

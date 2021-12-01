@@ -12,15 +12,32 @@ const DATA_ICON_FOR = {
 function Button(props) {
   var iconWidth = 0;
   var iconHeight = 0;
+  var buttonWidth = 0;
+  var buttonHeight = 0;
+  var classes = '';
   if (props.forMobile) {
     iconWidth = props.large ? 14 : 12;
     iconHeight = props.large ? 14 : 12;
+    buttonWidth = props.large ? 80 : 60;
+    buttonHeight = props.large ? 21 : 17;
+    classes = `${styles.mobileButtonText} text-styles-mobile-small`;
   } else {
     iconWidth = props.large ? 22 : 12;
     iconHeight = props.large ? 22 : 12;
+    buttonWidth = props.large ? 154 : 115;
+    buttonHeight = props.large ? 41 : 33;
+    classes = `${styles.webButtonText} text-style-web-regular`;
   }
   return (
-    <button className={styles.button}>
+    <button
+      className={`${styles.button} mouseover-enabled`}
+      style={
+        {
+          width: buttonWidth,
+          height: buttonHeight
+        }
+      }
+    >
       <span className={styles.iconContainer}>
         <span
           className={`iconify ${styles.iconSvg}`}
@@ -29,7 +46,10 @@ function Button(props) {
           data-height={iconHeight}>
         </span>
       </span>
-      <span className={styles.buttonText}>{props.text}</span>
+      <span
+        className={classes}>
+        {props.text}
+      </span>
     </button>
   );
 }

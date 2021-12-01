@@ -15,6 +15,7 @@ body {
 
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat', 'Futura', sans-serif;
   
   /* Color palette */
   --color-primary-dark: #191A1B;
@@ -75,7 +76,7 @@ button {
 
 /* Text style classes */
 .text-style-web-large {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: var(--medium);
 }
 .text-style-web-regular {
@@ -110,7 +111,7 @@ button {
 }
 .mouseover-enabled:hover {
   color: var(--color-grey-white);
-  transform: scale(1.1, 1.1);
+  transform: scale(1.02, 1.02);
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, .40));
   transition: all 100ms ease-in-out;
 }

@@ -2,10 +2,15 @@
 .button {
   display: flex;
   align-items: center;
+  background-color: var(--color-grey-darkest);
+  color: var(--color-grey-base);
+  border-radius: 6px;
+  margin-top: 30px;
 }
 
 .iconContainer {
-
+  margin-top: 2px;
+  margin-left: auto;
 }
 
 .iconSvg {
@@ -13,5 +18,12 @@
 }
 
 .buttonText {
-
+  margin-left: 12%;
+  margin-right: auto;
+}
+.webButtonText {
+  composes: buttonText;
+}
+.mobileButtonText {
+  composes: buttonText;
 }
