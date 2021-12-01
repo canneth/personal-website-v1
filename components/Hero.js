@@ -10,13 +10,12 @@ function Hero() {
   return (
     <div className={styles.heroContainer}>
       <div className={styles.backgroundContainer}>
-        <div className={styles.backgroundAnimContainer}>
-          <Image
-            src='/../public/hero-background.svg'
-            alt='Background'
-            layout='fill'
-          />
-        </div>
+        <Image
+          className={styles.backgroundImage}
+          src='/../public/hero-background.svg'
+          alt='Background'
+          layout='fill'
+        />
       </div>
       <div className={styles.foregroundContainer}>
         <p className={styles.subtitle}>{`Hi! I'm`}</p>
