@@ -3,9 +3,9 @@ import ContactItem from "@/components/ContactItem";
 
 import styles from './ContactBar.module.css';
 
-function ContactBar() {
+function ContactBar(props) {
   return (
-    <ul className={styles.listContainer}>
+    <ul className={`${styles.listContainer} ${props.className}`}>
       <li className={styles.listItem}><ContactItem for='github' width={24} height={24} link=''/></li>
       <li className={styles.listItem}><ContactItem for='linkedin' width={24} height={24} link=''/></li>
       <li className={styles.listItem}><ContactItem for='instagram' width={24} height={24} link=''/></li>

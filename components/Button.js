@@ -14,23 +14,23 @@ function Button(props) {
   var iconHeight = 0;
   var buttonWidth = 0;
   var buttonHeight = 0;
-  var classes = '';
+  var textClasses = '';
   if (props.forMobile) {
     iconWidth = props.large ? 14 : 12;
     iconHeight = props.large ? 14 : 12;
     buttonWidth = props.large ? 80 : 60;
     buttonHeight = props.large ? 21 : 17;
-    classes = `${styles.mobileButtonText} text-styles-mobile-small`;
+    textClasses = `${styles.mobileButtonText} text-styles-mobile-small`;
   } else {
     iconWidth = props.large ? 22 : 12;
     iconHeight = props.large ? 22 : 12;
     buttonWidth = props.large ? 154 : 115;
     buttonHeight = props.large ? 41 : 33;
-    classes = `${styles.webButtonText} text-style-web-regular`;
+    textClasses = `${styles.webButtonText} text-style-web-regular`;
   }
   return (
     <button
-      className={`${styles.button} mouseover-enabled`}
+      className={`${styles.button} ${props.className} mouseover-enabled`}
       style={
         {
           width: buttonWidth,
@@ -47,7 +47,7 @@ function Button(props) {
         </span>
       </span>
       <span
-        className={classes}>
+        className={textClasses}>
         {props.text}
       </span>
     </button>

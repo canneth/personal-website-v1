@@ -12,7 +12,7 @@ const DATA_ICON_FOR = {
 
 function ContactItem(props) {
   return (
-    <div className={styles.iconContainer}>
+    <div className={styles.itemContainer}>
       <a href={props.link}>
         <span className={`iconify ${styles.iconSvg} mouseover-enabled`} data-icon={DATA_ICON_FOR[props.for]} data-width={props.width} data-height={props.height}></span>
       </a>

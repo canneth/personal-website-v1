@@ -1,9 +1,9 @@
 
-
 .listContainer {
+  display: flex;
+  align-items: center;
   margin-top: 48px;
-}
-
-.listItem {
-  display: inline;
+  list-style-type: none;
+  justify-content: space-between;
+  width: clamp(200px, 20vw, 300px);
 }
