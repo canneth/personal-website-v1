@@ -50,6 +50,9 @@ body {
 
   /* Filter styles */
   --drop-shadow-regular: drop-shadow(0px 2px 15px rgba(0, 0, 0, .10));
+
+  /* Misc */
+  --loading-page-duration: 999999s;
 }
 
 h1 {

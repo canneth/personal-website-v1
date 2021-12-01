@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  animation: hide-until-loaded var(--loading-page-duration) linear;
 }
 
 /* Foreground */
@@ -25,7 +26,7 @@
   color: var(--color-highlight-base);
   filter: var(--drop-shadow-regular);
   opacity: 0;
-  animation: fade-grow-in 800ms ease-out 1000ms forwards;
+  animation: fade-grow-in 900ms ease-out calc(var(--loading-page-duration) + 500ms) forwards;
 }
 .title {
   font-size: clamp(100px, 8vw, 140px);
@@ -33,13 +34,13 @@
   color: var(--color-grey-darkest);
   filter: var(--drop-shadow-regular);
   opacity: 0;
-  animation: fade-grow-in 800ms ease-out 1150ms forwards;
+  animation: fade-grow-in 900ms ease-out calc(var(--loading-page-duration) + 650ms) forwards;
 }
 .titlePrefix {
-  animation: prefix-fill-in 1s ease-out 2300ms forwards;
+  animation: prefix-fill-in 1s ease-out calc(var(--loading-page-duration) + 1600ms) forwards;
 }
 .titleSuffix {
-  animation: suffix-fill-in 1s ease-out 2800ms forwards;
+  animation: suffix-fill-in 1s ease-out calc(var(--loading-page-duration) + 2000ms) forwards;
 }
 .description {
   max-width: 70vw;
@@ -47,7 +48,7 @@
   color: var(--color-highlight-dull);
   filter: var(--drop-shadow-regular);
   opacity: 0;
-  animation: fade-grow-in 800ms ease-out 1300ms forwards;
+  animation: fade-grow-in 900ms ease-out calc(var(--loading-page-duration) + 800ms) forwards;
 }
 
 .contactBar {
@@ -58,22 +59,22 @@
   animation: fade-drop-in 800ms ease-out forwards;
 }
 .contactBar li:nth-child(1) {
-  animation-delay: 3500ms;
+  animation-delay: calc(var(--loading-page-duration) + 2500ms);
 }
 .contactBar li:nth-child(2) {
-  animation-delay: 3600ms;
+  animation-delay: calc(var(--loading-page-duration) + 2600ms);
 }
 .contactBar li:nth-child(3) {
-  animation-delay: 3700ms;
+  animation-delay: calc(var(--loading-page-duration) + 2700ms);
 }
 .contactBar li:nth-child(4) {
-  animation-delay: 3800ms;
+  animation-delay: calc(var(--loading-page-duration) + 2800ms);
 }
 
 .resumeButtonAnimContainer {
   margin-top: 4%;
   opacity: 0;
-  animation: fade-grow-in 500ms ease-out 4500ms forwards;
+  animation: fade-grow-in 500ms ease-out calc(var(--loading-page-duration) + 3500ms) forwards;
 }
 
 /* Background */
@@ -87,14 +88,24 @@
   height: 1500px;
   top: 50%;
   transform: translateY(-50%);
+  animation: hide-until-loaded var(--loading-page-duration) linear;
 }
 .backgroundImage {
   opacity: 0.05;
   transform: scale(0.86);
   filter: drop-shadow(0px 0px 80px rgba(0, 0, 0, .40));
   animation:
-    background-loop 8s ease-in-out 2100ms infinite alternate,
-    background-load-in 2000ms cubic-bezier(0,1,0,1);
+    background-loop 8s ease-in-out calc(var(--loading-page-duration) + 2100ms) infinite alternate,
+    background-load-in 2000ms cubic-bezier(0,1,0,1) var(--loading-page-duration);
+}
+
+@keyframes hide-until-loaded {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 0px;
+  }
 }
 
 @keyframes background-load-in {

@@ -1,0 +1,15 @@
+
+.svg {
+  transform-origin: center;
+}
+
+.svg g {
+  stroke: var(--color-highlight-base);
+}
+
+.svg g .face {
+  transform-origin: center;
+}
+.svg g .brackets {
+  transform-origin: center;
+}
