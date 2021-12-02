@@ -8,15 +8,7 @@ import styles from './Hero.module.css';
 
 function Hero() {
   return (
-    <div className={styles.heroContainer}>
-      <div className={styles.backgroundContainer}>
-        <Image
-          className={styles.backgroundImage}
-          src='/../public/hero-background.svg'
-          alt='Background'
-          layout='fill'
-        />
-      </div>
+    <section className={styles.heroContainer}>
       <div className={styles.foregroundContainer}>
         <p className={styles.subtitle}>{`Hi! I'm`}</p>
         <h1 className={styles.title}>
@@ -31,7 +23,15 @@ function Hero() {
           <Button className={styles.resumeButton} for='resume' text='Resume' large />
         </div>
       </div>
-    </div>
+      <div className={styles.backgroundContainer}>
+        <Image
+          className={styles.backgroundImage}
+          src='/../public/hero-background.svg'
+          alt='Background'
+          layout='fill'
+        />
+      </div>
+    </section>
   );
 }
 

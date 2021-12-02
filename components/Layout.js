@@ -6,7 +6,7 @@ import styles from './Layout.module.css';
 function Layout(props) {
   return (
     <>
-      <NavBar />
+      <NavBar className={styles.navBar}/>
       <div className={styles.mainColumn}>
         <main>
           {props.children}

@@ -58,7 +58,8 @@ Button.propTypes = {
   for: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   forMobile: PropTypes.bool,
-  large: PropTypes.bool
+  large: PropTypes.bool,
+  className: PropTypes.string
 }
 
 export default Button;

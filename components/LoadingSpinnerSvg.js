@@ -1,7 +1,7 @@
 
-import styles from './LoadingSpinner.module.css';
+import styles from './LoadingSpinnerSvg.module.css';
 
-function LoadingSpinner(props) {
+function LoadingSpinnerSvg(props) {
   return (
     <svg
       width={201}
@@ -21,4 +21,4 @@ function LoadingSpinner(props) {
   );
 }
 
-export default LoadingSpinner;
+export default LoadingSpinnerSvg;

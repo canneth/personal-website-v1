@@ -1,0 +1,43 @@
+
+.navItemContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+}
+.navItemContainer svg {
+  width: 20px;
+}
+.navItemContainer svg .leftLine {
+  stroke-dasharray: 20;
+  stroke-dashoffset: -20;
+  stroke: var(--color-secondary-base);
+  transition: all 200ms ease-out;
+}
+.navItemContainer svg .rightLine {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  stroke: var(--color-secondary-base);
+  transition: all 200ms ease-out;
+}
+
+.text {
+  color: var(--color-highlight-dull);
+  margin-left: 12px;
+  margin-right: 12px;
+  transition: all 200ms ease-out;
+}
+
+.navItemContainer:hover {
+  cursor: pointer;
+}
+.navItemContainer:hover svg .leftLine {
+  stroke-dashoffset: 0;
+}
+.navItemContainer:hover svg .rightLine {
+  stroke-dashoffset: 0;
+}
+.navItemContainer:hover .text {
+  color: var(--color-grey-white);
+}
