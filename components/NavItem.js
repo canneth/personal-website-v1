@@ -7,12 +7,14 @@ import styles from './NavItem.module.css';
 
 function NavItem(props) {
   return (
-    <div className={`${styles.navItemContainer} mouseover-enabled`}>
+    <>
       {
-        props.for === 'hero' ?
-          <LogoSvg className={props.className} />
+        props.forHero ?
+          <div className={`${styles.logoContainer} mouseover-drop-shadow-style`}>
+            <LogoSvg className={styles.logoSvg} />
+          </div>
         :
-          <>
+          <div className={`${styles.navItemContainer} mouseover-drop-shadow-style`}>
             <svg viewBox="0 0 20 3" xmlns="http://www.w3.org/2000/svg">
               <line className={styles.leftLine} x1="0" y1="0" x2="20" y2="0" stroke="black" strokeWidth={3}/>
             </svg>
@@ -20,15 +22,14 @@ function NavItem(props) {
             <svg viewBox="0 0 20 3" xmlns="http://www.w3.org/2000/svg">
               <line className={styles.rightLine} x1="0" y1="0" x2="20" y2="0" stroke="black" strokeWidth={3}/>
             </svg>
-          </>
+          </div>
       }
-    </div>
+    </>
   );
 }
 
 NavItem.propTypes = {
-  for: PropTypes.string.isRequired,
-  number: PropTypes.number,
+  forHero: PropTypes.boolean,
   text: PropTypes.string,
   forMobile: PropTypes.boolean
 }

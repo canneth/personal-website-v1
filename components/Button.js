@@ -30,7 +30,7 @@ function Button(props) {
   }
   return (
     <button
-      className={`${styles.button} ${props.className} mouseover-enabled`}
+      className={`${styles.button} ${props.className} mouseover-drop-shadow-style`}
       style={
         {
           width: buttonWidth,
