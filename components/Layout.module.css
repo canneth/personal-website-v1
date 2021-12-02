@@ -4,3 +4,17 @@
   flex-direction: column;
   align-content: center;
 }
+
+.navBar {
+  opacity: 0;
+  z-index: -1;
+  animation: nav-bar-fade-in 1s ease-out calc(var(--loading-page-duration) + 4s) forwards;
+}
+
+@keyframes nav-bar-fade-in {
+  0% { }
+  100% {
+    opacity: 1;
+    z-index: 1;
+  }
+}

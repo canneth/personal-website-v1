@@ -33,7 +33,7 @@ function NavBar(props) {
   });
 
   return (
-    <nav id='nav-bar' className={`${styles.navBar} ${props.className}`}>
+    <nav id='nav-bar' className={`${styles.navBar} ${props.className} ${styles.integrated}`}>
       <ul>
         <li><NavItem text='About Me' /></li>
         <li><NavItem text='Skills' /></li>
