@@ -10,7 +10,7 @@ function NavBar(props) {
 
   const [currScrollYPos, setCurrScrollYPos] = useState();
 
-  function handleScroll() {
+  function handleScrollForNavBar() {
     const newScrollYPos = window.scrollY;
     const modes = ['retracted', 'extended', 'integrated'];
     let modeClass = '';
@@ -28,8 +28,8 @@ function NavBar(props) {
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScrollForNavBar);
+    return () => window.removeEventListener('scroll', handleScrollForNavBar);
   });
 
   return (
