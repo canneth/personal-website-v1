@@ -1,10 +1,15 @@
 
-.iconContainer {
-
+.itemContainer * {
+  transition: all 80ms ease-out;
 }
-
 .iconSvg {
   color: var(--color-highlight-base);
   width: clamp(22px, 1.8vw, 26px);
   height: auto;
+}
+
+.itemContainer:hover .iconSvg {
+  color: var(--color-grey-white);
+  transform-origin: center;
+  transform: scale(1.05);
 }

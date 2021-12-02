@@ -55,12 +55,12 @@
 }
 .logoSvg g {
   transform-origin: center;
-  stroke: var(--color-highlight-base);
+  stroke: var(--color-secondary-base);
 }
 .logoContainer:hover {
   cursor: pointer;
 }
 .logoContainer:hover .logoSvg g {
-  stroke: var(--color-grey-white);
+  stroke: var(--color-highlight-base);
   transform: scale(1.02);
 }

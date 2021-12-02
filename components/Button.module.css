@@ -7,8 +7,8 @@
   border-radius: 6px;
   margin-top: 30px;
 }
-.button:hover {
-  cursor: pointer;
+.button * {
+  transition: all 80ms ease-out;
 }
 
 .iconContainer {
@@ -29,4 +29,10 @@
 }
 .mobileButtonText {
   composes: buttonText;
+}
+
+.button:hover {
+  transform-origin: center;
+  transform: scale(1.01);
+  cursor: pointer;
 }

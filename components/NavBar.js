@@ -1,14 +1,39 @@
 
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 
 import NavItem from '@/components/NavItem';
-import LogoSvg from '@/components/LogoSvg';
 
 import styles from './NavBar.module.css';
 
 function NavBar(props) {
+
+  const [currScrollYPos, setCurrScrollYPos] = useState();
+
+  function handleScroll() {
+    const newScrollYPos = window.scrollY;
+    const modes = ['retracted', 'extended', 'integrated'];
+    let modeClass = '';
+    if (newScrollYPos > 0) {
+      modeClass = newScrollYPos > currScrollYPos ? 'retracted' : 'extended';
+    } else {
+      modeClass = 'integrated';
+    }
+    const navBar = document.getElementById('nav-bar');
+    if (!navBar.classList.contains(styles[modeClass])) {
+      for (let mode of modes) navBar.classList.remove(styles[mode]);
+      navBar.classList.add(styles[modeClass]);
+    }
+    setCurrScrollYPos(newScrollYPos);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
+
   return (
-    <nav className={`${styles.navBar} ${props.className}`}>
+    <nav id='nav-bar' className={`${styles.navBar} ${props.className}`}>
       <ul>
         <li><NavItem text='About Me' /></li>
         <li><NavItem text='Skills' /></li>
@@ -16,6 +41,7 @@ function NavBar(props) {
         <li><NavItem text='Projects' /></li>
         <li><NavItem text='Contact' /></li>
       </ul>
+      <div className={styles.barBackground} />
     </nav>
   );
 }

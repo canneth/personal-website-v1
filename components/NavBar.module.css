@@ -4,10 +4,11 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 60px;
   align-items: center;
   justify-content: center;
+  transition: all 200ms linear;
 }
-
 .navBar ul {
   display: flex;
   flex-direction: row;
@@ -17,4 +18,30 @@
   width: 60vw;
   min-width: 780px;
   list-style: none;
+}
+
+.barBackground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, .25));
+  background-color: var(--color-primary-dark);
+  transition: all 200ms linear;
+}
+
+.retracted {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+.extended {
+
+}
+.integrated {
+  height: 100px;
+}
+.integrated .barBackground {
+  filter: none;
+  opacity: 0;
 }
