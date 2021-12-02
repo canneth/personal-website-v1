@@ -1,15 +1,79 @@
 
-.svg {
-  transform-origin: center;
-}
-
-.svg g {
+.whole {
   stroke: var(--color-highlight-base);
+  transform-origin: center;
+  animation: grow-fade-out calc(var(--loading-page-duration) - var(--draw-duration)) ease-out var(--draw-duration) forwards;
+
+  --draw-duration: 1700ms;
+  --timing-func: cubic-bezier(.20,.75,.45,1);
 }
 
-.svg g .face {
-  transform-origin: center;
+.face {
+
 }
-.svg g .brackets {
+
+.c {
   transform-origin: center;
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+  animation: draw-c 1s var(--timing-func) forwards;
+}
+.a1 {
+  transform-origin: center;
+  stroke-dasharray: 78;
+  stroke-dashoffset: 78;
+  animation: draw-a1 500ms var(--timing-func) 400ms forwards;
+}
+.a2 {
+  transform-origin: center;
+  stroke-dasharray: 66;
+  stroke-dashoffset: 66;
+  animation: draw-a2 500ms var(--timing-func) 600ms forwards;
+}
+.a3 {
+  transform-origin: center;
+  stroke-dasharray: 36;
+  stroke-dashoffset: 36;
+  animation: draw-a3 300ms var(--timing-func) 700ms forwards;
+}
+.brackets {
+  transform-origin: center;
+  opacity: 0;
+  transform: rotate(120deg);
+  animation: spin-shrink-fade-in 800ms var(--timing-func) 900ms forwards;
+}
+
+@keyframes draw-c {
+  0% { stroke-dashoffset: 180; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes draw-a1 {
+  0% { stroke-dashoffset: 78; }
+  100% { stroke-dashoffset: 4; }
+}
+@keyframes draw-a2 {
+  0% { stroke-dashoffset: -66; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes draw-a3 {
+  0% { stroke-dashoffset: 36; }
+  100% { stroke-dashoffset: 2; }
+}
+@keyframes spin-shrink-fade-in {
+  0% { }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes grow-fade-out {
+  0% { }
+  10% {
+    stroke: var(--color-grey-white);
+  }
+  100% {
+    stroke: var(--color-grey-white);
+    opacity: 0;
+    transform: scale(1.2);
+  }
 }
