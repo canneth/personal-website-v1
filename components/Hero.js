@@ -16,7 +16,7 @@ function Hero() {
           <span className={styles.titleSuffix}>nneth</span>
         </h1>
         <p className={`${styles.description} text-style-web-large`}>
-          A self-taught developer creating beautiful solutions to real-world problems
+          I love creating beautiful solutions to real-world problems
         </p>
         <ContactBar className={styles.contactBar}/>
         <div className={styles.resumeButtonAnimContainer}>
