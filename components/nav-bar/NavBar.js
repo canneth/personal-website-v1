@@ -1,7 +1,7 @@
 
 import PropTypes from 'prop-types';
 import { useEffect, useState, useRef } from 'react';
-import useScroll from '@/hooks/useScroll.js';
+import useScroll from '@/hooks/useScroll';
 import NavItem from '@/components/nav-bar/NavItem';
 import styles from './NavBar.module.css';
 
@@ -23,10 +23,9 @@ function NavBar(props) {
     } else {
       modeClass = 'integrated';
     }
-    const navBar = selfRef.current;
-    if (!navBar.classList.contains(styles[modeClass])) {
-      for (let mode of modes) navBar.classList.remove(styles[mode]);
-      navBar.classList.add(styles[modeClass]);
+    if (!selfRef.current.classList.contains(styles[modeClass])) {
+      for (let mode of modes) selfRef.current.classList.remove(styles[mode]);
+      selfRef.current.classList.add(styles[modeClass]);
     }
   }, [scrollY, scrollYDirection]);
 

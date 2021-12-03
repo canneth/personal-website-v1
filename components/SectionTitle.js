@@ -1,6 +1,7 @@
 
 import PropTypes from 'prop-types';
 import { useEffect, useRef } from 'react';
+import useScroll from '@/hooks/useScroll'
 import styles from './SectionTitle.module.css';
 
 function SectionTitle(props) {
@@ -11,16 +12,13 @@ function SectionTitle(props) {
     gridTemplateColumns: `${leftLineFraction} auto ${rightLineFraction}`
   };
 
+  const { scrollY } = useScroll();
+
   const selfRef = useRef();
 
-  function handleScrollForSectionTitle() {
-    // TODO: YOU LEFT OFF HERE!
-  }
-
   useEffect(() => {
-    window.addEventListener('scroll', handleScrollForSectionTitle);
-    return () => { window.removeEventListener('scroll', handleScrollForSectionTitle) };
-  });
+    const { } = selfRef.current.getBoundingClientRect();
+  }, [scrollY]);
 
   return (
     <header
