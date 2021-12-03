@@ -50,10 +50,7 @@ body {
 
   /* Filter styles */
   --drop-shadow-regular: drop-shadow(0px 2px 10px rgba(0, 0, 0, .20));
-
-  /* Misc */
-  --loading-page-duration: 2.5s;
-
+  
   /* Scrollbar styling for Firefox */
   scrollbar-width: thin;
   scrollbar-color: var(--color-secondary-dark) var(--color-primary-dark);
@@ -133,4 +130,8 @@ button {
 }
 .mouseover-drop-shadow-style:hover {
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, .40));
+}
+
+.hidden {
+  display: none !important;
 }

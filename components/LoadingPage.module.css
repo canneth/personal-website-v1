@@ -9,21 +9,12 @@
   height: 100vh;
   background-color: var(--color-primary-dark);
   z-index: 1;
-  animation:
-    page-fade-out 200ms linear calc(var(--loading-page-duration) - 200ms) forwards,
-    page-disappear 0s linear var(--loading-page-duration) forwards;
+  animation: page-fade-out 500ms linear 200ms forwards,
 }
 
 @keyframes page-fade-out {
   0% { }
   100% {
     opacity: 0;
-  }
-}
-@keyframes page-disappear {
-  0% { }
-  100% {
-    width: 0px;
-    height: 0px;
   }
 }

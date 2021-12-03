@@ -2,7 +2,7 @@
 .whole {
   stroke: var(--color-highlight-base);
   transform-origin: center;
-  animation: grow-fade-out calc(var(--loading-page-duration) - var(--draw-duration)) ease-out var(--draw-duration) forwards;
+  animation: grow-fade-out 800ms ease-out var(--draw-duration) forwards;
 
   --draw-duration: 1700ms;
   --timing-func: cubic-bezier(.20,.75,.45,1);

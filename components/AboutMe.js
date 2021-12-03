@@ -6,8 +6,15 @@ import styles from './AboutMe.module.css';
 function AboutMe() {
   return (
     <section className={styles.sectionContainer}>
-      <SectionTitle className={styles.sectionTitle} titleOffsetFromLeft={0.2}>Hello!</SectionTitle>
-      <p>HI I AM ABOUT ME!</p>
+      <SectionTitle className={styles.sectionTitle} titleOffsetFromLeft={0.2}>
+        Hello!
+      </SectionTitle>
+      <p>
+        HI I AM ABOUT ME!
+      </p>
+      <div className={styles.graphicContainer}>
+        
+      </div>
     </section>
   );
 }
