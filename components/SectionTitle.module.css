@@ -13,3 +13,8 @@
 .lineContainer svg line {
   stroke: var(--color-secondary-dark);
 }
+
+/* Styles before scrolling into view */
+.titleContainer.hidden {
+
+}

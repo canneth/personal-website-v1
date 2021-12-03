@@ -1,6 +1,5 @@
 
 import Image from 'next/image';
-
 import SectionTitle from '@/components/SectionTitle';
 import AboutMeFrame1Svg from '@/components/svgs/AboutMeFrame1Svg';
 

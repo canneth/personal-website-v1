@@ -1,8 +1,6 @@
 
 import PropTypes from 'prop-types';
-
 import LogoSvg from '@/components/svgs/LogoSvg';
-
 import styles from './NavItem.module.css';
 
 function NavItem(props) {
@@ -29,9 +27,9 @@ function NavItem(props) {
 }
 
 NavItem.propTypes = {
-  forHero: PropTypes.boolean,
+  forHero: PropTypes.bool,
   text: PropTypes.string,
-  forMobile: PropTypes.boolean
+  forMobile: PropTypes.bool
 }
 
 export default NavItem;

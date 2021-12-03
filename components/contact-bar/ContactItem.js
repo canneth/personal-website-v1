@@ -1,6 +1,5 @@
 
 import PropTypes from 'prop-types';
-
 import styles from './ContactItem.module.css';
 
 const DATA_ICON_FOR = {

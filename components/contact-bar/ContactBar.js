@@ -1,6 +1,5 @@
 
 import ContactItem from "@/components/contact-bar/ContactItem";
-
 import styles from './ContactBar.module.css';
 
 function ContactBar(props) {

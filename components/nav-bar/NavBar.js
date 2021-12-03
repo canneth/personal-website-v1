@@ -1,39 +1,37 @@
 
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
-
+import { useEffect, useState, useRef } from 'react';
+import useScroll from '@/hooks/useScroll.js';
 import NavItem from '@/components/nav-bar/NavItem';
-
 import styles from './NavBar.module.css';
 
 function NavBar(props) {
 
-  const [currScrollYPos, setCurrScrollYPos] = useState();
+  const { scrollY, scrollYDirection } = useScroll();
+  console.log(scrollYDirection);
+  const selfRef = useRef();
 
-  function handleScrollForNavBar() {
-    const newScrollYPos = window.scrollY;
+  useEffect(() => {
     const modes = ['retracted', 'extended', 'integrated'];
     let modeClass = '';
-    if (newScrollYPos > 0) {
-      modeClass = newScrollYPos > currScrollYPos ? 'retracted' : 'extended';
+    if (scrollY > 0) {
+      switch (scrollYDirection) {
+        case 1: { modeClass = 'retracted'; break; }
+        case -1: { modeClass = 'extended'; break; }
+        default: break;
+      }
     } else {
       modeClass = 'integrated';
     }
-    const navBar = document.getElementById('nav-bar');
+    const navBar = selfRef.current;
     if (!navBar.classList.contains(styles[modeClass])) {
       for (let mode of modes) navBar.classList.remove(styles[mode]);
       navBar.classList.add(styles[modeClass]);
     }
-    setCurrScrollYPos(newScrollYPos);
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScrollForNavBar);
-    return () => window.removeEventListener('scroll', handleScrollForNavBar);
-  });
+  }, [scrollY, scrollYDirection]);
 
   return (
-    <nav id='nav-bar' className={`${styles.navBar} ${props.className} ${styles.integrated}`}>
+    <nav ref={selfRef} className={`${styles.navBar} ${props.className} ${styles.integrated}`}>
       <ul>
         <li><NavItem text='About Me' /></li>
         <li><NavItem text='Skills' /></li>

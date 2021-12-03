@@ -1,12 +1,10 @@
 
-import { useLayoutEffect } from 'react';
-
+import { useEffect } from 'react';
 import LoadingSpinnerSvg from '@/components/loading-page/LoadingSpinner';
-
 import styles from './LoadingPage.module.css';
 
 function LoadingPage() {
-  useLayoutEffect(() => {
+  useEffect(() => {
     const layoutElement = document.getElementById('layout-container');
     layoutElement.classList.add('hidden');
     setTimeout(() => {
