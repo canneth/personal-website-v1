@@ -1,5 +1,5 @@
 
-import styles from './LoadingSpinnerSvg.module.css';
+import styles from './LoadingSpinner.module.css';
 
 function LoadingSpinnerSvg(props) {
   return (

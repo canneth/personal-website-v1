@@ -1,7 +1,7 @@
 
 import { useLayoutEffect } from 'react';
 
-import LoadingSpinnerSvg from '@/components/LoadingSpinnerSvg';
+import LoadingSpinnerSvg from '@/components/loading-page/LoadingSpinner';
 
 import styles from './LoadingPage.module.css';
 

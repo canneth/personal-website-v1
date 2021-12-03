@@ -1,5 +1,5 @@
 
-import ContactItem from "@/components/ContactItem";
+import ContactItem from "@/components/contact-bar/ContactItem";
 
 import styles from './ContactBar.module.css';
 

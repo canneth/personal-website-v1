@@ -1,7 +1,7 @@
 
 import PropTypes from 'prop-types';
 
-import LogoSvg from '@/components/LogoSvg';
+import LogoSvg from '@/components/svgs/LogoSvg';
 
 import styles from './NavItem.module.css';
 

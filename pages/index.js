@@ -1,6 +1,6 @@
 
-import Hero from '@/components/Hero';
-import AboutMe from '@/components/AboutMe';
+import Hero from '@/components/page-sections/Hero';
+import AboutMe from '@/components/page-sections/AboutMe';
 
 function MainPage() {
   return (

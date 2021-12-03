@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
-import NavItem from '@/components/NavItem';
+import NavItem from '@/components/nav-bar/NavItem';
 
 import styles from './NavBar.module.css';
 
