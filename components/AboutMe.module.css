@@ -1,0 +1,16 @@
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80vh;
+  height: 200vh; /* TODO: Remove this, this is temporary! */
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.sectionTitle {
+  width: 40vw;
+}
+
+

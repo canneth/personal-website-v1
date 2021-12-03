@@ -46,10 +46,10 @@ body {
   /* Font weights */
   --regular: 400;
   --medium: 500;
-  --semi-bold: 600;
+  --semibold: 600;
 
   /* Filter styles */
-  --drop-shadow-regular: drop-shadow(0px 2px 15px rgba(0, 0, 0, .10));
+  --drop-shadow-regular: drop-shadow(0px 2px 10px rgba(0, 0, 0, .20));
 
   /* Misc */
   --loading-page-duration: 2.5s;
@@ -82,6 +82,7 @@ p {
   margin: 0px;
   font-weight: var(--medium);
   color: var(--color-grey-base);
+  line-height: 1.6;
 }
 
 ul {
