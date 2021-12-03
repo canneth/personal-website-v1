@@ -8,7 +8,6 @@ import styles from './NavBar.module.css';
 function NavBar(props) {
 
   const { scrollY, scrollYDirection } = useScroll();
-  console.log(scrollYDirection);
   const selfRef = useRef();
 
   useEffect(() => {

@@ -10,7 +10,7 @@ function useScroll() {
   function normalise(x) {
     return x ? (x / Math.abs(x)) : 0;
   }
-  
+
   useEffect(() => {
     function handleScroll() {
       const newScrollX = window.scrollX;
@@ -25,14 +25,7 @@ function useScroll() {
     return () => { window.removeEventListener('scroll', handleScroll) };
   }, [scrollX, scrollY]);
 
-  return (
-    {
-      scrollX: scrollX,
-      scrollY: scrollY,
-      scrollXDirection: scrollXDirection,
-      scrollYDirection: scrollYDirection
-    }
-  );
+  return ({ scrollX, scrollY, scrollXDirection, scrollYDirection });
 }
 
 export default useScroll;

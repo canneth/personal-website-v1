@@ -2,6 +2,8 @@
 import PropTypes from 'prop-types';
 import { useEffect, useRef } from 'react';
 import useScroll from '@/hooks/useScroll'
+import useWindowSize from '@/hooks/useWindowSize';
+import useHiddenRef from '@/hooks/useHiddenRef';
 import styles from './SectionTitle.module.css';
 
 function SectionTitle(props) {
@@ -12,17 +14,11 @@ function SectionTitle(props) {
     gridTemplateColumns: `${leftLineFraction} auto ${rightLineFraction}`
   };
 
-  const { scrollY } = useScroll();
-
-  const selfRef = useRef();
-
-  useEffect(() => {
-    const { } = selfRef.current.getBoundingClientRect();
-  }, [scrollY]);
+  const selfRef = useHiddenRef(styles);
 
   return (
     <header
-      className={`${styles.titleContainer} ${props.className} ${styles.hidden}`}
+      className={`${styles.titleContainer} ${props.className}`}
       style={computedStyle}
       ref={selfRef}
     >
