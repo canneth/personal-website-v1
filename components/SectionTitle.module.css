@@ -2,6 +2,10 @@
 .titleContainer {
   display: grid;
   filter: var(--drop-shadow-regular);
+  transition: all 500ms ease-out;
+}
+.titleContainer * {
+  transition: all 500ms ease-out;
 }
 .text {
   margin-left: 40px;
@@ -10,11 +14,21 @@
   font-weight: var(--semibold);
   color: var(--color-highlight-base);
 }
-.lineContainer svg line {
+.lineContainer line {
   stroke: var(--color-secondary-dark);
 }
+.leftLine,
+.rightLine {
+  stroke-dasharray: 100px;
+}
 
-/* Styles before scrolling into view */
+/* For transitioning into view */
 .titleContainer.hidden {
-
+  opacity: 0;
+}
+.titleContainer.hidden .leftLine {
+  stroke-dashoffset: -100px;
+}
+.titleContainer.hidden .rightLine {
+  stroke-dashoffset: 100px;
 }

@@ -1,7 +1,10 @@
 
+import PropTypes from 'prop-types';
+
 function AboutMeFrame1Svg(props) {
   return (
     <svg
+      className={props.className}
       width={382}
       height={316}
       fill="none"
@@ -27,5 +30,9 @@ function AboutMeFrame1Svg(props) {
     </svg>
   );
 }
+
+AboutMeFrame1Svg.propTypes = {
+  className: PropTypes.string
+};
 
 export default AboutMeFrame1Svg;

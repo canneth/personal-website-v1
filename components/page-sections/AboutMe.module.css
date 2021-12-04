@@ -5,28 +5,54 @@
   align-items: center;
   margin-top: 50vh;
   height: 200vh; /* TODO: Remove this, this is temporary! */
-  width: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
 }
+.sectionContainer * {
+  transition: all 500ms ease-out;
+}
+
 .sectionTitle {
-  align-self: flex-start;
   width: 30vw;
 }
 
 .contentContainer {
-  margin-top: 50px;
+  width: 100%;
+}
+.contentBlockContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 150px;
 }
-.graphicContainer {
-  margin-left: 10vw;
-}
-.imageContainer {
+.firstContentBlockContainer .imageContainer {
   position: absolute;
   clip-path: circle(48%);
   transform: translateX(-2%) translateY(-5%);
+}
+.spacer {
+  min-width: 100px;
+  height: 5vh;
+}
+.secondContentBlockContainer .imageContainer {
+  position: absolute;
+  clip-path: circle(48%);
+  transform: translateX(18%);
+}
+.text {
+  max-width: 42vw;
+}
+
+/* For transitioning into view */
+.hidden {
+  opacity: 0;
+}
+.firstContentBlockContainer.hidden text {
+  transform: translateX(-20%);
+}
+.firstContentBlockContainer.hidden .firstFrame {
+  
+}
+.secondContentBlockContainer.hidden text {
+  transform: translateX(20%);
 }
 
 

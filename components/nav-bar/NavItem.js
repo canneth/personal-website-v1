@@ -30,6 +30,6 @@ NavItem.propTypes = {
   forHero: PropTypes.bool,
   text: PropTypes.string,
   forMobile: PropTypes.bool
-}
+};
 
 export default NavItem;

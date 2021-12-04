@@ -59,6 +59,6 @@ Button.propTypes = {
   forMobile: PropTypes.bool,
   large: PropTypes.bool,
   className: PropTypes.string
-}
+};
 
 export default Button;

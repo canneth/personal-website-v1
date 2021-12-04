@@ -1,8 +1,5 @@
 
 import PropTypes from 'prop-types';
-import { useEffect, useRef } from 'react';
-import useScroll from '@/hooks/useScroll'
-import useWindowSize from '@/hooks/useWindowSize';
 import useHiddenRef from '@/hooks/useHiddenRef';
 import styles from './SectionTitle.module.css';
 
@@ -30,7 +27,7 @@ function SectionTitle(props) {
       <h1 className={styles.text}>{props.children}</h1>
       <div className={styles.lineContainer}>
         <svg viewBox="0 0 100 2" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio='none' height={5} width='100%'>
-          <line className={styles.leftLine} x1="0" y1="1" x2="100" y2="1" stroke="black" strokeWidth={1} />
+          <line className={styles.rightLine} x1="0" y1="1" x2="100" y2="1" stroke="black" strokeWidth={1} />
         </svg>
       </div>
     </header>
@@ -41,6 +38,6 @@ function SectionTitle(props) {
 SectionTitle.propTypes = {
   titleOffsetFromLeft: PropTypes.number,
   className: PropTypes.string
-}
+};
 
 export default SectionTitle;

@@ -6,11 +6,11 @@ function Layout(props) {
   return (
     <div id='layout-container'>
       <NavBar className={styles.navBar}/>
-      <div className={styles.mainColumn}>
-        <main>
+      <main>
+        <div className={styles.mainColumn}>
           {props.children}
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
   );
 }

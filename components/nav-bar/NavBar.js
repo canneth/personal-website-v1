@@ -44,6 +44,6 @@ function NavBar(props) {
 
 NavBar.propTypes = {
   className: PropTypes.string
-}
+};
 
 export default NavBar;
