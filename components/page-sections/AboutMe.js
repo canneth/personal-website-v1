@@ -13,12 +13,18 @@ function AboutMe() {
   const secondContentBlockContainerRef = useHiddenRef(styles);
 
   return (
-    <section ref={sectionTitleRef} className={styles.sectionContainer}>
+    <section
+      ref={sectionTitleRef}
+      className={styles.sectionContainer}
+    >
       <SectionTitle className={styles.sectionTitle} titleOffsetFromLeft={0.5}>
         Hello!
       </SectionTitle>
       <div className={styles.contentContainer}>
-        <div ref={firstContentBlockContainerRef} className={`${styles.firstContentBlockContainer} ${styles.contentBlockContainer}`}>
+        <div
+          ref={firstContentBlockContainerRef}
+          className={`${styles.firstContentBlockContainer} ${styles.contentBlockContainer}`}
+        >
           <p className={styles.text}>
             Hi, I’m Canneth, a self-taught developer who’s just beginning his journey in the exciting world of web development.
             <br /><br />
@@ -45,10 +51,13 @@ function AboutMe() {
                 height={300}
               />
             </div>
-            <AboutMeFrame1Svg className={styles.firstFrame}/>
+            <AboutMeFrame1Svg className={styles.firstFrame} moduleStyles={styles} />
           </div>
         </div>
-        <div ref={secondContentBlockContainerRef} className={`${styles.secondContentBlockContainer} ${styles.contentBlockContainer}`}>
+        <div
+          ref={secondContentBlockContainerRef}
+          className={`${styles.secondContentBlockContainer} ${styles.contentBlockContainer}`}
+        >
           <div className={styles.graphicContainer}>
             <div className={styles.imageContainer}>
               <Image
@@ -58,7 +67,7 @@ function AboutMe() {
                 height={300}
               />
             </div>
-            <AboutMeFrame2Svg className={styles.secondFrame}/>
+            <AboutMeFrame2Svg className={styles.secondFrame} moduleStyles={styles} />
           </div>
           <div className={styles.spacer} />
           <p className={styles.text}>

@@ -7,7 +7,7 @@
   height: 200vh; /* TODO: Remove this, this is temporary! */
 }
 .sectionContainer * {
-  transition: all 500ms ease-out;
+  transition: all 1000ms ease-out;
 }
 
 .sectionTitle {
@@ -42,17 +42,58 @@
 }
 
 /* For transitioning into view */
-.hidden {
-  opacity: 0;
+.firstContentBlockContainer .firstFrame .circle-main {
+  transition-delay: 200ms;
+}
+.firstContentBlockContainer .firstFrame .circle-1 {
+  transition-delay: 600ms;
+}
+.firstContentBlockContainer .firstFrame .circle-2 {
+  transition-delay: 800ms;
+}
+.firstContentBlockContainer .firstFrame .circle-3 {
+  transition-delay: 1000ms;
 }
 .firstContentBlockContainer.hidden text {
+  opacity: 0;
   transform: translateX(-20%);
 }
-.firstContentBlockContainer.hidden .firstFrame {
-  
+.firstContentBlockContainer .firstFrame .circle-1,
+.firstContentBlockContainer .firstFrame .circle-2,
+.firstContentBlockContainer .firstFrame .circle-3,
+.firstContentBlockContainer .firstFrame .circle-main {
+  transform-origin: center;
+  /* animation: scale-loop 100ms ease-in-out alternate infinite; */
 }
+.firstContentBlockContainer.hidden .firstFrame .circle-1,
+.firstContentBlockContainer.hidden .firstFrame .circle-2,
+.firstContentBlockContainer.hidden .firstFrame .circle-3,
+.firstContentBlockContainer.hidden .firstFrame .circle-main {
+  transform: scale(0);
+  display: none;
+}
+.firstContentBlockContainer .firstFrame .circle-main {
+  transition-delay: 200ms;
+}
+.firstContentBlockContainer .firstFrame .circle-1 {
+  transition-delay: 600ms;
+}
+.firstContentBlockContainer .firstFrame .circle-2 {
+  transition-delay: 800ms;
+}
+.firstContentBlockContainer .firstFrame .circle-3 {
+  transition-delay: 1000ms;
+}
+
 .secondContentBlockContainer.hidden text {
+  opacity: 0;
   transform: translateX(20%);
 }
 
+@keyframes scale-loop {
+  0% { }
+  100% {
+    transform: scale(1.01);
+  }
+}
 

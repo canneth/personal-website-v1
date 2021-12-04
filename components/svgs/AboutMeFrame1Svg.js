@@ -2,36 +2,53 @@
 import PropTypes from 'prop-types';
 
 function AboutMeFrame1Svg(props) {
+  const styles = props.moduleStyles;
   return (
     <svg
       className={props.className}
-      width={382}
-      height={316}
+      width={420}
+      height={360}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <circle
-        cx={301.243}
-        cy={45.997}
-        r={19.396}
+        className={styles['circle-1']}
+        cx={322}
+        cy={70}
+        r={20}
         stroke="#D05630"
-        strokeWidth={1.108}
+        strokeWidth={1}
       />
-      <circle cx={159.928} cy={146.303} r={146.303} fill="#555" />
       <circle
-        cx={281.847}
-        cy={216.129}
-        r={97.535}
-        stroke="#763626"
-        strokeWidth={4.433}
+        className={styles['circle-main']}
+        cx={180}
+        cy={170}
+        r={145}
+        fill="#555"
       />
-      <circle cx={30.5} cy={245.5} r={29.5} stroke="#F37249" strokeWidth={2} />
+      <circle
+        className={styles['circle-2']}
+        cx={300}
+        cy={240}
+        r={98}
+        stroke="#763626"
+        strokeWidth={4}
+      />
+      <circle 
+        className={styles['circle-3']}
+        cx={50}
+        cy={270}
+        r={30}
+        stroke="#F37249"
+        strokeWidth={2}
+      />
     </svg>
   );
 }
 
 AboutMeFrame1Svg.propTypes = {
+  moduleStyles: PropTypes.string.isRequired,
   className: PropTypes.string
 };
 
