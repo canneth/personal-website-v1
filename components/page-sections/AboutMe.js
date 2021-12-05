@@ -49,9 +49,10 @@ function AboutMe() {
                 alt='image'
                 width={300}
                 height={300}
+                priority
               />
             </div>
-            <AboutMeFrame1Svg className={styles.firstFrame} moduleStyles={styles} />
+            <AboutMeFrame1Svg className={styles.frameSvg} moduleStyles={styles} />
           </div>
         </div>
         <div
@@ -65,9 +66,10 @@ function AboutMe() {
                 alt='image'
                 width={300}
                 height={300}
+                priority
               />
             </div>
-            <AboutMeFrame2Svg className={styles.secondFrame} moduleStyles={styles} />
+            <AboutMeFrame2Svg className={styles.frameSvg} moduleStyles={styles} />
           </div>
           <div className={styles.spacer} />
           <p className={styles.text}>

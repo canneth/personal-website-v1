@@ -29,6 +29,7 @@ function Hero() {
           src='/hero-background.svg'
           alt='Background'
           layout='fill'
+          priority
         />
       </div>
     </section>

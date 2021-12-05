@@ -5,9 +5,8 @@
   align-items: center;
   margin-top: 50vh;
   height: 200vh; /* TODO: Remove this, this is temporary! */
-}
-.sectionContainer * {
-  transition: all 1000ms ease-out;
+
+  --time-stagger-duration: 200ms;
 }
 
 .sectionTitle {
@@ -23,77 +22,100 @@
   align-items: center;
   margin-top: 150px;
 }
-.firstContentBlockContainer .imageContainer {
-  position: absolute;
-  clip-path: circle(48%);
-  transform: translateX(-2%) translateY(-5%);
-}
 .spacer {
   min-width: 100px;
   height: 5vh;
 }
+.text {
+  max-width: 42vw;
+  transition: all 500ms ease-out;
+}
+
+.imageContainer {
+  transition: all 400ms cubic-bezier(0.1,0.8,0.2,1.2) 400ms;
+}
+.firstContentBlockContainer .imageContainer {
+  position: absolute;
+  clip-path: circle(48%);
+  transform: scale(1) translateX(4%);
+}
 .secondContentBlockContainer .imageContainer {
   position: absolute;
   clip-path: circle(48%);
-  transform: translateX(18%);
-}
-.text {
-  max-width: 42vw;
+  transform: scale(1) translateX(18%);
 }
 
-/* For transitioning into view */
-.firstContentBlockContainer .firstFrame .circle-main {
-  transition-delay: 200ms;
-}
-.firstContentBlockContainer .firstFrame .circle-1 {
-  transition-delay: 600ms;
-}
-.firstContentBlockContainer .firstFrame .circle-2 {
-  transition-delay: 800ms;
-}
-.firstContentBlockContainer .firstFrame .circle-3 {
-  transition-delay: 1000ms;
-}
-.firstContentBlockContainer.hidden text {
-  opacity: 0;
-  transform: translateX(-20%);
-}
-.firstContentBlockContainer .firstFrame .circle-1,
-.firstContentBlockContainer .firstFrame .circle-2,
-.firstContentBlockContainer .firstFrame .circle-3,
-.firstContentBlockContainer .firstFrame .circle-main {
+.frameSvg .circle-main,
+.frameSvg .circle-1,
+.frameSvg .circle-2,
+.frameSvg .circle-3 {
   transform-origin: center;
-  /* animation: scale-loop 100ms ease-in-out alternate infinite; */
+  transform: scale(1);
+  transition: all 500ms cubic-bezier(0.1,0.8,0.2,1.2);
 }
-.firstContentBlockContainer.hidden .firstFrame .circle-1,
-.firstContentBlockContainer.hidden .firstFrame .circle-2,
-.firstContentBlockContainer.hidden .firstFrame .circle-3,
-.firstContentBlockContainer.hidden .firstFrame .circle-main {
-  transform: scale(0);
-  display: none;
-}
-.firstContentBlockContainer .firstFrame .circle-main {
-  transition-delay: 200ms;
-}
-.firstContentBlockContainer .firstFrame .circle-1 {
-  transition-delay: 600ms;
-}
-.firstContentBlockContainer .firstFrame .circle-2 {
+.frameSvg .circle-main {
   transition-delay: 800ms;
 }
-.firstContentBlockContainer .firstFrame .circle-3 {
-  transition-delay: 1000ms;
+.frameSvg .circle-1 {
+  transition-delay: calc(800ms + 1 * var(--time-stagger-duration));
+}
+.frameSvg .circle-2 {
+  transition-delay: calc(800ms + 2 * var(--time-stagger-duration));
+}
+.frameSvg .circle-3 {
+  transition-delay: calc(800ms + 3 * var(--time-stagger-duration));
 }
 
-.secondContentBlockContainer.hidden text {
+/* Hidden styles */
+
+.contentBlockContainer.hidden .imageContainer {
   opacity: 0;
-  transform: translateX(20%);
+  transform: scale(0.8);
+}
+.contentBlockContainer.hidden .frameSvg .circle-main,
+.contentBlockContainer.hidden .frameSvg .circle-1,
+.contentBlockContainer.hidden .frameSvg .circle-2,
+.contentBlockContainer.hidden .frameSvg .circle-3 {
+  transform: scale(0);
+}
+.firstContentBlockContainer.hidden .text {
+  opacity: 0;
+  transform: translateX(-5%);
+}
+.secondContentBlockContainer.hidden .text {
+  opacity: 0;
+  transform: translateX(5%);
+}
+
+/* Animate styles */
+
+.contentBlockContainer.animate .frameSvg .circle-main {
+  animation:
+    scale-loop 4500ms ease-in-out 800ms alternate infinite,
+    opacity-loop 4500ms ease-in-out 800ms alternate infinite;
+}
+.contentBlockContainer.animate .frameSvg .circle-1 {
+  animation:
+    scale-loop 3500ms ease-in-out calc(800ms + 1 * var(--time-stagger-duration)) alternate infinite,
+    opacity-loop 3500ms ease-in-out calc(800ms + 1 * var(--time-stagger-duration)) alternate infinite;
+}
+.contentBlockContainer.animate .frameSvg .circle-2 {
+  animation:
+    scale-loop 3700ms ease-in-out calc(800ms + 2 * var(--time-stagger-duration)) alternate infinite,
+    opacity-loop 3700ms ease-in-out calc(800ms + 2 * var(--time-stagger-duration)) alternate infinite;
+}
+.contentBlockContainer.animate .frameSvg .circle-3 {
+  animation:
+    scale-loop 3900ms ease-in-out calc(800ms + 3 * var(--time-stagger-duration)) alternate infinite,
+    opacity-loop 3900ms ease-in-out calc(800ms + 3 * var(--time-stagger-duration)) alternate infinite;
 }
 
 @keyframes scale-loop {
   0% { }
-  100% {
-    transform: scale(1.01);
-  }
+  100% { transform: scale(1.05); }
+}
+@keyframes opacity-loop {
+  0% { }
+  100% { opacity: 0.5; }
 }
 

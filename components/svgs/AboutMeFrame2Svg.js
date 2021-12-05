@@ -6,43 +6,40 @@ function AboutMeFrame2Svg(props) {
   return (
     <svg
       className={props.className}
-      width={351}
-      height={353}
+      width={420}
+      height={360}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <circle
-        className={styles['circle-1']}
-        cx={21.668}
-        cy={160.552}
-        r={12}
-        transform="rotate(180 21.668 160.552)"
+        className={styles['circle-3']}
+        cx={48.5}
+        cy={201.5}
+        r={22.5}
         stroke="#D05630"
-      />
-      <circle
-        className={styles['circle-2']}
-        r={20}
-        transform="matrix(-1 0 0 1 21.133 241.583)"
-        stroke="#D05630"
+        strokeWidth={1.108}
       />
       <circle
         className={styles['circle-main']}
-        r={150}
-        transform="matrix(-1 0 0 1 191 163.476)"
+        cx={236.303}
+        cy={173.303}
+        r={146.303}
         fill="#555"
       />
       <circle
-        className={styles['circle-3']}
-        r={45}
-        transform="matrix(-1 0 0 1 111.788 305.807)"
+        className={styles['circle-1']}
+        cx={140.5}
+        cy={288.5}
+        r={50.5}
         stroke="#763626"
-        strokeWidth={4}
+        strokeWidth={4.433}
       />
       <circle
-        className={styles['circle-4']}
-        r={28}
-        transform="matrix(-1 0 0 1 322 29)"
+        className={styles['circle-2']}
+        cx={367.5}
+        cy={45.5}
+        r={25.5}
         stroke="#F37249"
         strokeWidth={2}
       />
