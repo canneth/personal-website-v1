@@ -7,7 +7,7 @@ function ImageFrameCircularType2(props) {
     <svg
       className={props.className}
       width={420}
-      height={360}
+      viewBox='0 0 420 360'
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}

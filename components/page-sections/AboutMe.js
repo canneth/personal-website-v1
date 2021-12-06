@@ -1,9 +1,8 @@
 
-import Image from 'next/image';
 import useHiddenRef from '@/hooks/useHiddenRef';
 import SectionTitle from '@/components/common/SectionTitle';
 import FramedGraphicCircularType1 from '@/components/common/FramedGraphicCircularType1';
-import AboutMeFrame2Svg from '@/components/svgs/ImageFrameCircularType2';
+import FramedGraphicCircularType2 from '@/components/common/FramedGraphicCircularType2';
 import styles from './AboutMe.module.css';
 
 function AboutMe() {
@@ -30,9 +29,9 @@ function AboutMe() {
           enjoyment of all.
           <br /><br />
           This led to my first ever foray into programming. Having had the fortune of joining a devoted, fun-loving community
-          centered around reverse-engineering and modifying this game, it was during my time there that I fell into a (rather
-          pleasant) rabbit hole of hexadecimal offsets, assembly instructions, event scripting and pixel art. It was here that
-          I discovered my love for art, problem solving, and sharing the joys of both with others.
+          centered around reverse-engineering and modifying this game, it was during my time there that I fell into a rabbit
+          hole of hexadecimal offsets, assembly instructions, event scripting and pixel art. It was here that I discovered my
+          love for art, problem solving, and sharing the joys of both with others.
           <br /><br />
           Kindling that initial spark from such a long time ago, I have since found my passion in fullstack development--a
           field in which I can do what I love for a constructive purpose.
@@ -41,18 +40,7 @@ function AboutMe() {
         <FramedGraphicCircularType1 imgSrc='/mountain.jpg' imgAlt='Profile picture' />
       </div>
       <div className={`${styles.secondContentBlockContainer} ${styles.contentBlockContainer}`}>
-        <div className={styles.graphicContainer}>
-          <div className={styles.imageContainer}>
-            <Image
-              src='/mountain.jpg'
-              alt='image'
-              width={300}
-              height={300}
-              priority
-            />
-          </div>
-          <AboutMeFrame2Svg className={styles.frameSvg} moduleStyles={styles} />
-        </div>
+        <FramedGraphicCircularType2 imgSrc='/mountain.jpg' imgAlr='Me performing a skateboard ollie' />
         <div className={styles.spacer} />
         <p ref={secondTextBlock} className={`${styles.text} ${styles.secondTextBlock}`}>
           There’s more to life than just a career. Physical activity and the great outdoors revitalise me. I’m on my skateboard

@@ -5,7 +5,7 @@
 .imageContainer {
   position: absolute;
   clip-path: circle(48%);
-  transform: translate(5%, 2%);
+  transform: translate(32%, 5%);
   width: 72%;
 }
 .frameSvg {

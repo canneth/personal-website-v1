@@ -28,12 +28,6 @@
   transition: all 500ms ease-out;
 }
 
-.secondContentBlockContainer .imageContainer {
-  position: absolute;
-  clip-path: circle(48%);
-  transform: scale(1) translateX(18%);
-}
-
 /* Hidden styles */
 
 .firstTextBlock.hidden {
