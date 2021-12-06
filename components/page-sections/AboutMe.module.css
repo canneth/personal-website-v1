@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 50vh;
+  width: 90vw;
   height: 200vh; /* TODO: Remove this, this is temporary! */
 
   --time-stagger-duration: 200ms;
@@ -11,10 +12,6 @@
 
 .sectionTitle {
   width: 30vw;
-}
-
-.contentContainer {
-  width: 100%;
 }
 .contentBlockContainer {
   display: flex;
@@ -31,91 +28,21 @@
   transition: all 500ms ease-out;
 }
 
-.imageContainer {
-  transition: all 400ms cubic-bezier(0.1,0.8,0.2,1.2) 400ms;
-}
-.firstContentBlockContainer .imageContainer {
-  position: absolute;
-  clip-path: circle(48%);
-  transform: scale(1) translateX(4%);
-}
 .secondContentBlockContainer .imageContainer {
   position: absolute;
   clip-path: circle(48%);
   transform: scale(1) translateX(18%);
 }
 
-.frameSvg .circle-main,
-.frameSvg .circle-1,
-.frameSvg .circle-2,
-.frameSvg .circle-3 {
-  transform-origin: center;
-  transform: scale(1);
-  transition: all 500ms cubic-bezier(0.1,0.8,0.2,1.2);
-}
-.frameSvg .circle-main {
-  transition-delay: 800ms;
-}
-.frameSvg .circle-1 {
-  transition-delay: calc(800ms + 1 * var(--time-stagger-duration));
-}
-.frameSvg .circle-2 {
-  transition-delay: calc(800ms + 2 * var(--time-stagger-duration));
-}
-.frameSvg .circle-3 {
-  transition-delay: calc(800ms + 3 * var(--time-stagger-duration));
-}
-
 /* Hidden styles */
 
-.contentBlockContainer.hidden .imageContainer {
-  opacity: 0;
-  transform: scale(0.8);
-}
-.contentBlockContainer.hidden .frameSvg .circle-main,
-.contentBlockContainer.hidden .frameSvg .circle-1,
-.contentBlockContainer.hidden .frameSvg .circle-2,
-.contentBlockContainer.hidden .frameSvg .circle-3 {
-  transform: scale(0);
-}
-.firstContentBlockContainer.hidden .text {
+.firstTextBlock.hidden {
   opacity: 0;
   transform: translateX(-5%);
 }
-.secondContentBlockContainer.hidden .text {
+.secondTextBlock.hidden {
   opacity: 0;
   transform: translateX(5%);
 }
 
-/* Animate styles */
-
-.contentBlockContainer.animate .frameSvg .circle-main {
-  animation:
-    scale-loop 4500ms ease-in-out 800ms alternate infinite,
-    opacity-loop 4500ms ease-in-out 800ms alternate infinite;
-}
-.contentBlockContainer.animate .frameSvg .circle-1 {
-  animation:
-    scale-loop 3500ms ease-in-out calc(800ms + 1 * var(--time-stagger-duration)) alternate infinite,
-    opacity-loop 3500ms ease-in-out calc(800ms + 1 * var(--time-stagger-duration)) alternate infinite;
-}
-.contentBlockContainer.animate .frameSvg .circle-2 {
-  animation:
-    scale-loop 3700ms ease-in-out calc(800ms + 2 * var(--time-stagger-duration)) alternate infinite,
-    opacity-loop 3700ms ease-in-out calc(800ms + 2 * var(--time-stagger-duration)) alternate infinite;
-}
-.contentBlockContainer.animate .frameSvg .circle-3 {
-  animation:
-    scale-loop 3900ms ease-in-out calc(800ms + 3 * var(--time-stagger-duration)) alternate infinite,
-    opacity-loop 3900ms ease-in-out calc(800ms + 3 * var(--time-stagger-duration)) alternate infinite;
-}
-
-@keyframes scale-loop {
-  0% { }
-  100% { transform: scale(1.05); }
-}
-@keyframes opacity-loop {
-  0% { }
-  100% { opacity: 0.5; }
-}
 

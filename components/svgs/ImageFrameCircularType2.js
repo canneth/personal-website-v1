@@ -1,7 +1,7 @@
 
 import PropTypes from 'prop-types';
 
-function AboutMeFrame1Svg(props) {
+function ImageFrameCircularType2(props) {
   const styles = props.moduleStyles;
   return (
     <svg
@@ -13,33 +13,33 @@ function AboutMeFrame1Svg(props) {
       {...props}
     >
       <circle
-        className={styles['circle-1']}
-        cx={322}
-        cy={70}
-        r={20}
+        className={styles['circle-3']}
+        cx={48.5}
+        cy={201.5}
+        r={22.5}
         stroke="#D05630"
-        strokeWidth={1}
+        strokeWidth={1.108}
       />
       <circle
         className={styles['circle-main']}
-        cx={180}
-        cy={170}
-        r={145}
+        cx={236.303}
+        cy={173.303}
+        r={146.303}
         fill="#555"
       />
       <circle
-        className={styles['circle-2']}
-        cx={300}
-        cy={240}
-        r={98}
+        className={styles['circle-1']}
+        cx={140.5}
+        cy={288.5}
+        r={50.5}
         stroke="#763626"
-        strokeWidth={4}
+        strokeWidth={4.433}
       />
-      <circle 
-        className={styles['circle-3']}
-        cx={50}
-        cy={270}
-        r={30}
+      <circle
+        className={styles['circle-2']}
+        cx={367.5}
+        cy={45.5}
+        r={25.5}
         stroke="#F37249"
         strokeWidth={2}
       />
@@ -47,9 +47,9 @@ function AboutMeFrame1Svg(props) {
   );
 }
 
-AboutMeFrame1Svg.propTypes = {
+ImageFrameCircularType2.propTypes = {
   moduleStyles: PropTypes.string.isRequired,
   className: PropTypes.string
 };
 
-export default AboutMeFrame1Svg;
+export default ImageFrameCircularType2;

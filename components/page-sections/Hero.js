@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 import ContactBar from '@/components/contact-bar/ContactBar';
-import Button from '@/components/Button';
+import Button from '@/components/common/Button';
 
 import styles from './Hero.module.css';
 
