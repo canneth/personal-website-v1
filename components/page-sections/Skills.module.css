@@ -1,0 +1,27 @@
+
+.overallContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50vh;
+  height: 100vh; /* TODO: Remove this, as this is only for dev convenience */
+}
+
+.contentContainer {
+  width: 80%;
+  margin-top: 50px;
+}
+.categoryContainer {
+  margin-top: 10px;
+}
+.listHeader {
+
+}
+.list {
+  list-style-type: none;
+  margin-left: 2%;
+}
+.listItem {
+  display: inline-block;
+  margin-right: 30px;
+}

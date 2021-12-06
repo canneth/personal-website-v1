@@ -25,7 +25,7 @@ function useScroll() {
     return () => { window.removeEventListener('scroll', handleScroll) };
   }, [scrollX, scrollY]);
 
-  return ({ scrollX, scrollY, scrollXDirection, scrollYDirection });
+  return { scrollX, scrollY, scrollXDirection, scrollYDirection };
 }
 
 export default useScroll;

@@ -1,0 +1,15 @@
+
+.overallContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.iconSvg {
+
+}
+
+.label {
+  margin-left: 10px;
+  color: var(--color-grey-base);
+}

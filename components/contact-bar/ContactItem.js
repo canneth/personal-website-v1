@@ -13,7 +13,13 @@ function ContactItem(props) {
   return (
     <div className={styles.itemContainer}>
       <a href={props.link}>
-        <span className={`iconify ${styles.iconSvg} mouseover-drop-shadow-style`} data-icon={DATA_ICON_FOR[props.for]}></span>
+        <span
+          className={`iconify ${styles.iconSvg} mouseover-drop-shadow-style`}
+          data-icon={DATA_ICON_FOR[props.for]}
+          data-width={props.widthExpression}
+          data-height={props.heightExpression ? props.heightExpression : 'auto'}
+        >
+        </span>
       </a>
     </div>
   );
@@ -21,8 +27,8 @@ function ContactItem(props) {
 
 ContactItem.propTypes = {
   for: PropTypes.string.isRequired,
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
+  widthExpression: PropTypes.string.isRequired,
+  heightExpression: PropTypes.string,
   link: PropTypes.string
 };
 

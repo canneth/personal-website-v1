@@ -6,7 +6,6 @@ import useWindowSize from "@/hooks/useWindowSize";
 function useHiddenRef(styles) {
   /*
     DESCRIPTION:
-
       Returns a selfRef object that, when used by a component, will:
       1) add a styles.hidden class which is removed from the component when it is scrolled 90%
         of the way from below into the viewport, and
@@ -22,7 +21,6 @@ function useHiddenRef(styles) {
 
     RETURNS:
       * selfRef : An object; The returned object from the useRef() hook.
-
   */
   const { scrollY } = useScroll();
   const { windowHeight } = useWindowSize();

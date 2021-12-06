@@ -19,7 +19,7 @@ function Button(props) {
     iconHeight = props.large ? 14 : 12;
     buttonWidth = props.large ? 80 : 60;
     buttonHeight = props.large ? 21 : 17;
-    textClasses = `${styles.mobileButtonText} text-styles-mobile-small`;
+    textClasses = `${styles.mobileButtonText} text-style-mobile-small`;
   } else {
     iconWidth = props.large ? 22 : 12;
     iconHeight = props.large ? 22 : 12;
