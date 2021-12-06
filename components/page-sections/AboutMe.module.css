@@ -1,11 +1,10 @@
 
-.sectionContainer {
+.overallContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50vh;
   width: 90vw;
-  height: 200vh; /* TODO: Remove this, this is temporary! */
 
   --time-stagger-duration: 200ms;
 }

@@ -15,7 +15,7 @@ function SectionTitle(props) {
 
   return (
     <header
-      className={`${styles.titleContainer} ${props.className}`}
+      className={`${styles.overallContainer} ${props.className}`}
       style={computedStyle}
       ref={selfRef}
     >

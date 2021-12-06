@@ -14,7 +14,7 @@ function AboutMe() {
   return (
     <section
       ref={sectionTitleRef}
-      className={styles.sectionContainer}
+      className={styles.overallContainer}
     >
       <SectionTitle className={styles.sectionTitle} titleOffsetFromLeft={0.5}>
         Hello!

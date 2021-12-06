@@ -8,7 +8,7 @@ import styles from './Hero.module.css';
 
 function Hero() {
   return (
-    <section className={styles.heroContainer}>
+    <section className={styles.overallContainer}>
       <div className={styles.foregroundContainer}>
         <p className={styles.subtitle}>{`Hi! I'm`}</p>
         <h1 className={styles.title}>

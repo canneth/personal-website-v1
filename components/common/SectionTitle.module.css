@@ -1,10 +1,10 @@
 
-.titleContainer {
+.overallContainer {
   display: grid;
   filter: var(--drop-shadow-regular);
   transition: all 500ms ease-out;
 }
-.titleContainer * {
+.overallContainer * {
   transition: all 500ms ease-out;
 }
 .text {
@@ -23,12 +23,12 @@
 }
 
 /* For transitioning into view */
-.titleContainer.hidden {
+.overallContainer.hidden {
   opacity: 0;
 }
-.titleContainer.hidden .leftLine {
+.overallContainer.hidden .leftLine {
   stroke-dashoffset: -100px;
 }
-.titleContainer.hidden .rightLine {
+.overallContainer.hidden .rightLine {
   stroke-dashoffset: 100px;
 }
