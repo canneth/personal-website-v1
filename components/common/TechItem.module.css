@@ -4,6 +4,7 @@
   flex-direction: row;
   align-items: center;
   filter: var(--drop-shadow-regular);
+  gap: 20px;
 }
 
 .iconSvg {
@@ -11,7 +12,5 @@
 }
 
 .label {
-  margin-left: 10px;
-  color: var(--color-grey-base);
-  font-size: 14px;
+  color: var(--color-highlight-dull);
 }
