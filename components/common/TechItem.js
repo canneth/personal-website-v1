@@ -3,39 +3,92 @@ import PropTypes from 'prop-types';
 import styles from './TechItem.module.css';
 
 const DATA_FOR = {
+  // Frontend
   html5: {
-    icon: 'icon-park-outline:github-one',
-    label: 'GitHub'
+    icon: 'vscode-icons:file-type-html',
+    label: 'HTML 5'
   },
   css3: {
-    icon: 'icon-park-outline:github-one',
-    label: 'GitHub'
+    icon: 'vscode-icons:file-type-css',
+    label: 'CSS 3'
   },
   js: {
-    icon: 'icon-park-outline:github-one',
-    label: 'GitHub'
+    icon: 'vscode-icons:file-type-js-official',
+    label: 'JS (ES6+)'
   },
   react: {
-    icon: 'icon-park-outline:github-one',
-    label: 'GitHub'
+    icon: 'vscode-icons:file-type-reactjs',
+    label: 'React'
   },
   redux: {
-    icon: 'icon-park-outline:github-one',
-    label: 'GitHub'
+    icon: 'logos:redux',
+    label: 'Redux'
+  },
+  // Backend
+  nodejs: {
+    icon: 'logos:nodejs-icon',
+    label: 'NodeJS'
+  },
+  postgresql: {
+    icon: 'logos:postgresql',
+    label: 'PostgreSQL'
+  },
+  // Fullstack
+  nextjs: {
+    icon: 'akar-icons:nextjs-fill',
+    label: 'NextJS',
+    color: '#C0C0C0'
+  },
+  // Testing
+  jest: {
+    icon: 'logos:jest',
+    label: 'Jest'
+  },
+  testingLibrary: {
+    icon: 'simple-icons:testinglibrary',
+    label: 'Testing Library',
+    color: '#D91818'
+  },
+  // Version Control
+  git: {
+    icon: 'cib:git',
+    label: 'Git',
+    color: '#DE4C36'
+  },
+  gitHub: {
+    icon: 'cib:github',
+    label: 'GitHub',
+    color: '#C0C0C0'
+  },
+  // Design
+  figma: {
+    icon: 'logos:figma',
+    label: 'Figma'
   }
 }
 
 function TechItem(props) {
+  const icon = DATA_FOR[props.for].icon;
+  const label = DATA_FOR[props.for].label;
+  const color = DATA_FOR[props.for].color ? DATA_FOR[props.for].color : '';
   return (
-    <div className={`${styles.overallContainer} mouseover-drop-shadow-style`}>
+    <div className={`${styles.overallContainer} ${props.className}`}>
       <span
         className={`iconify ${styles.iconSvg}`}
-        data-icon={DATA_FOR[props.for].icon}
+        data-icon={icon}
         data-width={props.iconWidthExpression}
-        data-height={props.iconHeightExpression ? props.iconHeightExpression : 'auto'}
+        data-height={props.iconHeightExpression ? props.iconHeightExpression : props.iconWidthExpression}
+        style={{ color: color }}
       >
       </span>
-      <span className={`${styles.label} text-style-web-regular`}>{DATA_FOR[props.for].label}</span>
+      {
+        props.noLabel ?
+          null
+          :
+          <p className={`${styles.label} text-style-web-regular`}>
+            {label}
+          </p>
+      }
     </div>
   );
 }
@@ -44,6 +97,7 @@ TechItem.propTypes = {
   for: PropTypes.string.isRequired,
   iconWidthExpression: PropTypes.string.isRequired,
   iconHeightExpression: PropTypes.string,
+  noLabel: PropTypes.bool,
   className: PropTypes.string
 }
 

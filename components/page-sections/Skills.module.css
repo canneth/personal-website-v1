@@ -4,24 +4,104 @@
   flex-direction: column;
   align-items: center;
   margin-top: 50vh;
-  height: 100vh; /* TODO: Remove this, as this is only for dev convenience */
+  height: 150vh; /* TODO: Remove this, as this is only for dev convenience */
+
+  --bounce-timing-function: cubic-bezier(0.1,0.8,0.2,1.2);
+  --stagger-duration: 500ms;
+  --list-header-entry-duration: 500ms;
+}
+
+.sectionTitle { 
+  width: 80%;
 }
 
 .contentContainer {
-  width: 80%;
-  margin-top: 50px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
 }
-.categoryContainer {
-  margin-top: 10px;
-}
-.listHeader {
 
+.categoryContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.listHeader {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
 }
 .list {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   list-style-type: none;
-  margin-left: 2%;
+  margin-left: 10%;
 }
 .listItem {
   display: inline-block;
   margin-right: 30px;
+}
+
+/* Hidden styles */
+.categoryContainer.hidden .listHeader {
+  opacity: 0;
+}
+.categoryContainer.hidden .listItem svg {
+  transform: scale(0);
+}
+.categoryContainer.hidden .listItem p {
+  opacity: 0;
+}
+
+/* Animate styles */
+.categoryContainer.animate .listHeader {
+  animation: slide-fade-in var(--list-header-entry-duration) ease-out both;
+}
+.categoryContainer.animate .listItem:nth-child(1) svg {
+  animation: grow-in 500ms var(--bounce-timing-function) calc(var(--list-header-entry-duration) + 0 * var(--stagger-duration)) both;
+}
+.categoryContainer.animate .listItem:nth-child(2) svg {
+  animation: grow-in 500ms var(--bounce-timing-function) calc(var(--list-header-entry-duration) + 1 * var(--stagger-duration)) both;
+}
+.categoryContainer.animate .listItem:nth-child(3) svg {
+  animation: grow-in 500ms var(--bounce-timing-function) calc(var(--list-header-entry-duration) + 2 * var(--stagger-duration)) both;
+}
+.categoryContainer.animate .listItem:nth-child(4) svg {
+  animation: grow-in 500ms var(--bounce-timing-function) calc(var(--list-header-entry-duration) + 3 * var(--stagger-duration)) both;
+}
+.categoryContainer.animate .listItem:nth-child(5) svg {
+  animation: grow-in 500ms var(--bounce-timing-function) calc(var(--list-header-entry-duration) + 4 * var(--stagger-duration)) both;
+}
+.categoryContainer.animate .listItem:nth-child(1) p {
+  animation: fade-in 500ms ease-out calc(var(--list-header-entry-duration) + 100ms + 0 * var(--stagger-duration)) both;
+}
+.categoryContainer.animate .listItem:nth-child(2) p {
+  animation: fade-in 500ms ease-out calc(var(--list-header-entry-duration) + 100ms + 1 * var(--stagger-duration)) both;
+}
+.categoryContainer.animate .listItem:nth-child(3) p {
+  animation: fade-in 500ms ease-out calc(var(--list-header-entry-duration) + 100ms + 2 * var(--stagger-duration)) both;
+}
+.categoryContainer.animate .listItem:nth-child(4) p {
+  animation: fade-in 500ms ease-out calc(var(--list-header-entry-duration) + 100ms + 3 * var(--stagger-duration)) both;
+}
+.categoryContainer.animate .listItem:nth-child(5) p {
+  animation: fade-in 500ms ease-out calc(var(--list-header-entry-duration) + 100ms + 4 * var(--stagger-duration)) both;
+}
+
+
+@keyframes grow-in {
+  0% { transform: scale(0); }
+}
+@keyframes fade-in {
+  0% { opacity: 0; }
+}
+@keyframes slide-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-5%);
+  };
 }

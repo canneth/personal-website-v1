@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  filter: var(--drop-shadow-regular);
 }
 
 .iconSvg {
@@ -12,4 +13,5 @@
 .label {
   margin-left: 10px;
   color: var(--color-grey-base);
+  font-size: 14px;
 }
