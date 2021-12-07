@@ -20,7 +20,7 @@
 
 /* Hidden styles */
 .overallContainer.hidden .imageContainer {
-  opacity: 0;
+  clip-path: circle(0%);
 }
 .overallContainer.hidden .frameSvg .circle-main,
 .overallContainer.hidden .frameSvg .circle-1,
@@ -31,7 +31,7 @@
 
 /* Animate styles */
 .overallContainer.animate .imageContainer {
-  animation: fade-in 800ms ease-in 100ms both;
+  animation: clip-path-grow-in 400ms cubic-bezier(0.1,0.8,0.2,1.1) 100ms both;
 }
 .overallContainer.animate .frameSvg .circle-main {
   animation:
@@ -63,6 +63,9 @@
 }
 @keyframes grow-in {
   0% { transform: scale(0); }
+}
+@keyframes clip-path-grow-in {
+  0% { clip-path: circle(0%); }
 }
 @keyframes scale-loop {
   0% { }

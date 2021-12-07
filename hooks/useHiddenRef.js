@@ -16,7 +16,7 @@ function useHiddenRef(styles) {
       the viewport.
 
     PARAMETERS:
-      * styles: A string; The imported CSS module of the component. This is necessary to apply
+      * styles: An object; The imported CSS module of the component. This is necessary to apply
                 the correct corresponding class to the component.
 
     RETURNS:

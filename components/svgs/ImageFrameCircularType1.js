@@ -10,7 +10,6 @@ function ImageFrameCircularType1(props) {
       viewBox='0 0 420 360'
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
     >
       <circle
         className={styles['circle-1']}
@@ -48,7 +47,7 @@ function ImageFrameCircularType1(props) {
 }
 
 ImageFrameCircularType1.propTypes = {
-  moduleStyles: PropTypes.string.isRequired,
+  moduleStyles: PropTypes.object.isRequired,
   className: PropTypes.string
 };
 
