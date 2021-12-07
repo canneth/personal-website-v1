@@ -61,13 +61,13 @@
   animation-delay: 2000ms;
 }
 .contactBar li:nth-child(2) {
-  animation-delay: 2100ms;
-}
-.contactBar li:nth-child(3) {
   animation-delay: 2200ms;
 }
+.contactBar li:nth-child(3) {
+  animation-delay: 2400ms;
+}
 .contactBar li:nth-child(4) {
-  animation-delay: 2300ms;
+  animation-delay: 2600ms;
 }
 
 .resumeButtonAnimContainer {
@@ -131,7 +131,7 @@
 }
 @keyframes fade-drop-in {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-10px);
     opacity: 0;
   }
   100% {
