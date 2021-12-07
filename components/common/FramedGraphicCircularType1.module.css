@@ -1,12 +1,16 @@
 
 .overallContainer {
   position: relative;
+  
+  --perspective-origin-x: 0px;
+  --perspective-origin-y: 0px;
 }
 .imageContainer {
   position: absolute;
   clip-path: circle(48%);
   transform: translate(5%, 2%);
   width: 72%;
+  z-index: 1;
 }
 .frameSvg {
   width: 100%;

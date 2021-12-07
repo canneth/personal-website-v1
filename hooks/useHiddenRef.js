@@ -33,7 +33,6 @@ function useHiddenRef(styles) {
 
   useEffect(() => {
     const { y: posFromTopOfWindow } = selfRef.current.getBoundingClientRect();
-    console.log(posFromTopOfWindow);
     if (scrollY > 0 && posFromTopOfWindow < 0.9 * windowHeight) {
       selfRef.current.classList.remove(styles.hidden);
       selfRef.current.classList.add(styles.animate);
