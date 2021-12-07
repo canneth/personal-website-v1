@@ -1,7 +1,8 @@
 
-import Hero from '@/components/page-sections/Hero';
-import AboutMe from '@/components/page-sections/AboutMe';
-import Skills from '@/components/page-sections/Skills';
+import Hero from '@/components/page-sections/hero-section/Hero';
+import AboutMe from '@/components/page-sections/about-section/AboutMe';
+import Skills from '@/components/page-sections/skills-section/Skills';
+import Projects from '@/components/page-sections/project-section/Projects';
 
 function MainPage() {
   return (
@@ -9,6 +10,7 @@ function MainPage() {
       <Hero />
       <AboutMe />
       <Skills />
+      <Projects />
     </>
   );
 }

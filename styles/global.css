@@ -72,12 +72,12 @@ body {
 
 h1 {
   margin: 0px;
-  font-weight: normal;
+  font-weight: var(--regular);
 }
 
 p {
   margin: 0px;
-  font-weight: var(--medium);
+  font-weight: var(--regular);
   color: var(--color-grey-base);
   line-height: 1.6;
 }
@@ -98,27 +98,27 @@ button {
 /* Text style classes */
 .text-style-web-large {
   font-size: 22px;
-  font-weight: var(--medium);
+  font-weight: var(--regular);
 }
 .text-style-web-regular {
   font-size: 16px;
-  font-weight: var(--medium);
+  font-weight: var(--regular);
 }
 .text-style-web-small {
   font-size: 12px;
-  font-weight: var(--medium);
+  font-weight: var(--regular);
 }
 .text-style-mobile-large {
   font-size: 12px;
-  font-weight: var(--medium);
+  font-weight: var(--regular);
 }
 .text-style-mobile-regular {
   font-size: 9px;
-  font-weight: var(--medium);
+  font-weight: var(--regular);
 }
 .text-style-mobile-small {
   font-size: 8px;
-  font-weight: var(--medium);
+  font-weight: var(--regular);
 }
 .text-style-mobile-tiny {
   font-size: 7px;

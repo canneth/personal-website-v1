@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   margin-top: 50vh;
-  height: 150vh; /* TODO: Remove this, as this is only for dev convenience */
 
   --bounce-timing-function: cubic-bezier(0.1,0.8,0.2,1.2);
   --stagger-duration: 200ms;
@@ -33,7 +32,7 @@
   display: inline-block;
   width: 150px;
   text-align: right;
-  color: var(--color-grey-dark);
+  color: var(--color-secondary-base);
   font-size: 18px;
 }
 .list {
