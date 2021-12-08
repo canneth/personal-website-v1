@@ -7,7 +7,7 @@ function Projects() {
   return (
     <section className={styles.overallContainer}>
       <SectionTitle titleOffsetFromLeft={0.5} className={styles.sectionTitle}>
-        {`Some Of My Works`}
+        My Works
       </SectionTitle>
       <div className={styles.contentContainer}>
         <ProjectCard title={`JustGo!`}>

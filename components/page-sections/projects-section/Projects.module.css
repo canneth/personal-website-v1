@@ -1,0 +1,17 @@
+
+.overallContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50vh;
+  height: 200vh; /* TODO: Remove this, as this is just for dev convenience */
+}
+.sectionTitle {
+  width: 40vw;
+}
+
+@media only screen and (max-width: 800px) {
+  .sectionTitle {
+    width: 64vw;
+  }
+}

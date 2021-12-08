@@ -10,7 +10,7 @@ const DATA_ICON_FOR = {
 
 function Button(props) {
   return (
-    <button className={`${styles.button} ${props.large ? styles.large : styles.small} ${props.className}`}>
+    <button className={`${styles.button} ${props.small ? styles.small : styles.large} ${props.className}`}>
       <span className={styles.iconContainer}>
         <span
           className={`iconify ${styles.iconSvg}`}

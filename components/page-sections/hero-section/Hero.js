@@ -15,13 +15,11 @@ function Hero() {
           <span className={styles.titlePrefix}>Ca</span>
           <span className={styles.titleSuffix}>nneth</span>
         </h1>
-        <p className={`${styles.description} text-style-web-large`}>
+        <p className={styles.description}>
           I love creating beautiful solutions to real-world problems
         </p>
         <ContactBar className={styles.contactBar}/>
-        <div className={styles.resumeButtonAnimContainer}>
-          <Button className={styles.resumeButton} for='resume' text='Resume' large />
-        </div>
+        <Button className={styles.resumeButton} for='resume' text='Resume' />
       </div>
       <div className={styles.backgroundContainer}>
         <Image

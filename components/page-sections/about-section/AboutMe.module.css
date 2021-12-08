@@ -37,6 +37,9 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .sectionTitle {
+    width: 64vw;
+  }
   .contentBlockContainer {
     margin-top: 50px;
   }
@@ -49,6 +52,9 @@
   .graphicContainer {
     width: 65%;
   }
+  .secondContentBlockContainer .graphicContainer {
+    transform: translateX(-5vw);
+  }
   .text {
     max-width: 80vw;
   }
@@ -56,9 +62,6 @@
 @media only screen and (max-width: 600px) {
   .text {
     font-size: var(--font-size-mobile-regular);
-  }
-  .sectionTitle {
-    width: 64vw;
   }
 }
 

@@ -32,7 +32,6 @@ function SectionTitle(props) {
       </div>
     </header>
   );
-
 }
 
 SectionTitle.propTypes = {

@@ -6,16 +6,16 @@ function ContactBar(props) {
   return (
     <ul className={`${styles.listContainer} ${props.className}`}>
       <li className={styles.listItem}>
-        <ContactItem for='github' widthExpression='clamp(22px, 1.8vw, 26px)' link=''/>
+        <ContactItem for='github' widthExpression='clamp(18px, 2.5vw, 26px)' link=''/>
       </li>
       <li className={styles.listItem}>
-        <ContactItem for='linkedin' widthExpression='clamp(22px, 1.8vw, 26px)' link=''/>
+        <ContactItem for='linkedin' widthExpression='clamp(18px, 2.5vw, 26px)' link=''/>
       </li>
       <li className={styles.listItem}>
-        <ContactItem for='instagram' widthExpression='clamp(22px, 1.8vw, 26px)' link=''/>
+        <ContactItem for='instagram' widthExpression='clamp(18px, 2.5vw, 26px)' link=''/>
       </li>
       <li className={styles.listItem}>
-        <ContactItem for='gmail' widthExpression='clamp(22px, 1.8vw, 26px)' link=''/>
+        <ContactItem for='gmail' widthExpression='clamp(18px, 2.5vw, 26px)' link=''/>
       </li>
     </ul>
   );

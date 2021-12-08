@@ -52,7 +52,7 @@
 }
 
 .contactBar {
-  margin-top: 8%;
+  margin-top: 30px;
 }
 .contactBar li {
   opacity: 0;
@@ -71,8 +71,8 @@
   animation-delay: 2600ms;
 }
 
-.resumeButtonAnimContainer {
-  margin-top: 4%;
+.resumeButton {
+  margin-top: 40px;
   opacity: 0;
   animation: fade-grow-in 500ms ease-out 2800ms forwards;
 }
@@ -157,5 +157,14 @@
   }
   100% {
     color: var(--color-secondary-base);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contactBar {
+    margin-top: 10px;
+  }
+  .resumeButton {
+    margin-top: 15px;
   }
 }
