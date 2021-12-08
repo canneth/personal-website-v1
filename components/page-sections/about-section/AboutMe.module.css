@@ -36,4 +36,29 @@
   transform: translateX(5%);
 }
 
+@media only screen and (max-width: 800px) {
+  .contentBlockContainer {
+    margin-top: 50px;
+  }
+  .firstContentBlockContainer {
+    flex-direction: column-reverse;
+  }
+  .secondContentBlockContainer {
+    flex-direction: column;
+  }
+  .graphicContainer {
+    width: 65%;
+  }
+  .text {
+    max-width: 80vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .text {
+    font-size: var(--font-size-mobile-regular);
+  }
+  .sectionTitle {
+    width: 64vw;
+  }
+}
 

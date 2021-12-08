@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import useWindowSize from "@/hooks/useWindowSize";
 
 function useForMobile(breakpoint) {
@@ -21,7 +21,7 @@ function useForMobile(breakpoint) {
 
   const selfRef = useRef();
 
-  const { windowWidth, windowHeight } = useWindowSize();
+  const { windowWidth } = useWindowSize();
 
   useEffect(() => {
     self.current.setAttribute('forMobile', windowWidth <= breakpoint);

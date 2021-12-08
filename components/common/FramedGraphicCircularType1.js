@@ -10,7 +10,7 @@ function FramedGraphicCircularType1(props) {
   const selfRef = useHiddenRef(styles);
 
   return (
-    <div ref={selfRef} className={styles.overallContainer}>
+    <div ref={selfRef} className={`${styles.overallContainer} ${props.className}`}>
       <div className={styles.imageContainer}>
         <Image
           src={props.imgSrc}

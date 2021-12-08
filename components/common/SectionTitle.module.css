@@ -8,11 +8,17 @@
   transition: all 500ms ease-out;
 }
 .text {
-  margin-left: 40px;
-  margin-right: 40px;
-  font-size: 20px;
+  margin-left: 6vw;
+  margin-right: 6vw;
+  font-size: var(--font-size-web-large);
   font-weight: var(--semibold);
   color: var(--color-highlight-base);
+  text-align: center;
+}
+.lineContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .lineContainer line {
   stroke: var(--color-secondary-dark);
@@ -31,4 +37,11 @@
 }
 .overallContainer.hidden .rightLine {
   stroke-dashoffset: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .text {
+    font-size: var(--font-size-web-regular);
+    max-width: 50vw;
+  }
 }

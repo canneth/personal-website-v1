@@ -1,6 +1,8 @@
 
 .overallContainer {
   position: relative;
+
+  --time-stagger-duration: 200ms;
 }
 .imageContainer {
   position: absolute;

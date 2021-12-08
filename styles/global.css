@@ -7,6 +7,7 @@ body {
   border: 0px;
   outline: 0px;
   font-family: 'Montserrat', 'Futura', sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -34,13 +35,12 @@ body {
   --color-grey-white: #FBFBFB;
 
   /* Font sizes */
-  --font-size-web-large: 24px;
+  --font-size-web-large: 20px;
   --font-size-web-regular: 16px;
   --font-size-web-small: 12px;
   --font-size-mobile-large: 16px;
-  --font-size-mobile-regular: 14px;
-  --font-size-mobile-small: 12px;
-  --font-size-mobile-tiny: 10px;
+  --font-size-mobile-regular: 12px;
+  --font-size-mobile-small: 10px;
 
   /* Font weights */
   --regular: 400;

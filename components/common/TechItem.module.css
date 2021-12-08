@@ -14,3 +14,9 @@
 .label {
   color: var(--color-highlight-dull);
 }
+
+@media only screen and (max-width: 600px) {
+  .label {
+    font-size: var(--font-size-mobile-regular);
+  }
+}
