@@ -14,7 +14,7 @@ function ContactItem(props) {
     <div className={styles.itemContainer}>
       <a href={props.link}>
         <span
-          className={`iconify ${styles.iconSvg} mouseover-drop-shadow-style`}
+          className={`iconify ${styles.iconSvg}`}
           data-icon={DATA_ICON_FOR[props.for]}
           data-width={props.widthExpression}
           data-height={props.heightExpression ? props.heightExpression : 'auto'}

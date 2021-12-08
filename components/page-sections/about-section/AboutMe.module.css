@@ -5,8 +5,6 @@
   align-items: center;
   margin-top: 50vh;
   width: 90vw;
-
-  --time-stagger-duration: 200ms;
 }
 
 .sectionTitle {
