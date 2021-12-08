@@ -72,20 +72,20 @@ function TechItem(props) {
   const label = DATA_FOR[props.for].label;
   const color = DATA_FOR[props.for].color ? DATA_FOR[props.for].color : '';
   return (
-    <div className={`${styles.overallContainer} ${props.className}`}>
+    <div className={`${styles.overallContainer} ${props.className} ${props.noLabel ? styles.tooltipEnabled : ''}`}>
       <span
         className={`iconify ${styles.iconSvg}`}
         data-icon={icon}
         data-width={props.iconWidthExpression}
         data-height={props.iconHeightExpression ? props.iconHeightExpression : props.iconWidthExpression}
         style={{ color: color }}
-      >
-      </span>
+      />
+      <span className={styles.tooltip}>{label}</span>
       {
         props.noLabel ?
           null
           :
-          <p className={`${styles.label} text-style-web-regular`}>
+          <p className={`${styles.label}`}>
             {label}
           </p>
       }

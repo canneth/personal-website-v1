@@ -19,7 +19,7 @@ function Hero() {
           I love creating beautiful solutions to real-world problems
         </p>
         <ContactBar className={styles.contactBar}/>
-        <Button className={styles.resumeButton} for='resume' text='Resume' />
+        <Button className={styles.resumeButton} for='resume'>Resume</Button>
       </div>
       <div className={styles.backgroundContainer}>
         <Image

@@ -1,8 +1,24 @@
 
 .overallContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 120px;
+  border-radius: 3px;
   filter: var(--drop-shadow-regular);
 }
 .text {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  color: var(--color-grey-white);
+}
+
+@media only screen and (max-width: 600px) {
+  .overallContainer {
+    height: 26px;
+    width: 100px;
+  }
+  .text {
+    font-size: var(--font-size-mobile-regular);
+  }
 }

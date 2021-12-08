@@ -8,11 +8,29 @@ function DevStatusBadge(props) {
   const selfRef = useRef();
 
   let backgroundColor = '';
-  switch(props.status) {
-    case 'in-progress': { backgroundColor = '#CE7625'; break; }
-    case 'complete': { backgroundColor = '#37751A'; break; }
-    case 'kiv': { backgroundColor = '#747474'; break; }
-    default: { backgroundColor = '#747474'; break; }
+  let text = '';
+
+  switch (props.status) {
+    case 'in-progress': {
+      backgroundColor = '#CE7625';
+      text = 'In Progress';
+      break;
+    }
+    case 'complete': {
+      backgroundColor = '#37751A';
+      text = 'Complete';
+      break;
+    }
+    case 'kiv': {
+      backgroundColor = '#747474';
+      text = 'KIV';
+      break;
+    }
+    default: {
+      backgroundColor = '#747474';
+      text = 'KIV';
+      break;
+    }
   }
 
   useEffect(() => {
@@ -21,7 +39,7 @@ function DevStatusBadge(props) {
 
   return (
     <div ref={selfRef} className={styles.overallContainer}>
-      <p className={styles.text}>{props.children}</p>
+      <p className={styles.text}>{text}</p>
     </div>
   );
 }

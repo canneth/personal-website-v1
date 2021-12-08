@@ -18,8 +18,8 @@ function Button(props) {
         >
         </span>
       </span>
-      <span className={styles.text} >
-        {props.text}
+      <span className={styles.text}>
+        {props.children}
       </span>
     </button>
   );
@@ -27,7 +27,6 @@ function Button(props) {
 
 Button.propTypes = {
   for: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
   small: PropTypes.bool,
   className: PropTypes.string
 };

@@ -1,4 +1,61 @@
 
 .overallContainer {
+  
+}
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 400px;
+  height: 100%;
+}
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.title {
+  color: var(--color-grey-white);
+  font-weight: var(--medium);
+  justify-self: flex-start;
+}
+.devStatusBadge {
+  justify-self: flex-end;
+}
+.text {
 
+}
+
+.linkButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.techContainer {
+
+}
+.techHeader {
+  color: var(--color-highlight-base);
+  font-size: var(--font-size-web-regular);
+}
+.techList {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  gap: 30px;
+  list-style: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: var(--font-size-mobile-large);
+  }
+  .techHeader {
+    font-size: var(--font-size-mobile-regular);
+  }
+  .text {
+    font-size: var(--font-size-mobile-regular);
+  }
 }

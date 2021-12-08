@@ -1,22 +1,47 @@
 
 import PropTypes from 'prop-types';
 import DevStatusBadge from '@/components/common/DevStatusBadge';
+import Button from '@/components/common/Button';
 import styles from './ProjectCard.module.css';
+import TechItem from '@/components/common/TechItem';
 
 function ProjectCard(props) {
   return (
     <div className={styles.overallContainer}>
-      <h1>{props.title}</h1>
-      <DevStatusBadge status='in-progress'>In Progress</DevStatusBadge>
-      <p className={styles.description}>
-        {props.children}
-      </p>
+      <div className={styles.contentContainer}>
+        <header className={styles.headerContainer}>
+          <h1 className={styles.title}>{props.title}</h1>
+          <DevStatusBadge status={props.devStatus} className={styles.devStatusBadge} />
+        </header>
+        <p className={styles.text}>
+          {props.children}
+        </p>
+        <div className={styles.linkButtonsContainer}>
+          <Button for='github' small>GitHub</Button>
+          <Button for='extlink' small>Try It!</Button>
+        </div>
+        <div className={styles.techContainer}>
+          <h1 className={styles.techHeader}>Technologies</h1>
+          <ol className={styles.techList}>
+            {
+              props.techList.map((techItem, i) => (
+                <li key={i} className={styles.techListItem}>
+                  <TechItem for={techItem} iconWidthExpression='clamp(24px, 5vw, 30px)' noLabel/>
+                </li>
+              ))
+            }
+          </ol>
+        </div>
+      </div>
+      {/* TODO: Add graphic here! */}
     </div>
   );
 }
 
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
+  devStatus: PropTypes.string.isRequired,
+  techList: PropTypes.array.isRequired,
   mirrored: PropTypes.bool,
   forMobile: PropTypes.bool,
   className: PropTypes.string

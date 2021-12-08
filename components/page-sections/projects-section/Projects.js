@@ -10,12 +10,18 @@ function Projects() {
         My Works
       </SectionTitle>
       <div className={styles.contentContainer}>
-        <ProjectCard title={`JustGo!`}>
-          I AM A PROJECT CARD AND THIS IS MY DESCRIPTION!!
+        <ProjectCard
+          title={`JustGo!`}
+          devStatus='in-progress'
+          techList={['nextjs', 'redux']}
+        >
+          A simple app that helps you decide on a local place to go
+          for the times when you just feel like getting out of the house
+          but have no specific location in mind.
         </ProjectCard>
       </div>
     </section>
-      );
+  );
 }
 
       export default Projects;
