@@ -23,13 +23,11 @@
 .title {
   color: var(--color-grey-white);
   font-weight: var(--medium);
+  font-size: var(--font-size-web-large);
   justify-self: flex-start;
 }
 .devStatusBadge {
   justify-self: flex-end;
-}
-.text {
-
 }
 
 .linkButtonsContainer {
@@ -66,7 +64,7 @@
     position: absolute;
     gap: 10px;
     right: 0%;
-    top: 10%;
+    top: 16%;
   }
   .linkButtonsContainer {
     justify-content: flex-end;
@@ -95,6 +93,9 @@
   }
   .techHeader {
     font-size: var(--font-size-mobile-regular);
+  }
+  .techList {
+    gap: 12px;
   }
   .text {
     font-size: var(--font-size-mobile-regular);

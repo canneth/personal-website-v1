@@ -110,9 +110,6 @@
   .sectionTitle {
     width: 68vw;
   }
-  .sectionTitle h1 {
-    font-size: var(--font-size-mobile-large);
-  }
   .listHeader {
     font-size: var(--font-size-mobile-regular);
     font-weight: var(--medium);

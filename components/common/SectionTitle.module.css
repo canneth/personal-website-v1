@@ -41,7 +41,7 @@
 
 @media only screen and (max-width: 600px) {
   .text {
-    font-size: var(--font-size-web-regular);
+    font-size: var(--font-size-mobile-large);
     line-height: 1.4;
     max-width: 40vw;
   }

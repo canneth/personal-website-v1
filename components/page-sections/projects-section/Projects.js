@@ -16,8 +16,17 @@ function Projects() {
           techList={['nextjs', 'redux']}
         >
           {`Ever felt like getting out of the house,
-          but don't know where to go? This app helps
-          you find that perfect spot!`}
+          but can't decide where to go? This app helps
+          you find that perfect spot.`}
+        </ProjectCard>
+        <ProjectCard
+          title={`Personal Site v1`}
+          devStatus='complete'
+          techList={['nextjs', 'redux']}
+        >
+          {`First ever feeble attempts at HTML, CSS
+          and JS. The cracks show, but we all start
+          somewhere!`}
         </ProjectCard>
       </div>
     </section>

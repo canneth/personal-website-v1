@@ -8,6 +8,12 @@
   height: 200vh; /* TODO: Remove this, as this is just for dev convenience */
   gap: 200px;
 }
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 200px;
+}
 .sectionTitle {
   width: 40vw;
 }

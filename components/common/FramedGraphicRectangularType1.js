@@ -18,8 +18,8 @@ function FramedGraphicRectangularType1(props) {
           className={styles.image}
           src={props.imgSrc}
           alt={props.imgAlt}
-          width={1600}
-          height={900}
+          width={1200}
+          height={800}
         />
       </div>
     </div>

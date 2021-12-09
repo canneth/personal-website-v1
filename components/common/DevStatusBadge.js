@@ -12,12 +12,12 @@ function DevStatusBadge(props) {
 
   switch (props.status) {
     case 'in-progress': {
-      backgroundColor = '#CE7625';
+      backgroundColor = '#9E5918';
       text = 'In Progress';
       break;
     }
     case 'complete': {
-      backgroundColor = '#37751A';
+      backgroundColor = '#22450F';
       text = 'Complete';
       break;
     }

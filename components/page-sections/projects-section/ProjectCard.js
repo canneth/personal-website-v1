@@ -47,7 +47,6 @@ ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   devStatus: PropTypes.string.isRequired,
   techList: PropTypes.array.isRequired,
-  mirrored: PropTypes.bool,
   forMobile: PropTypes.bool,
   className: PropTypes.string
 }
