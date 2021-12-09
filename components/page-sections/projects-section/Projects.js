@@ -1,6 +1,7 @@
 
 import SectionTitle from '@/components/common/SectionTitle';
-import ProjectCard from './ProjectCard.js';
+import ProjectCardType1 from './ProjectCardType1.js';
+import ProjectCardType2 from './ProjectCardType2.js';
 import styles from './Projects.module.css';
 
 function Projects() {
@@ -10,24 +11,24 @@ function Projects() {
         My Works
       </SectionTitle>
       <div className={styles.contentContainer}>
-        <ProjectCard
+        <ProjectCardType1
           title={`JustGo!`}
           devStatus='in-progress'
-          techList={['nextjs', 'redux']}
+          techList={['nextjs', 'redux', 'nodejs', 'postgresql']}
         >
           {`Ever felt like getting out of the house,
           but can't decide where to go? This app helps
           you find that perfect spot.`}
-        </ProjectCard>
-        <ProjectCard
+        </ProjectCardType1>
+        <ProjectCardType2
           title={`Personal Site v1`}
           devStatus='complete'
-          techList={['nextjs', 'redux']}
+          techList={['html5', 'css3', 'js']}
         >
           {`First ever feeble attempts at HTML, CSS
           and JS. The cracks show, but we all start
           somewhere!`}
-        </ProjectCard>
+        </ProjectCardType2>
       </div>
     </section>
   );

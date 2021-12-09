@@ -5,7 +5,6 @@
   align-items: center;
   margin-top: 50vh;
   width: 80vw;
-  height: 200vh; /* TODO: Remove this, as this is just for dev convenience */
   gap: 200px;
 }
 .contentContainer {
@@ -18,7 +17,22 @@
   width: 40vw;
 }
 
+@media only screen and (max-width: 1000px) {
+  .overallContainer {
+    gap: 120px;
+  }
+  .contentContainer {
+    gap: 120px;
+  }
+}
+
 @media only screen and (max-width: 800px) {
+  .overallContainer {
+    gap: 30vw;
+  }
+  .contentContainer {
+    gap: 30vw;
+  }
   .sectionTitle {
     width: 64vw;
   }

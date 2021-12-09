@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 import DevStatusBadge from '@/components/common/DevStatusBadge';
 import Button from '@/components/common/Button';
 import TechItem from '@/components/common/TechItem';
-import FramedGraphicRectangularType1 from '@/components/common/FramedGraphicRectangularType1';
-import styles from './ProjectCard.module.css';
+import FramedGraphicRectangularType2 from '@/components/common/FramedGraphicRectangularType2';
+import useAnimateInRef from '@/hooks/useAnimateInRef';
+import styles from './ProjectCardType2.module.css';
 
-function ProjectCard(props) {
+function ProjectCardType2(props) {
+
+  const selfRef = useAnimateInRef(styles);
+
   return (
-    <div className={styles.overallContainer}>
-      <FramedGraphicRectangularType1
-        imgSrc='/landscape.jpg'
-        imgAlt='Poster of the landing page of the JustGo web app'
-        className={styles.graphic}
-      />
+    <div ref={selfRef} className={styles.overallContainer}>
       <div className={styles.contentContainer}>
         <header className={styles.headerContainer}>
           <h1 className={styles.title}>{props.title}</h1>
@@ -39,11 +38,16 @@ function ProjectCard(props) {
           </ol>
         </div>
       </div>
+      <FramedGraphicRectangularType2
+        imgSrc='/landscape.jpg'
+        imgAlt='Poster of the landing page of the JustGo web app'
+        className={styles.graphic}
+      />
     </div>
   );
 }
 
-ProjectCard.propTypes = {
+ProjectCardType2.propTypes = {
   title: PropTypes.string.isRequired,
   devStatus: PropTypes.string.isRequired,
   techList: PropTypes.array.isRequired,
@@ -51,4 +55,4 @@ ProjectCard.propTypes = {
   className: PropTypes.string
 }
 
-export default ProjectCard;
+export default ProjectCardType2;
