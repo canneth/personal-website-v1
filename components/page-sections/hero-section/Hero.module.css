@@ -20,7 +20,7 @@
 }
 
 .subtitle {
-  margin-bottom: -16px;
+  margin-bottom: -30px;
   font-size: clamp(18px, 2vw, 30px);
   color: var(--color-highlight-base);
   filter: var(--drop-shadow-regular);
@@ -160,7 +160,10 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
+  .subtitle {
+    margin-bottom: -10px; 
+  }
   .contactBar {
     margin-top: 10px;
   }
