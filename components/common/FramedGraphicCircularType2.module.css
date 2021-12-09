@@ -1,79 +1,129 @@
 
 .overallContainer {
   position: relative;
-  
-  --time-stagger-duration: 200ms;
+  transform: translateX(10%);
+  perspective-origin: -20% 120%;
+  perspective: 1000px;
+
+  --stagger-duration: 200ms;
+  --bounce-timing-function: cubic-bezier(0.1,0.8,0.2,1.2);
 }
-.imageContainer {
+.overallContainer::before {
+  content: ' ';
   position: absolute;
-  clip-path: circle(48%);
-  transform: translate(32%, 5%);
-  width: 72%;
-}
-.frameSvg {
   width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: translateZ(-100px);
+  background: var(--color-grey-darkest);
+  filter: var(--drop-shadow-regular);
 }
-.frameSvg .circle-main,
-.frameSvg .circle-1,
-.frameSvg .circle-2,
-.frameSvg .circle-3 {
-  transform-origin: center;
+.imageContainer span {
+  border-radius: 50%;
+  filter: var(--drop-shadow-regular);
+}
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  border-style: solid;
+  aspect-ratio: 1 / 1;
+  filter: var(--drop-shadow-regular);
+}
+.circle-1 {
+  width: 10%;
+  border-color: var(--color-secondary-darkest);
+  border-width: 3px;
+  left: -20%;
+  bottom: 60%;
+}
+.circle-2 {
+  width: 18%;
+  border-color: var(--color-secondary-dark);
+  border-width: 3px;
+  left: -28%;
+  bottom: 30%;
+  z-index: -1;
+}
+.circle-3 {
+  width: 40%;
+  border-color: var(--color-secondary-base);
+  border-width: 3px;
+  left: -10%;
+  bottom: -10%;
+  z-index: 1;
 }
 
 /* Hidden styles */
-.overallContainer.hidden .imageContainer {
-  clip-path: circle(0%);
-}
-.overallContainer.hidden .frameSvg .circle-main,
-.overallContainer.hidden .frameSvg .circle-1,
-.overallContainer.hidden .frameSvg .circle-2,
-.overallContainer.hidden .frameSvg .circle-3 {
-  transform: scale(0);
+.overallContainer.hidden {
+  opacity: 0;
 }
 
 /* Animate styles */
 .overallContainer.animate .imageContainer {
-  animation: clip-path-grow-in 400ms cubic-bezier(0.1,0.8,0.2,1.1) 100ms both;
+  animation: img-translate-fade-in 800ms ease-out 400ms backwards;
 }
-.overallContainer.animate .frameSvg .circle-main {
-  animation:
-    grow-in 500ms cubic-bezier(0.1,0.8,0.2,1.2) 500ms both,
-    scale-loop 4500ms ease-in-out 500ms alternate infinite,
-    opacity-loop 4500ms ease-in-out 500ms alternate infinite;
+.overallContainer.animate::before {
+  animation: shadow-translate-fade-in 800ms ease-out backwards;
 }
-.overallContainer.animate .frameSvg .circle-1 {
-  animation:
-    grow-in 500ms cubic-bezier(0.1,0.8,0.2,1.2) calc(500ms + 1 * var(--time-stagger-duration)) both,
-    scale-loop 3500ms ease-in-out calc(500ms + 1 * var(--time-stagger-duration)) alternate infinite,
-    opacity-loop 3500ms ease-in-out calc(500ms + 1 * var(--time-stagger-duration)) alternate infinite;
+.overallContainer.animate .circle-1 {
+  animation: decor-translate-fade-in 500ms var(--bounce-timing-function) calc(500ms + 2 * var(--stagger-duration)) backwards;
 }
-.overallContainer.animate .frameSvg .circle-2 {
-  animation:
-    grow-in 500ms cubic-bezier(0.1,0.8,0.2,1.2) calc(500ms + 2 * var(--time-stagger-duration)) both,
-    scale-loop 3700ms ease-in-out calc(500ms + 2 * var(--time-stagger-duration)) alternate infinite,
-    opacity-loop 3700ms ease-in-out calc(500ms + 2 * var(--time-stagger-duration)) alternate infinite;
+.overallContainer.animate .circle-2 {
+  animation: decor-translate-fade-in 500ms var(--bounce-timing-function) calc(500ms + 1 * var(--stagger-duration)) backwards;
 }
-.overallContainer.animate .frameSvg .circle-3 {
-  animation:
-    grow-in 500ms cubic-bezier(0.1,0.8,0.2,1.2) calc(500ms + 3 * var(--time-stagger-duration)) both,
-    scale-loop 3900ms ease-in-out calc(500ms + 3 * var(--time-stagger-duration)) alternate infinite,
-    opacity-loop 3900ms ease-in-out calc(500ms + 3 * var(--time-stagger-duration)) alternate infinite;
+.overallContainer.animate .circle-3 {
+  animation: decor-translate-fade-in 500ms var(--bounce-timing-function) calc(500ms + 0 * var(--stagger-duration)) backwards;
 }
 
-@keyframes fade-in {
-  0% { opacity: 0; }
+/* Interactable styles */
+.overallContainer.interactable .imageContainer {
+  animation: translate-loop 3000ms ease-in-out calc(800ms + 2 * var(--stagger-duration)) alternate infinite;
 }
-@keyframes grow-in {
-  0% { transform: scale(0); }
+.overallContainer.interactable::before {
+  animation: translate-loop 3000ms ease-in-out calc(800ms + 2 * var(--stagger-duration)) alternate infinite;
 }
-@keyframes clip-path-grow-in {
-  0% { clip-path: circle(0%); }
+.overallContainer.interactable .circle-1 {
+  animation: translate-loop 3200ms ease-in-out calc(800ms + 2 * var(--stagger-duration)) alternate infinite;
 }
-@keyframes scale-loop {
-  0% { }
-  100% { transform: scale(1.05); }
+.overallContainer.interactable .circle-2 {
+  animation: translate-loop 2800ms ease-in-out calc(800ms + 1 * var(--stagger-duration)) alternate infinite;
 }
-@keyframes opacity-loop {
-  0% { }
-  100% { opacity: 0.5; }
+.overallContainer.interactable .circle-3 {
+  animation: translate-loop 3500ms ease-in-out calc(800ms + 0 * var(--stagger-duration)) alternate infinite;
+}
+
+@keyframes img-translate-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateZ(-50px);
+  }
+}
+@keyframes shadow-translate-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateZ(-150px);
+  }
+}
+@keyframes decor-translate-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateZ(-100px);
+  }
+}
+@keyframes translate-loop {
+  100% {
+    transform: translateZ(-20px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .circle-1 {
+    border-width: 1px;
+  }
+  .circle-2 {
+    border-width: 2px;
+  }
+  .circle-3 {
+    border-width: 2px;
+  }
 }

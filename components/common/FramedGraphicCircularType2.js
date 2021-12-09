@@ -1,13 +1,12 @@
 
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import ImageFrameCircularType2 from '@/components/svgs/ImageFrameCircularType2';
 import useAnimateInRef from '@/hooks/useAnimateInRef';
 import styles from './FramedGraphicCircularType2.module.css';
 
 function FramedGraphicCircularType2(props) {
 
-  const selfRef = useAnimateInRef(styles);
+  const selfRef = useAnimateInRef(styles, 1400);
 
   return (
     <div ref={selfRef} className={`${styles.overallContainer} ${props.className}`}>
@@ -20,7 +19,9 @@ function FramedGraphicCircularType2(props) {
           priority
         />
       </div>
-      <ImageFrameCircularType2 className={styles.frameSvg} moduleStyles={styles} />
+      <div className={`${styles.circle} ${styles['circle-1']}`} />
+      <div className={`${styles.circle} ${styles['circle-2']}`} />
+      <div className={`${styles.circle} ${styles['circle-3']}`} />
     </div>
   );
 }

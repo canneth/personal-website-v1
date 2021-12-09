@@ -4,17 +4,23 @@
   flex-direction: column;
   align-items: center;
   margin-top: 50vh;
-  width: 90vw;
+  gap: 150px;
 }
-
 .sectionTitle {
   width: 30vw;
+}
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  gap: 100px;
 }
 .contentBlockContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 150px;
+  gap: 20px;
 }
 .spacer {
   min-width: 100px;
@@ -40,8 +46,14 @@
   .sectionTitle {
     width: 64vw;
   }
+  .overallContainer {
+    gap: 50px;
+  }
+  .contentContainer {
+    gap: 50px;
+  }
   .contentBlockContainer {
-    margin-top: 50px;
+    gap: 10px;
   }
   .firstContentBlockContainer {
     flex-direction: column-reverse;
@@ -49,11 +61,11 @@
   .secondContentBlockContainer {
     flex-direction: column;
   }
-  .graphicContainer {
-    width: 65%;
-  }
   .secondContentBlockContainer .graphicContainer {
     transform: translateX(-5vw);
+  }
+  .graphic {
+    width: 50%;
   }
   .text {
     max-width: 80vw;
