@@ -1,17 +1,17 @@
 
 import SectionTitle from '@/components/common/SectionTitle';
 import TechItem from '@/components/common/TechItem';
-import useHiddenRef from '@/hooks/useHiddenRef';
+import useAnimateInRef from '@/hooks/useAnimateInRef';
 import styles from './Skills.module.css';
 
 function Skills() {
 
-  const frontendRef = useHiddenRef(styles);
-  const backendRef = useHiddenRef(styles);
-  const fullstackRef = useHiddenRef(styles);
-  const testingRef = useHiddenRef(styles);
-  const verControlRef = useHiddenRef(styles);
-  const designRef = useHiddenRef(styles);
+  const frontendRef = useAnimateInRef(styles);
+  const backendRef = useAnimateInRef(styles);
+  const fullstackRef = useAnimateInRef(styles);
+  const testingRef = useAnimateInRef(styles);
+  const verControlRef = useAnimateInRef(styles);
+  const designRef = useAnimateInRef(styles);
 
   return (
     <section className={styles.overallContainer}>

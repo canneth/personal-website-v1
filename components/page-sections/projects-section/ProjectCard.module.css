@@ -1,17 +1,22 @@
 
 .overallContainer {
-  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 .contentContainer {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 400px;
-  height: 100%;
+  width: 32%;
+  min-width: 350px;
 }
 .headerContainer {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
 }
@@ -34,7 +39,9 @@
 }
 
 .techContainer {
-
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .techHeader {
   color: var(--color-highlight-base);
@@ -43,14 +50,48 @@
 .techList {
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
   gap: 30px;
   list-style: none;
 }
 
+.graphic {
+  max-width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+  .overallContainer {
+    transform: translate(0%);
+  }
+  .contentContainer {
+    position: absolute;
+    gap: 10px;
+    right: 0%;
+    top: 10%;
+  }
+  .linkButtonsContainer {
+    justify-content: flex-end;
+  }
+  .techContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .graphic {
+    max-width: 80%;
+    pointer-events: none;
+  }
+  .graphic span {
+    filter: brightness(20%) var(--drop-shadow-mouseoff);
+  }
+  
+}
 @media only screen and (max-width: 600px) {
   .title {
     font-size: var(--font-size-mobile-large);
+  }
+  .contentContainer {
+    gap: 10px;
+    min-width: 80%;
   }
   .techHeader {
     font-size: var(--font-size-mobile-regular);

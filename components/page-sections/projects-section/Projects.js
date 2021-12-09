@@ -15,9 +15,9 @@ function Projects() {
           devStatus='in-progress'
           techList={['nextjs', 'redux']}
         >
-          A simple app that helps you decide on a local place to go
-          for the times when you just feel like getting out of the house
-          but have no specific location in mind.
+          {`Ever felt like getting out of the house,
+          but don't know where to go? This app helps
+          you find that perfect spot!`}
         </ProjectCard>
       </div>
     </section>

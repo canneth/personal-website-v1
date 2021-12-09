@@ -24,7 +24,7 @@ function ImageFrameCircularType2(props) {
         cx={236.303}
         cy={173.303}
         r={146.303}
-        fill="#555"
+        fill="#323232"
       />
       <circle
         className={styles['circle-1']}

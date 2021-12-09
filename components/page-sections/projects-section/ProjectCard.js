@@ -2,12 +2,18 @@
 import PropTypes from 'prop-types';
 import DevStatusBadge from '@/components/common/DevStatusBadge';
 import Button from '@/components/common/Button';
-import styles from './ProjectCard.module.css';
 import TechItem from '@/components/common/TechItem';
+import FramedGraphicRectangularType1 from '@/components/common/FramedGraphicRectangularType1';
+import styles from './ProjectCard.module.css';
 
 function ProjectCard(props) {
   return (
     <div className={styles.overallContainer}>
+      <FramedGraphicRectangularType1
+        imgSrc='/landscape.jpg'
+        imgAlt='Poster of the landing page of the JustGo web app'
+        className={styles.graphic}
+      />
       <div className={styles.contentContainer}>
         <header className={styles.headerContainer}>
           <h1 className={styles.title}>{props.title}</h1>
@@ -33,7 +39,6 @@ function ProjectCard(props) {
           </ol>
         </div>
       </div>
-      {/* TODO: Add graphic here! */}
     </div>
   );
 }

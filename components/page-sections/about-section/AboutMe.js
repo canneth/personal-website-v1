@@ -1,5 +1,5 @@
 
-import useHiddenRef from '@/hooks/useHiddenRef';
+import useAnimateInRef from '@/hooks/useAnimateInRef';
 import SectionTitle from '@/components/common/SectionTitle';
 import FramedGraphicCircularType1 from '@/components/common/FramedGraphicCircularType1';
 import FramedGraphicCircularType2 from '@/components/common/FramedGraphicCircularType2';
@@ -7,9 +7,9 @@ import styles from './AboutMe.module.css';
 
 function AboutMe() {
 
-  const sectionTitleRef = useHiddenRef(styles);
-  const firstTextBlock = useHiddenRef(styles);
-  const secondTextBlock = useHiddenRef(styles);
+  const sectionTitleRef = useAnimateInRef(styles);
+  const firstTextBlock = useAnimateInRef(styles);
+  const secondTextBlock = useAnimateInRef(styles);
 
   return (
     <section

@@ -15,8 +15,8 @@
 
 @media only screen and (max-width: 600px) {
   .overallContainer {
-    height: 26px;
-    width: 100px;
+    height: 24px;
+    width: 90px;
   }
   .text {
     font-size: var(--font-size-mobile-regular);

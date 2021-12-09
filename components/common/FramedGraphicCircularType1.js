@@ -2,12 +2,12 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import ImageFrameCircularType1 from '@/components/svgs/ImageFrameCircularType1';
-import useHiddenRef from '@/hooks/useHiddenRef';
+import useAnimateInRef from '@/hooks/useAnimateInRef';
 import styles from './FramedGraphicCircularType1.module.css';
 
 function FramedGraphicCircularType1(props) {
 
-  const selfRef = useHiddenRef(styles);
+  const selfRef = useAnimateInRef(styles);
 
   return (
     <div ref={selfRef} className={`${styles.overallContainer} ${props.className}`}>

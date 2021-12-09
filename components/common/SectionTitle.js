@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types';
-import useHiddenRef from '@/hooks/useHiddenRef';
+import useAnimateInRef from '@/hooks/useAnimateInRef';
 import styles from './SectionTitle.module.css';
 
 function SectionTitle(props) {
@@ -11,7 +11,7 @@ function SectionTitle(props) {
     gridTemplateColumns: `${leftLineFraction} auto ${rightLineFraction}`
   };
 
-  const selfRef = useHiddenRef(styles);
+  const selfRef = useAnimateInRef(styles);
 
   return (
     <header

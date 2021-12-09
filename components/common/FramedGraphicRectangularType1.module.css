@@ -1,0 +1,145 @@
+
+.overallContainer {
+  position: relative;
+  perspective: 500px;
+
+  --bounce-timing-function: cubic-bezier(0.1,0.8,0.2,1.2);
+  --stagger-duration: 200ms;
+}
+.imageContainer {
+  width: 100%;
+  perspective-origin: bottom left;
+  perspective: 500px;
+}
+.imageContainer span {
+  filter: grayscale(50%) var(--drop-shadow-mouseoff);
+  border-radius: 2% / 3%;
+  transform: rotateY(5deg);
+  transition: all 200ms ease-out;
+}
+.imageContainer::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--color-grey-darkest);
+  z-index: -1;
+  border-radius: 2% / 3%;
+  transform: rotateY(5deg) scale(1.08) translateZ(-100px);
+  transition: all 200ms ease-out;
+  opacity: 0.5;
+  filter: var(--drop-shadow-mouseoff);
+}
+
+.circle {
+  z-index: -1;
+  position: absolute;
+  border-radius: 50%;
+  transition: all 500ms ease-out;
+}
+.circle-1 {
+  width: 40%;
+  aspect-ratio: 1;
+  border: 4px solid var(--color-secondary-dark);
+  top: 60%;
+  left: -20%;
+  animation: 
+}
+.circle-2 {
+  width: 20%;
+  aspect-ratio: 1;
+  border: 3px solid var(--color-secondary-dark);
+  top: -40%;
+  left: -5%;
+}
+.circle-3 {
+  width: 12%;
+  aspect-ratio: 1;
+  border: 2px solid var(--color-secondary-base);
+  left: -20%;
+}
+
+
+/* Interactable styles */
+.overallContainer.interactable:hover .imageContainer span {
+  filter: grayscale(0%) var(--drop-shadow-mouseon);
+  transform: rotateY(0deg) scale(1.05);
+}
+.overallContainer.interactable:hover .imageContainer::before {
+  filter: var(--drop-shadow-mouseon);
+  transform: none;
+}
+.overallContainer.interactable .circle-1 {
+  animation: translate-loop 3000ms ease-in-out calc(800ms + 2 * var(--stagger-duration)) alternate infinite;
+}
+.overallContainer.interactable .circle-2 {
+  animation: translate-loop 2500ms ease-in-out calc(800ms + 1 * var(--stagger-duration)) alternate infinite;
+}
+.overallContainer.interactable .circle-3 {
+  animation: translate-loop 3500ms ease-in-out calc(800ms + 0 * var(--stagger-duration)) alternate infinite;
+}
+
+/* Hidden styles */
+.overallContainer.hidden .imageContainer span {
+  opacity: 0;
+}
+.overallContainer.hidden .imageContainer::before {
+  opacity: 0;
+}
+.overallContainer.hidden .circle {
+  opacity: 0;
+  transform: translateZ(-100px);
+}
+
+/* Animation styles */
+.overallContainer.animate .imageContainer span {
+  animation: img-approach-fade-in 800ms ease-out 400ms backwards;
+}
+.overallContainer.animate .imageContainer::before {
+  animation: shadow-approach-fade-in 800ms ease-out backwards;
+}
+.overallContainer.animate .circle-1 {
+  animation: translate-in 500ms var(--bounce-timing-function) calc(800ms + 2 * var(--stagger-duration)) both;
+}
+.overallContainer.animate .circle-2 {
+  animation: translate-in 500ms var(--bounce-timing-function) calc(800ms + 1 * var(--stagger-duration)) both;
+}
+.overallContainer.animate .circle-3 {
+  animation: translate-in 500ms var(--bounce-timing-function) calc(800ms + 0 * var(--stagger-duration)) both;
+}
+
+@keyframes img-approach-fade-in {
+  0% {
+    opacity: 0;
+    transform: rotateY(5deg) translateZ(-20px);
+  }
+}
+@keyframes shadow-approach-fade-in {
+  0% {
+    opacity: 0;
+    transform: rotateY(5deg) scale(1.08) translateZ(-200px);
+  }
+}
+@keyframes translate-in {
+  0% {
+    opacity: 0;
+    transform: translateZ(-50px);
+  }
+}
+@keyframes translate-loop {
+  100% {
+    transform: translateZ(-20px);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .overallContainer .circle-1 {
+    border-width: 2px;
+  }
+  .overallContainer .circle-2 {
+    border-width: 1px;
+  }
+  .overallContainer .circle-3 {
+    border-width: 1px;
+  }
+}
