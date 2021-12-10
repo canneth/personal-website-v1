@@ -21,7 +21,7 @@ function Projects() {
           you find that perfect spot.`}
         </ProjectCardType1>
         <ProjectCardType2
-          title={`Personal Site v1`}
+          title={`Personal Site v0`}
           devStatus='complete'
           techList={['html5', 'css3', 'js']}
         >
@@ -29,6 +29,16 @@ function Projects() {
           and JS. The cracks show, but we all start
           somewhere!`}
         </ProjectCardType2>
+        <ProjectCardType1
+          title={`Personal Site v1`}
+          devStatus='complete'
+          techList={['nextjs']}
+        >
+          {`The website you're currently viewing is my
+          first tango with React and NextJS. User experience,
+          best practices, ease of maintenance and performance
+          were my foremost concerns here.`}
+        </ProjectCardType1>
       </div>
     </section>
   );

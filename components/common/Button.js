@@ -14,19 +14,19 @@ function Button(props) {
       <span className={styles.iconContainer}>
         <span
           className={`iconify ${styles.iconSvg}`}
-          data-icon={DATA_ICON_FOR[props.for]}
-        >
-        </span>
+          data-icon={DATA_ICON_FOR[props.icon]}
+        />
       </span>
       <span className={styles.text}>
-        {props.children}
+        {props.text}
       </span>
     </button>
   );
 }
 
 Button.propTypes = {
-  for: PropTypes.string.isRequired,
+  icon: PropTypes.string,
+  text: PropTypes.string,
   small: PropTypes.bool,
   className: PropTypes.string
 };

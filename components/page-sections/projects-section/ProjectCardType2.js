@@ -22,8 +22,8 @@ function ProjectCardType2(props) {
           {props.children}
         </p>
         <div className={styles.linkButtonsContainer}>
-          <Button for='github' small>GitHub</Button>
-          <Button for='extlink' small>Try It!</Button>
+          <Button icon='github' text='GitHub' small />
+          <Button icon='extlink' text='Try It!' small />
         </div>
         <div className={styles.techContainer}>
           <h1 className={styles.techHeader}>Technologies</h1>
