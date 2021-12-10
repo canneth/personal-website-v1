@@ -14,6 +14,10 @@ function Projects() {
         <ProjectCardType1
           title={`JustGo!`}
           devStatus='in-progress'
+          buttonList={[
+            { icon: 'github', text: 'GitHub' },
+            { icon: 'extlink', text: 'Try It!' }
+          ]}
           techList={['nextjs', 'redux', 'nodejs', 'postgresql']}
         >
           {`Ever felt like getting out of the house,
@@ -21,27 +25,34 @@ function Projects() {
           you find that perfect spot.`}
         </ProjectCardType1>
         <ProjectCardType2
-          title={`Personal Site v0`}
-          devStatus='complete'
-          techList={['html5', 'css3', 'js']}
-        >
-          {`First ever feeble attempts at HTML, CSS
-          and JS. The cracks show, but we all start
-          somewhere!`}
-        </ProjectCardType2>
-        <ProjectCardType1
           title={`Personal Site v1`}
           devStatus='complete'
+          buttonList={[
+            { icon: 'github', text: 'GitHub' }
+          ]}
           techList={['nextjs']}
         >
           {`The website you're currently viewing is my
           first tango with React and NextJS. User experience,
           best practices, ease of maintenance and performance
           were my foremost concerns here.`}
+        </ProjectCardType2>
+        <ProjectCardType1
+          title={`Personal Site v0`}
+          devStatus='complete'
+          buttonList={[
+            { icon: 'github', text: 'GitHub' },
+            { icon: 'extlink', text: 'View It!' }
+          ]}
+          techList={['html5', 'css3', 'js']}
+        >
+          {`First ever feeble attempts at HTML, CSS
+          and JS. The cracks show, but we all start
+          somewhere!`}
         </ProjectCardType1>
       </div>
     </section>
   );
 }
 
-      export default Projects;
+export default Projects;

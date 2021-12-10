@@ -27,19 +27,18 @@ function ProjectCardType1(props) {
           {props.children}
         </p>
         <div className={styles.linkButtonsContainer}>
-          <Button icon='github' text='GitHub' small />
-          <Button icon='extlink' text='Try It! 'small />
+          {props.buttonList.map((buttonItem, i) => (
+            <Button icon={buttonItem.icon} text={buttonItem.text} small />
+          ))}
         </div>
         <div className={styles.techContainer}>
           <h1 className={styles.techHeader}>Technologies</h1>
           <ol className={styles.techList}>
-            {
-              props.techList.map((techItem, i) => (
-                <li key={i} className={styles.techListItem}>
-                  <TechItem for={techItem} iconWidthExpression='clamp(24px, 5vw, 30px)' noLabel/>
-                </li>
-              ))
-            }
+            {props.techList.map((techItem, i) => (
+              <li key={i} className={styles.techListItem}>
+                <TechItem for={techItem} iconWidthExpression='clamp(24px, 5vw, 30px)' noLabel/>
+              </li>
+            ))}
           </ol>
         </div>
       </div>
@@ -50,6 +49,7 @@ function ProjectCardType1(props) {
 ProjectCardType1.propTypes = {
   title: PropTypes.string.isRequired,
   devStatus: PropTypes.string.isRequired,
+  buttonList: PropTypes.array.isRequired,
   techList: PropTypes.array.isRequired,
   forMobile: PropTypes.bool,
   className: PropTypes.string

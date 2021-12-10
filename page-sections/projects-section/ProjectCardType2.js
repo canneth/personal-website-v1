@@ -22,8 +22,9 @@ function ProjectCardType2(props) {
           {props.children}
         </p>
         <div className={styles.linkButtonsContainer}>
-          <Button icon='github' text='GitHub' small />
-          <Button icon='extlink' text='Try It!' small />
+          {props.buttonList.map((buttonItem, i) => (
+            <Button icon={buttonItem.icon} text={buttonItem.text} small />
+          ))}
         </div>
         <div className={styles.techContainer}>
           <h1 className={styles.techHeader}>Technologies</h1>
