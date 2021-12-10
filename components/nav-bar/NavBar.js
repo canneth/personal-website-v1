@@ -26,7 +26,7 @@ function NavBar(props) {
   }, [scrollYDirection]);
 
   return (
-    <nav ref={selfRef} className={`${styles.navBar} ${props.className} ${styles.integrated}`}>
+    <nav ref={selfRef} className={`${styles.navBar} ${props.className}`}>
       <ul>
         <li><NavItem text='About Me' href='/#about-section'/></li>
         <li><NavItem text='Skills' href='/#skills-section'/></li>
@@ -34,7 +34,6 @@ function NavBar(props) {
         <li><NavItem text='Projects' href='/#projects-section'/></li>
         <li><NavItem text='Contact' href='/#contact-section'/></li>
       </ul>
-      <div className={styles.barBackground} />
     </nav>
   );
 }
