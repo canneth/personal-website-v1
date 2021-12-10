@@ -7,7 +7,7 @@ import styles from './Projects.module.css';
 function Projects() {
   return (
     <section className={styles.overallContainer}>
-      <SectionTitle titleOffsetFromLeft={0.5} className={styles.sectionTitle}>
+      <SectionTitle className={styles.sectionTitle}>
         My Works
       </SectionTitle>
       <div className={styles.contentContainer}>

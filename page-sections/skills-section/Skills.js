@@ -15,7 +15,7 @@ function Skills() {
 
   return (
     <section className={styles.overallContainer}>
-      <SectionTitle titleOffsetFromLeft={0.5} className={styles.sectionTitle}>
+      <SectionTitle className={styles.sectionTitle}>
         In My Toolbox
       </SectionTitle>
       <div className={styles.contentContainer}>
