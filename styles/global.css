@@ -8,6 +8,9 @@ body {
   outline: 0px;
   font-family: 'Montserrat', 'Futura', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--color-primary-dark);

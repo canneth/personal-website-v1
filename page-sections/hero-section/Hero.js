@@ -1,14 +1,13 @@
 
 import Image from 'next/image';
-
+import PropTypes from 'prop-types';
 import ContactBar from '@/components/contact-bar/ContactBar';
 import Button from '@/components/common/Button';
-
 import styles from './Hero.module.css';
 
-function Hero() {
+function Hero(props) {
   return (
-    <section className={styles.overallContainer}>
+    <section id={props.id} className={styles.overallContainer}>
       <div className={styles.foregroundContainer}>
         <p className={styles.subtitle}>{`Hi! I'm`}</p>
         <h1 className={styles.title}>
@@ -32,6 +31,10 @@ function Hero() {
       </div>
     </section>
   );
+}
+
+Hero.propTypes = {
+  id: PropTypes.string.isRequired
 }
 
 export default Hero;

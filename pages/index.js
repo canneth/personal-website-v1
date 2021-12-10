@@ -8,11 +8,11 @@ import ContactMe from '@/page-sections/contact-section/ContactMe';
 function MainPage() {
   return (
     <>
-      <Hero />
-      <AboutMe />
-      <Skills />
-      <Projects />
-      <ContactMe />
+      <Hero id='hero-section' />
+      <AboutMe id='about-section' />
+      <Skills id='skills-section' />
+      <Projects id='projects-section' />
+      <ContactMe id='contact-section' />
     </>
   );
 }

@@ -1,10 +1,11 @@
 
+import PropTypes from 'prop-types';
 import SectionTitle from '@/components/common/SectionTitle';
 import TechItem from '@/components/common/TechItem';
 import useAnimateInRef from '@/hooks/useAnimateInRef';
 import styles from './Skills.module.css';
 
-function Skills() {
+function Skills(props) {
 
   const frontendRef = useAnimateInRef(styles);
   const backendRef = useAnimateInRef(styles);
@@ -14,7 +15,7 @@ function Skills() {
   const designRef = useAnimateInRef(styles);
 
   return (
-    <section className={styles.overallContainer}>
+    <section id={props.id} className={styles.overallContainer}>
       <SectionTitle className={styles.sectionTitle}>
         In My Toolbox
       </SectionTitle>
@@ -62,6 +63,10 @@ function Skills() {
       </div>
     </section>
   )
+}
+
+Skills.propTypes = {
+  id: PropTypes.string.isRequired
 }
 
 export default Skills;

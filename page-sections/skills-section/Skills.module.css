@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50vh;
+  margin-top: 40vh;
+  padding-top: 10vh;
 
   --bounce-timing-function: cubic-bezier(0.1,0.8,0.2,1.2);
   --stagger-duration: 200ms;

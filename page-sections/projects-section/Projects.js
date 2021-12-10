@@ -1,12 +1,13 @@
 
+import PropTypes from 'prop-types';
 import SectionTitle from '@/components/common/SectionTitle';
 import ProjectCardType1 from './ProjectCardType1.js';
 import ProjectCardType2 from './ProjectCardType2.js';
 import styles from './Projects.module.css';
 
-function Projects() {
+function Projects(props) {
   return (
-    <section className={styles.overallContainer}>
+    <section id={props.id} className={styles.overallContainer}>
       <SectionTitle className={styles.sectionTitle}>
         My Works
       </SectionTitle>
@@ -53,6 +54,10 @@ function Projects() {
       </div>
     </section>
   );
+}
+
+Projects.propTypes = {
+  id: PropTypes.string.isRequired
 }
 
 export default Projects;

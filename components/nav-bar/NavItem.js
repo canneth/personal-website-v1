@@ -1,11 +1,12 @@
 
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 import LogoSvg from '@/components/svgs/LogoSvg';
 import styles from './NavItem.module.css';
 
 function NavItem(props) {
   return (
-    <>
+    <Link href={props.href}>
       {
         props.forHero ?
           <div className={styles.logoContainer}>
@@ -22,11 +23,12 @@ function NavItem(props) {
             </svg>
           </div>
       }
-    </>
+    </Link>
   );
 }
 
 NavItem.propTypes = {
+  href: PropTypes.string.isRequired,
   forHero: PropTypes.bool,
   text: PropTypes.string,
   forMobile: PropTypes.bool

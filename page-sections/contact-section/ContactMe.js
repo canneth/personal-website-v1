@@ -1,15 +1,16 @@
 
+import PropTypes from 'prop-types';
 import SectionTitle from '@/components/common/SectionTitle';
 import Button from '@/components/common/Button';
 import useAnimateInRef from '@/hooks/useAnimateInRef';
 import styles from './ContactMe.module.css';
 
-function ContactMe() {
+function ContactMe(props) {
 
   const selfRef = useAnimateInRef(styles);
 
   return (
-    <section ref={selfRef} className={styles.overallContainer}>
+    <section id={props.id} ref={selfRef} className={styles.overallContainer}>
       <SectionTitle className={styles.sectionTitle}>
         Let's Chat!
       </SectionTitle>
@@ -26,6 +27,10 @@ function ContactMe() {
       </div>
     </section>
   );
+}
+
+ContactMe.propTypes = {
+  id: PropTypes.string.isRequired
 }
 
 export default ContactMe;

@@ -28,11 +28,11 @@ function NavBar(props) {
   return (
     <nav ref={selfRef} className={`${styles.navBar} ${props.className} ${styles.integrated}`}>
       <ul>
-        <li><NavItem text='About Me' /></li>
-        <li><NavItem text='Skills' /></li>
-        <li><NavItem forHero /></li>
-        <li><NavItem text='Projects' /></li>
-        <li><NavItem text='Contact' /></li>
+        <li><NavItem text='About Me' href='/#about-section'/></li>
+        <li><NavItem text='Skills' href='/#skills-section'/></li>
+        <li><NavItem forHero href='/#hero-section'/></li>
+        <li><NavItem text='Projects' href='/#projects-section'/></li>
+        <li><NavItem text='Contact' href='/#contact-section'/></li>
       </ul>
       <div className={styles.barBackground} />
     </nav>

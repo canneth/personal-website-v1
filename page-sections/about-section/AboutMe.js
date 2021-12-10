@@ -1,21 +1,19 @@
 
+import PropTypes from 'prop-types';
 import useAnimateInRef from '@/hooks/useAnimateInRef';
 import SectionTitle from '@/components/common/SectionTitle';
 import CircularStyle1 from '@/components/framed-graphics/CircularStyle1';
 import CircularStyle2 from '@/components/framed-graphics/CircularStyle2';
 import styles from './AboutMe.module.css';
 
-function AboutMe() {
+function AboutMe(props) {
 
   const sectionTitleRef = useAnimateInRef(styles);
   const firstTextBlock = useAnimateInRef(styles);
   const secondTextBlock = useAnimateInRef(styles);
 
   return (
-    <section
-      ref={sectionTitleRef}
-      className={styles.overallContainer}
-    >
+    <section ref={sectionTitleRef} id={props.id} className={styles.overallContainer}>
       <SectionTitle className={styles.sectionTitle}>
         Hello!
       </SectionTitle>
@@ -56,5 +54,9 @@ function AboutMe() {
     </section>
   );
 }
+
+AboutMe.propTypes = {
+  id: PropTypes.string.isRequired
+};
 
 export default AboutMe;
