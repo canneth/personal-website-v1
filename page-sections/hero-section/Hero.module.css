@@ -1,15 +1,18 @@
 
 .overallContainer {
+  position: relative;
   overflow-x: visible;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100%;
 }
 
 /* Foreground */
 .foregroundContainer {
+  position: relative;
   margin-top: 5%;
   height: 100%;
   display: flex;
@@ -85,10 +88,8 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 1500px;
-  top: 50%;
+  height: 100vw;
   z-index: -1;
-  transform: translateY(-50%);
 }
 .backgroundImage {
   opacity: 0.05;

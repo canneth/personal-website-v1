@@ -21,14 +21,17 @@ function Layout(props) {
   }, []);
 
   return (
-    <div id='layout-container'>
-      {mobileLayout ? <NavBarMobile className={styles.navBar} /> : <NavBar className={styles.navBar} />}
-      <main>
-        <div className={styles.mainColumn}>
-          {props.children}
-        </div>
+    <div id='layout-container' className={styles.layoutContainer}>
+      {
+        mobileLayout ?
+          <NavBarMobile className={styles.navBar} />
+          :
+          <NavBar className={styles.navBar} />
+      }
+      <main className={styles.mainColumn}>
+        {props.children}
       </main>
-      <Footer />
+      <Footer className={styles.footer} />
     </div>
   );
 }
