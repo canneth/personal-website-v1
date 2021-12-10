@@ -25,7 +25,7 @@
   position: absolute;
   background: var(--color-grey-darkest);
   color: var(--color-grey-base);
-  padding: 5px 20px;
+  padding: 5px 10px;
   font-size: var(--font-size-web-small);
   top: 150%;
   left: 50%;
