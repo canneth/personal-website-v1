@@ -20,7 +20,6 @@ function useScrollYDirection() {
     let updated = false;
     function updateScrollDirection() {
       const newScrollY = window.scrollY;
-      console.log(`newScrollY: ${newScrollY}`);
       const diffY = newScrollY - oldScrollY;
       const normalise = x => x ? (x / Math.abs(x)) : 0;
       if (newScrollY === 0) {
