@@ -64,7 +64,7 @@
 
 /* Animate styles */
 .overallContainer.animate .contentContainer {
-  animation: slide-fade-in 800ms ease-out backwards;
+  animation: slide-fade-in 800ms ease-out 600ms backwards;
 }
 
 @keyframes slide-fade-in {
