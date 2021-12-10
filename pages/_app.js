@@ -1,7 +1,7 @@
 
 import Script from 'next/script';
 
-import Layout from '@/components/common/Layout';
+import Layout from '@/components/layout/Layout';
 import LoadingPage from '@/components/loading-page/LoadingPage';
 
 import '@/styles/global.css'
