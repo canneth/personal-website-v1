@@ -1,5 +1,6 @@
 
 import NavBar from '@/components/nav-bar/NavBar';
+import Footer from '@/components/footer/Footer';
 import styles from './Layout.module.css';
 
 function Layout(props) {
@@ -11,6 +12,7 @@ function Layout(props) {
           {props.children}
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

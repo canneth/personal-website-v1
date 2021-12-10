@@ -38,9 +38,11 @@ body {
   --font-size-web-large: 18px;
   --font-size-web-regular: 16px;
   --font-size-web-small: 12px;
+  --font-size-web-tiny: 10px;
   --font-size-mobile-large: 14px;
   --font-size-mobile-regular: 12px;
   --font-size-mobile-small: 10px;
+  --font-size-mobile-tiny: 8px;
 
   /* Font weights */
   --regular: 400;

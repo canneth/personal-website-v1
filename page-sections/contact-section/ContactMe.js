@@ -16,15 +16,8 @@ function ContactMe() {
           <br /><br />
           I am currently actively seeking job opportunities, so if I've piqued your
           interest, my resume is available for download as well.
-          <br /><br />
-          Feel free to drop me a line at
-          <br /><br />
         </p>
         <a className={styles.emailLink} href=''>canneth@gmail.com</a>
-        <p className={styles.text}>
-          <br />
-          and I will do my best to get back to you!
-        </p>
         <Button className={styles.resumeButton} icon='resume' text='Resume' />
       </div>
     </section>

@@ -1,0 +1,22 @@
+
+.overallContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 12vh;
+}
+
+.text {
+  text-align: center;
+  line-height: 0.8;
+  color: var(--color-secondary-base);
+  font-size: var(--font-size-web-small);
+}
+
+@media only screen and (max-width: 600px) {
+  .text {
+    font-size: var(--font-size-mobile-small);
+  }
+}

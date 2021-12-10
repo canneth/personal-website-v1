@@ -7,9 +7,8 @@
   margin-top: 50vh;
   width: 100%;
   gap: 50px;
-  margin-bottom: 10vh;
+  margin-bottom: 16vh;
 }
-
 .sectionTitle {
   width: 50vw;
 }
@@ -18,6 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 40px;
 }
 
 .text {
@@ -26,9 +26,6 @@
 }
 .emailLink {
   color: var(--color-highlight-base);
-}
-.resumeButton {
-  margin-top: 50px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -43,8 +40,5 @@
   }
   .emailLink {
     font-size: var(--font-size-mobile-regular);
-  }
-  .resumeButton {
-    margin-top: 30px;
   }
 }
