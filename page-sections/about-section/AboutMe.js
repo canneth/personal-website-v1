@@ -1,8 +1,8 @@
 
 import useAnimateInRef from '@/hooks/useAnimateInRef';
 import SectionTitle from '@/components/common/SectionTitle';
-import FramedGraphicCircularType1 from '@/components/common/FramedGraphicCircularType1';
-import FramedGraphicCircularType2 from '@/components/common/FramedGraphicCircularType2';
+import CircularStyle1 from '@/components/framed-graphics/CircularStyle1';
+import CircularStyle2 from '@/components/framed-graphics/CircularStyle2';
 import styles from './AboutMe.module.css';
 
 function AboutMe() {
@@ -34,10 +34,10 @@ function AboutMe() {
             field in which I can do what I love for a living.
           </p>
           <div className={styles.spacer} />
-          <FramedGraphicCircularType1 className={styles.graphic} imgSrc='/mountain.jpg' imgAlt='Profile picture' />
+          <CircularStyle1 className={styles.graphic} imgSrc='/mountain.jpg' imgAlt='Profile picture' />
         </div>
         <div className={`${styles.secondContentBlockContainer} ${styles.contentBlockContainer}`}>
-          <FramedGraphicCircularType2 className={styles.graphic} imgSrc='/mountain.jpg' imgAlt='Me performing a skateboard ollie' />
+          <CircularStyle2 className={styles.graphic} imgSrc='/mountain.jpg' imgAlt='Me performing a skateboard ollie' />
           <div className={styles.spacer} />
           <p ref={secondTextBlock} className={`${styles.text} ${styles.secondTextBlock}`}>
             There's more to life than just a career. Activity and the great outdoors revitalise me. I'm on my skateboard

@@ -2,9 +2,9 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import useAnimateInRef from '@/hooks/useAnimateInRef';
-import styles from './FramedGraphicCircularType1.module.css';
+import styles from './CircularStyle2.module.css';
 
-function FramedGraphicCircularType1(props) {
+function CircularStyle2(props) {
 
   const selfRef = useAnimateInRef(styles, 1400);
 
@@ -26,10 +26,10 @@ function FramedGraphicCircularType1(props) {
   );
 }
 
-FramedGraphicCircularType1.propTypes = {
+CircularStyle2.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   imgAlt: PropTypes.string.isRequired,
   className: PropTypes.string
 }
 
-export default FramedGraphicCircularType1;
+export default CircularStyle2;

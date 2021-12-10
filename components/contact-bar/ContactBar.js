@@ -1,4 +1,5 @@
 
+import PropTypes from 'prop-types';
 import ContactItem from "@/components/contact-bar/ContactItem";
 import styles from './ContactBar.module.css';
 
@@ -21,5 +22,8 @@ function ContactBar(props) {
   );
 }
 
+ContactBar.propTypes = {
+  className: PropTypes.string
+}
 
 export default ContactBar;

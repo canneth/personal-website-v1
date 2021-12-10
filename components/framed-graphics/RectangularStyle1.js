@@ -2,9 +2,9 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import useAnimateInRef from '@/hooks/useAnimateInRef';
-import styles from './FramedGraphicRectangularType2.module.css';
+import styles from './RectangularStyle1.module.css';
 
-function FramedGraphicRectangularType2(props) {
+function RectangularStyle1(props) {
 
   const selfRef = useAnimateInRef(styles, 1700);
 
@@ -27,10 +27,10 @@ function FramedGraphicRectangularType2(props) {
   );
 }
 
-FramedGraphicRectangularType2.propTypes = {
+RectangularStyle1.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   imgAlt: PropTypes.string.isRequired,
   className: PropTypes.string
 }
 
-export default FramedGraphicRectangularType2;
+export default RectangularStyle1;

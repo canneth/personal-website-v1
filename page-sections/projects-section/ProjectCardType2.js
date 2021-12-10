@@ -1,9 +1,9 @@
 
 import PropTypes from 'prop-types';
-import DevStatusBadge from '@/components/common/DevStatusBadge';
+import DevStatusBadge from '@/page-sections/projects-section/DevStatusBadge';
 import Button from '@/components/common/Button';
 import TechItem from '@/components/common/TechItem';
-import FramedGraphicRectangularType2 from '@/components/common/FramedGraphicRectangularType2';
+import RectangularStyle2 from '@/components/framed-graphics/RectangularStyle2';
 import useAnimateInRef from '@/hooks/useAnimateInRef';
 import styles from './ProjectCardType2.module.css';
 
@@ -38,7 +38,7 @@ function ProjectCardType2(props) {
           </ol>
         </div>
       </div>
-      <FramedGraphicRectangularType2
+      <RectangularStyle2
         imgSrc='/landscape.jpg'
         imgAlt='Poster of the landing page of the JustGo web app'
         className={styles.graphic}
