@@ -39,11 +39,10 @@ function useScrollYDirection() {
         updated = true;
       }
     }
-    console.log(scrollYDirection);
 
     window.addEventListener('scroll', handleScroll);
     return () => { window.removeEventListener('scroll', handleScroll) };
-  }, [scrollYDirection]);
+  }, []);
 
   return scrollYDirection;
 }
