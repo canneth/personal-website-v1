@@ -1,23 +1,25 @@
 
-import { useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import LoadingSpinnerSvg from '@/components/loading-page/LoadingSpinner';
 import styles from './LoadingPage.module.css';
 
 function LoadingPage() {
 
-  const selfRef = useRef();
+  const [exists, setExists] = useState(true);
 
   useEffect(() => {
     const layoutElement = document.getElementById('layout-container');
     layoutElement.classList.add('hidden');
     setTimeout(() => {
       layoutElement.classList.remove('hidden');
-      selfRef.current.style.display = 'none';
+      setExists(false);
     }, 2500);
   }, []);
 
+  if (!exists) return null;
+  
   return (
-    <div ref={selfRef} className={styles.page}>
+    <div className={styles.page}>
       <LoadingSpinnerSvg />
     </div>
   );
