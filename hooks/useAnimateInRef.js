@@ -1,7 +1,5 @@
 
 import { useEffect, useRef } from 'react';
-import useScroll from "@/hooks/useScroll";
-import useWindowSize from "@/hooks/useWindowSize";
 
 function useAnimateInRef(styles, animateInDuration) {
   /*
@@ -31,8 +29,6 @@ function useAnimateInRef(styles, animateInDuration) {
       * selfRef : An object; The returned object from the useRef() hook.
   */
 
-  const { scrollY } = useScroll();
-  const { windowHeight } = useWindowSize();
   const selfRef = useRef();
 
   useEffect(() => {
@@ -40,18 +36,24 @@ function useAnimateInRef(styles, animateInDuration) {
   }, [styles]);
 
   useEffect(() => {
-    const { y: posFromTopOfWindow } = selfRef.current.getBoundingClientRect();
-    if (scrollY > 0 && posFromTopOfWindow < 0.9 * windowHeight) {
-      if (selfRef.current.classList.contains(styles.hidden)) {
-        selfRef.current.classList.remove(styles.hidden);
-        selfRef.current.classList.add(styles.animate);
-        setTimeout(() => {
-          selfRef.current.classList.add(styles.interactable);
-          if (animateInDuration) selfRef.current.classList.remove(styles.animate);
-        }, animateInDuration ? animateInDuration : 0);
+    function handleScroll() {
+      const scrollY = window.scrollY;
+      const { innerHeight: windowHeight } = window;
+      const { y: posFromTopOfWindow } = selfRef.current.getBoundingClientRect();
+      if (scrollY > 0 && posFromTopOfWindow < 0.9 * windowHeight) {
+        if (selfRef.current.classList.contains(styles.hidden)) {
+          selfRef.current.classList.remove(styles.hidden);
+          selfRef.current.classList.add(styles.animate);
+          setTimeout(() => {
+            selfRef.current.classList.add(styles.interactable);
+            if (animateInDuration) selfRef.current.classList.remove(styles.animate);
+          }, animateInDuration ? animateInDuration : 0);
+        }
       }
     }
-  }, [scrollY, windowHeight, animateInDuration, styles]);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [animateInDuration, styles]);
 
   return selfRef;
 }

@@ -1,32 +1,29 @@
 
 import PropTypes from 'prop-types';
-import { useEffect, useState, useRef } from 'react';
-import useScroll from '@/hooks/useScroll';
+import { useEffect, useRef } from 'react';
+import useScrollYDirection from '@/hooks/useScrollYDirection';
 import NavItem from '@/components/nav-bar/NavItem';
 import styles from './NavBar.module.css';
 
 function NavBar(props) {
 
-  const { scrollY, scrollYDirection } = useScroll();
+  const scrollYDirection = useScrollYDirection();
   const selfRef = useRef();
 
   useEffect(() => {
     const modes = ['retracted', 'extended', 'integrated'];
     let modeClass = '';
-    if (scrollY > 0) {
-      switch (scrollYDirection) {
-        case 1: { modeClass = 'retracted'; break; }
-        case -1: { modeClass = 'extended'; break; }
-        default: break;
-      }
-    } else {
-      modeClass = 'integrated';
+    switch (scrollYDirection) {
+      case 0: { modeClass = 'integrated'; break; }
+      case 1: { modeClass = 'retracted'; break; }
+      case -1: { modeClass = 'extended'; break; }
+      default: { modeClass = 'integrated'; break; }
     }
     if (!selfRef.current.classList.contains(styles[modeClass])) {
       for (let mode of modes) selfRef.current.classList.remove(styles[mode]);
       selfRef.current.classList.add(styles[modeClass]);
     }
-  }, [scrollY, scrollYDirection]);
+  }, [scrollYDirection]);
 
   return (
     <nav ref={selfRef} className={`${styles.navBar} ${props.className} ${styles.integrated}`}>
