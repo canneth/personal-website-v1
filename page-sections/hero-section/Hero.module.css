@@ -1,0 +1,173 @@
+
+.overallContainer {
+  overflow-x: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Foreground */
+.foregroundContainer {
+  margin-top: 5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.subtitle {
+  margin-bottom: -30px;
+  font-size: clamp(18px, 2vw, 30px);
+  color: var(--color-highlight-base);
+  filter: var(--drop-shadow-regular);
+  opacity: 0;
+  animation: fade-grow-in 900ms ease-out 500ms forwards;
+}
+.title {
+  font-size: clamp(50px, 10vw, 140px);
+  font-weight: bold;
+  color: var(--color-grey-darkest);
+  filter: var(--drop-shadow-regular);
+  opacity: 0;
+  animation: fade-grow-in 900ms ease-out 650ms forwards;
+}
+.titlePrefix {
+  animation: prefix-fill-in 1s ease-out 1200ms forwards;
+}
+.titleSuffix {
+  animation: suffix-fill-in 1s ease-out 1500ms forwards;
+}
+.description {
+  max-width: 70vw;
+  min-width: 250px;
+  font-size: clamp(14px, 2.2vw, 24px);
+  color: var(--color-highlight-dull);
+  filter: var(--drop-shadow-regular);
+  opacity: 0;
+  animation: fade-grow-in 900ms ease-out 800ms forwards;
+}
+
+.contactBar {
+  margin-top: 30px;
+}
+.contactBar li {
+  opacity: 0;
+  animation: fade-drop-in 800ms ease-out forwards;
+}
+.contactBar li:nth-child(1) {
+  animation-delay: 2000ms;
+}
+.contactBar li:nth-child(2) {
+  animation-delay: 2200ms;
+}
+.contactBar li:nth-child(3) {
+  animation-delay: 2400ms;
+}
+.contactBar li:nth-child(4) {
+  animation-delay: 2600ms;
+}
+
+.resumeButton {
+  margin-top: 40px;
+  opacity: 0;
+  animation: fade-grow-in 500ms ease-out 2800ms forwards;
+}
+
+/* Background */
+.backgroundContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 1500px;
+  top: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
+}
+.backgroundImage {
+  opacity: 0.05;
+  transform: scale(0.86);
+  filter: drop-shadow(0px 0px 80px rgba(0, 0, 0, .40));
+  animation:
+    background-loop 4s ease-in-out 2100ms infinite alternate,
+    background-load-in 1000ms cubic-bezier(0,1,0,1);
+}
+
+@keyframes background-load-in {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0.05;
+    transform: scale(0.86);
+  }
+}
+@keyframes background-loop {
+  0% {
+    transform: scale(0.86);
+    filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, .50));
+  }
+  100% {
+    transform: scale(0.9);
+    filter: drop-shadow(0px 0px 80px rgba(0, 0, 0, .40));
+  }
+}
+
+@keyframes fade-grow-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fade-drop-in {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes prefix-fill-in {
+  0% { }
+  10% {
+    color: var(--color-grey-white);
+  }
+  100% {
+    color: var(--color-secondary-base);
+  }
+}
+@keyframes suffix-fill-in {
+  0% { }
+  10% {
+    color: var(--color-highlight-base);
+  }
+  100% {
+    color: var(--color-secondary-base);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .subtitle {
+    margin-bottom: -10px; 
+  }
+  .contactBar {
+    margin-top: 10px;
+  }
+  .resumeButton {
+    margin-top: 15px;
+  }
+}
