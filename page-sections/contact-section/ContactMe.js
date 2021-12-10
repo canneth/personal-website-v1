@@ -1,11 +1,15 @@
 
 import SectionTitle from '@/components/common/SectionTitle';
 import Button from '@/components/common/Button';
+import useAnimateInRef from '@/hooks/useAnimateInRef';
 import styles from './ContactMe.module.css';
 
 function ContactMe() {
+
+  const selfRef = useAnimateInRef(styles);
+
   return (
-    <section className={styles.overallContainer}>
+    <section ref={selfRef} className={styles.overallContainer}>
       <SectionTitle className={styles.sectionTitle}>
         Let's Chat!
       </SectionTitle>

@@ -28,6 +28,36 @@
   color: var(--color-highlight-base);
 }
 
+/* Hidden styles */
+.overallContainer.hidden .contentContainer {
+  opacity: 0;
+}
+
+/* Animate styles */
+.overallContainer.animate .text {
+  animation: fade-in 500ms ease-out 200ms backwards;
+}
+.overallContainer.animate .emailLink {
+  animation: fade-grow-in 500ms ease-out 500ms backwards;
+}
+.overallContainer.animate .resumeButton {
+  animation: fade-grow-in 500ms ease-out 800ms backwards;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+}
+@keyframes fade-grow-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .sectionTitle {
     width: 64vw;
