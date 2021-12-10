@@ -9,7 +9,7 @@ function NavItem(props) {
     <Link href={props.href}>
       {
         props.forHero ?
-          <div className={`${styles.logoContainer} ${props.className}`}>
+          <div className={`${styles.logoContainer} ${props.className}`} onClick={props.onClick}>
             <LogoSvg className={styles.logoSvg} />
           </div>
         :

@@ -18,9 +18,9 @@ function useScrollYDirection() {
     let oldScrollY = window.scrollY;
     let thresholdY = 50;
     let updated = false;
-
     function updateScrollDirection() {
       const newScrollY = window.scrollY;
+      console.log(`newScrollY: ${newScrollY}`);
       const diffY = newScrollY - oldScrollY;
       const normalise = x => x ? (x / Math.abs(x)) : 0;
       if (newScrollY === 0) {
@@ -32,14 +32,12 @@ function useScrollYDirection() {
       }
       updated = false;
     }
-
     function handleScroll() {
       if (!updated) {
         window.requestAnimationFrame(updateScrollDirection);
         updated = true;
       }
     }
-
     window.addEventListener('scroll', handleScroll);
     return () => { window.removeEventListener('scroll', handleScroll) };
   }, []);

@@ -12,14 +12,14 @@ function NavBar(props) {
 
   useEffect(() => {
     const modes = ['retracted', 'extended', 'integrated'];
-    let modeClass = '';
+    let modeClass = null;
     switch (scrollYDirection) {
       case 0: { modeClass = 'integrated'; break; }
       case 1: { modeClass = 'retracted'; break; }
       case -1: { modeClass = 'extended'; break; }
       default: { modeClass = 'integrated'; break; }
     }
-    if (!selfRef.current.classList.contains(styles[modeClass])) {
+    if (modeClass && !selfRef.current.classList.contains(styles[modeClass])) {
       for (let mode of modes) selfRef.current.classList.remove(styles[mode]);
       selfRef.current.classList.add(styles[modeClass]);
     }

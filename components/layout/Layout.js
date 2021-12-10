@@ -14,6 +14,8 @@ function Layout(props) {
     function handleResize() {
       const { innerWidth: windowWidth } = window;
       setMobileLayout(windowWidth <= breakpoint);
+      const main = document.getElementById('main');
+      if (windowWidth > breakpoint) main.classList.remove('blur');
     }
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -28,10 +30,10 @@ function Layout(props) {
           :
           <NavBar className={styles.navBar} />
       }
-      <main className={styles.mainColumn}>
+      <main id='main' className={styles.main}>
         {props.children}
-      </main>
       <Footer className={styles.footer} />
+      </main>
     </div>
   );
 }
