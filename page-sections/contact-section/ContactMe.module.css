@@ -1,0 +1,50 @@
+
+.overallContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50vh;
+  width: 100%;
+  gap: 50px;
+  margin-bottom: 10vh;
+}
+
+.sectionTitle {
+  width: 50vw;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  width: 60%;
+  text-align: center;
+}
+.emailLink {
+  color: var(--color-highlight-base);
+}
+.resumeButton {
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+  .sectionTitle {
+    width: 64vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .text {
+    font-size: var(--font-size-mobile-regular);
+    width: 80%;
+  }
+  .emailLink {
+    font-size: var(--font-size-mobile-regular);
+  }
+  .resumeButton {
+    margin-top: 30px;
+  }
+}
