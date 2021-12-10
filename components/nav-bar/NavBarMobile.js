@@ -1,12 +1,14 @@
 
 import PropTypes from 'prop-types';
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import useScrollYDirection from '@/hooks/useScrollYDirection';
 import NavItem from '@/components/nav-bar/NavItem';
+import NavOverlay from '@/components/nav-bar/NavOverlay';
 import styles from './NavBarMobile.module.css';
 
-function NavBar(props) {
+function NavBarMobile(props) {
 
+  const [deployed, setDeployed] = useState(false);
   const scrollYDirection = useScrollYDirection();
   const selfRef = useRef();
 
@@ -26,17 +28,27 @@ function NavBar(props) {
   }, [scrollYDirection]);
 
   return (
-    <nav ref={selfRef} className={`${styles.navBar} ${props.className}`}>
-      <ul>
-        <li><NavItem forHero href='/#hero-section'/></li>
-        <li></li>
-      </ul>
-    </nav>
+    <>
+      <NavOverlay className={`${styles.navOverlay} ${deployed ? styles.deployed : null}`} setDeployed={setDeployed}/>
+      <nav ref={selfRef} className={`${styles.navBar} ${props.className}`}>
+        <ul>
+          <li><NavItem forHero href='/#hero-section' className={styles.logoIcon} /></li>
+          <li>
+            <div
+              className={`${styles.menuIcon} ${deployed ? styles.deployed : null}`}
+              onClick={() => setDeployed(!deployed)}
+            >
+              <div className={styles.middleLine} />
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }
 
-NavBar.propTypes = {
+NavBarMobile.propTypes = {
   className: PropTypes.string
 };
 
-export default NavBar;
+export default NavBarMobile;
