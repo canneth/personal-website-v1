@@ -26,9 +26,13 @@
   font-weight: var(--medium);
   font-size: var(--font-size-web-large);
   justify-self: flex-start;
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.8));
 }
 .devStatusBadge {
   justify-self: flex-end;
+}
+.text {
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.8));
 }
 
 .linkButtonsContainer {
@@ -45,6 +49,7 @@
 .techHeader {
   color: var(--color-highlight-base);
   font-size: var(--font-size-web-regular);
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.8));
 }
 .techList {
   display: flex;
@@ -95,7 +100,7 @@
     z-index: -1;
   }
   .graphic span {
-    filter: brightness(20%) var(--drop-shadow-mouseoff);
+    filter: brightness(40%) var(--drop-shadow-mouseoff);
   }
   
 }
