@@ -1,7 +1,7 @@
 
 import { useEffect, useRef } from 'react';
 
-function useAnimateInRef(styles, animateInDuration) {
+function useAnimateInRef(styles, { triggerProportionFromTop = 0.6, animateInDuration = undefined } = {}) {
   /*
     DESCRIPTION:
       Returns a selfRef object that, when used by a component, will:
@@ -19,11 +19,13 @@ function useAnimateInRef(styles, animateInDuration) {
       * styles:
           An object; The imported CSS module of the component. This is necessary to apply
           the correct corresponding class to the component.
-      * animateInDelay:
+      * triggerProportionFromTop:
+          A number; Between 0 and 1, this is the vertical proportion of the screen into which
+          the component must enter to trigger the entry animation.
+      * animateInDuration:
           A number; The number of milliseconds before the styles.interactable class is added
           to the component. If not provided, styles.animate will not be removed, and styles.interactable
           will not be added to the component.
-                
 
     RETURNS:
       * selfRef : An object; The returned object from the useRef() hook.
@@ -36,12 +38,21 @@ function useAnimateInRef(styles, animateInDuration) {
   }, [styles]);
 
   useEffect(() => {
-    function handleScroll() {
+    let updated = false;
+    let prevTimestamp = 0;
+    const timeInterval = 50; // In ms.
+    function updateScrollPosition(currTimestamp) {
+      updated = false;
+      const elapsedTime = currTimestamp - prevTimestamp;
+      if (elapsedTime < timeInterval) return;
+      prevTimestamp = currTimestamp;
+      console.log('Updated!');
       const scrollY = window.scrollY;
       const { innerHeight: windowHeight } = window;
       const { y: posFromTopOfWindow } = selfRef.current.getBoundingClientRect();
-      if (scrollY > 0 && posFromTopOfWindow < 0.9 * windowHeight) {
+      if (scrollY > 0 && posFromTopOfWindow < triggerProportionFromTop * windowHeight) {
         if (selfRef.current.classList.contains(styles.hidden)) {
+          window.removeEventListener('scroll', handleScroll);
           selfRef.current.classList.remove(styles.hidden);
           selfRef.current.classList.add(styles.animate);
           setTimeout(() => {
@@ -51,9 +62,15 @@ function useAnimateInRef(styles, animateInDuration) {
         }
       }
     }
+    function handleScroll() {
+      if (!updated) {
+        window.requestAnimationFrame(updateScrollPosition);
+        updated = true;
+      }
+    }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [animateInDuration, styles]);
+  }, [triggerProportionFromTop, animateInDuration, styles]);
 
   return selfRef;
 }

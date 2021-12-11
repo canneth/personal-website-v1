@@ -18,10 +18,10 @@ function useScrollYDirection() {
     let oldScrollY = window.scrollY;
     let thresholdY = 50;
     let updated = false;
+    const normalise = x => x ? (x / Math.abs(x)) : 0;
     function updateScrollDirection() {
       const newScrollY = window.scrollY;
       const diffY = newScrollY - oldScrollY;
-      const normalise = x => x ? (x / Math.abs(x)) : 0;
       if (newScrollY === 0) {
         setScrollYDirection(0);
         oldScrollY = newScrollY;

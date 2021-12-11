@@ -6,7 +6,7 @@ import styles from './CircularStyle1.module.css';
 
 function CircularStyle1(props) {
 
-  const selfRef = useAnimateInRef(styles, 1400);
+  const selfRef = useAnimateInRef(styles, { animateInDuration: 1400 });
 
   return (
     <div ref={selfRef} className={`${styles.overallContainer} ${props.className}`}>

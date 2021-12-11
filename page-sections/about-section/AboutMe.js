@@ -8,12 +8,12 @@ import styles from './AboutMe.module.css';
 
 function AboutMe(props) {
 
-  const sectionTitleRef = useAnimateInRef(styles);
+  const selfRef = useAnimateInRef(styles);
   const firstTextBlock = useAnimateInRef(styles);
   const secondTextBlock = useAnimateInRef(styles);
 
   return (
-    <section ref={sectionTitleRef} id={props.id} className={styles.overallContainer}>
+    <section ref={selfRef} id={props.id} className={styles.overallContainer}>
       <SectionTitle className={styles.sectionTitle}>
         Hello!
       </SectionTitle>

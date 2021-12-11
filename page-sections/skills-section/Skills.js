@@ -7,12 +7,12 @@ import styles from './Skills.module.css';
 
 function Skills(props) {
 
-  const frontendRef = useAnimateInRef(styles);
-  const backendRef = useAnimateInRef(styles);
-  const fullstackRef = useAnimateInRef(styles);
-  const testingRef = useAnimateInRef(styles);
-  const verControlRef = useAnimateInRef(styles);
-  const designRef = useAnimateInRef(styles);
+  const frontendRef = useAnimateInRef(styles, { triggerProportionFromTop: 0.9 });
+  const backendRef = useAnimateInRef(styles, { triggerProportionFromTop: 0.9 });
+  const fullstackRef = useAnimateInRef(styles, { triggerProportionFromTop: 0.9 });
+  const testingRef = useAnimateInRef(styles, { triggerProportionFromTop: 0.9 });
+  const verControlRef = useAnimateInRef(styles, { triggerProportionFromTop: 0.9 });
+  const designRef = useAnimateInRef(styles, { triggerProportionFromTop: 0.9 });
 
   return (
     <section id={props.id} className={styles.overallContainer}>

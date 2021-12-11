@@ -2,6 +2,7 @@
 .whole {
   stroke: var(--color-highlight-base);
   transform-origin: center;
+  filter: var(--drop-shadow-mouseon);
   animation: grow-fade-out 800ms ease-out var(--draw-duration) forwards;
 
   --draw-duration: 1700ms;

@@ -6,7 +6,7 @@ import styles from './RectangularStyle2.module.css';
 
 function RectangularStyle2(props) {
 
-  const selfRef = useAnimateInRef(styles, 1700);
+  const selfRef = useAnimateInRef(styles, { animateInDuration: 1500 });
 
   return (
     <div ref={selfRef} className={`${styles.overallContainer} ${props.className}`}>
