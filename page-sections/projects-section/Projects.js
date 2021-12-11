@@ -34,9 +34,9 @@ function Projects(props) {
           techList={['nextjs']}
         >
           {`The website you're currently viewing is my
-          first tango with React and NextJS. User experience,
-          best practices, ease of maintenance and performance
-          were my foremost concerns here.`}
+          first tango with React and NextJS. It was an exercise
+          in efficient implementation without compromising on
+          visitor experience.`}
         </ProjectCardType2>
         <ProjectCardType1
           title={`Personal Site v0`}
