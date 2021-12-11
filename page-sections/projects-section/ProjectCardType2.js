@@ -40,8 +40,8 @@ function ProjectCardType2(props) {
         </div>
       </div>
       <RectangularStyle2
-        imgSrc='/landscape.jpg'
-        imgAlt='Poster of the landing page of the JustGo web app'
+        imgSrc={props.posterSrc}
+        imgAlt={props.posterAlt}
         className={styles.graphic}
       />
     </div>

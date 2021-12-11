@@ -20,6 +20,7 @@ function Projects(props) {
             { icon: 'extlink', text: 'Try It!' }
           ]}
           techList={['nextjs', 'redux', 'nodejs', 'postgresql']}
+          posterSrc='/mountain.jpg'
         >
           {`Ever felt like getting out of the house,
           but can't decide where to go? This app helps
@@ -32,6 +33,8 @@ function Projects(props) {
             { icon: 'github', text: 'GitHub' }
           ]}
           techList={['nextjs']}
+          posterSrc='/personal-website-v1-poster.png'
+          posterAlt='Landing page of personal website v1'
         >
           {`The website you're currently viewing is my
           first tango with React and NextJS. It was an exercise
@@ -46,6 +49,8 @@ function Projects(props) {
             { icon: 'extlink', text: 'View It!' }
           ]}
           techList={['html5', 'css3', 'js']}
+          posterSrc='/personal-website-v0-poster.png'
+          posterAlt='Landing page of personal website v0'
         >
           {`First ever feeble attempts at HTML, CSS
           and JS. The cracks show, but we all start

@@ -14,8 +14,8 @@ function ProjectCardType1(props) {
   return (
     <div ref={selfRef} className={styles.overallContainer}>
       <RectangularStyle1
-        imgSrc='/landscape.jpg'
-        imgAlt='Poster of the landing page of the JustGo web app'
+        imgSrc={props.posterSrc}
+        imgAlt={props.posterAlt}
         className={styles.graphic}
       />
       <div className={styles.contentContainer}>
@@ -48,6 +48,8 @@ function ProjectCardType1(props) {
 
 ProjectCardType1.propTypes = {
   title: PropTypes.string.isRequired,
+  posterSrc: PropTypes.string.isRequired,
+  posterAlt: PropTypes.string.isRequired,
   devStatus: PropTypes.string.isRequired,
   buttonList: PropTypes.array.isRequired,
   techList: PropTypes.array.isRequired,
