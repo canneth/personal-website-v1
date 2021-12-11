@@ -46,7 +46,6 @@ function useAnimateInRef(styles, { triggerProportionFromTop = 0.6, animateInDura
       const elapsedTime = currTimestamp - prevTimestamp;
       if (elapsedTime < timeInterval) return;
       prevTimestamp = currTimestamp;
-      console.log('Updated!');
       const scrollY = window.scrollY;
       const { innerHeight: windowHeight } = window;
       const { y: posFromTopOfWindow } = selfRef.current.getBoundingClientRect();
