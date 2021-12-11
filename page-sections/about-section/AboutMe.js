@@ -32,10 +32,10 @@ function AboutMe(props) {
             field in which I can do what I love for a living.
           </p>
           <div className={styles.spacer} />
-          <CircularStyle1 className={styles.graphic} imgSrc='/mountain.jpg' imgAlt='Profile picture' />
+          <CircularStyle1 className={styles.graphic} imgSrc='/profile-pic.jpg' imgAlt='Profile picture' />
         </div>
         <div className={`${styles.secondContentBlockContainer} ${styles.contentBlockContainer}`}>
-          <CircularStyle2 className={styles.graphic} imgSrc='/mountain.jpg' imgAlt='Me performing a skateboard ollie' />
+          <CircularStyle2 className={styles.graphic} imgSrc='/skateboarding-pic.jpg' imgAlt='Me performing a skateboard ollie' />
           <div className={styles.spacer} />
           <p ref={secondTextBlock} className={`${styles.text} ${styles.secondTextBlock}`}>
             There's more to life than just a career. Activity and the great outdoors revitalise me. I'm on my skateboard
