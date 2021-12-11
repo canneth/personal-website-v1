@@ -7,7 +7,7 @@ import styles from './ContactMe.module.css';
 
 function ContactMe(props) {
 
-  const selfRef = useAnimateInRef(styles, { triggerProportionFromTop: 0.8 });
+  const selfRef = useAnimateInRef(styles);
 
   return (
     <section id={props.id} ref={selfRef} className={styles.overallContainer}>
