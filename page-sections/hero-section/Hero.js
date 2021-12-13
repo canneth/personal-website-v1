@@ -18,7 +18,7 @@ function Hero(props) {
           I love creating beautiful solutions to real-world problems
         </p>
         <ContactBar className={styles.contactBar}/>
-        <Button className={styles.resumeButton} icon='resume' text='Resume' />
+        <Button className={styles.resumeButton} icon='resume' text='Resume' link='/Canneth.pdf'/>
       </div>
       <div className={styles.backgroundContainer}>
         <Image

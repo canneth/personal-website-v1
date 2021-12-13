@@ -27,6 +27,10 @@
 }
 .emailLink {
   color: var(--color-highlight-base);
+  transition: color 80ms ease-in-out;
+}
+.emailLink:hover {
+  color: var(--color-grey-white);
 }
 
 /* Hidden styles */

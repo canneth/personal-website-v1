@@ -22,8 +22,15 @@ function ContactMe(props) {
           I am currently actively seeking job opportunities, so if I've piqued your
           interest, my resume is available for download as well.
         </p>
-        <a className={styles.emailLink} href=''>canneth@gmail.com</a>
-        <Button className={styles.resumeButton} icon='resume' text='Resume' />
+        <a
+          className={styles.emailLink}
+          href='mailto:canneth.ho@gmail.com?subject=Hello%20From%20The%20Other%20Side!'
+          target='_blank'
+          rel='noreferrer'
+        >
+          canneth@gmail.com
+        </a>
+        <Button className={styles.resumeButton} icon='resume' text='Resume' link='/Canneth.pdf'/>
       </div>
     </section>
   );
