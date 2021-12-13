@@ -144,9 +144,11 @@
   .overallContainer .circle-3 {
     border-width: 1px;
   }
+  /*
   .overallContainer.interactable .circle-1,
   .overallContainer.interactable .circle-2,
   .overallContainer.interactable .circle-3 {
     animation: none;
   }
+  */
 }

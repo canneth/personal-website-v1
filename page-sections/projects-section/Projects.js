@@ -21,6 +21,7 @@ function Projects(props) {
           ]}
           techList={['nextjs', 'redux', 'nodejs', 'postgresql']}
           posterSrc='/mountain.jpg'
+          posterAlt='Landing page of JustGo!'
         >
           {`Ever felt like getting out of the house,
           but can't decide where to go? This app helps

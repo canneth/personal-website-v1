@@ -129,6 +129,8 @@
   }
 }
 @media only screen and (max-width: 500px) {
+
+  /*
   .overallContainer.interactable .imageContainer,
   .overallContainer.interactable::before,
   .overallContainer.interactable .circle-1,
@@ -136,4 +138,5 @@
   .overallContainer.interactable .circle-3 {
     animation: none;
   }
+  */
 }
