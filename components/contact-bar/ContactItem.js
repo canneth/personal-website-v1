@@ -12,7 +12,7 @@ const DATA_ICON_FOR = {
 function ContactItem(props) { 
   return (
     <div className={styles.itemContainer}>
-      <a href={props.link}>
+      <a href={props.link} target='_blank' rel='noreferrer'>
         <span
           className={`iconify ${styles.iconSvg}`}
           data-icon={DATA_ICON_FOR[props.for]}
