@@ -7,7 +7,7 @@
   height: 60px;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
   filter: var(--drop-shadow-mouseoff);
   transition:
     opacity 200ms linear,

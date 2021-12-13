@@ -5,7 +5,6 @@ import useScrollYDirection from '@/hooks/useScrollYDirection';
 import NavItem from '@/components/nav-bar/NavItem';
 import NavOverlay from '@/components/nav-bar/NavOverlay';
 import styles from './NavBarMobile.module.css';
-import useWindowSize from '@/hooks/useWindowSize';
 
 function NavBarMobile(props) {
 
@@ -41,8 +40,11 @@ function NavBarMobile(props) {
   }, [deployed]);
 
   return (
-    <nav className={`${styles.overallContainer} ${props.className}`}>
-      <div ref={navBarRef} className={`${styles.navBar} ${deployed ? styles.deployed : null}`}>
+    <nav className={styles.overallContainer}>
+      <div
+        ref={navBarRef}
+        className={`${styles.navBar} ${props.className} ${deployed ? styles.deployed : null}`}
+      >
         <NavItem forHero href='/#hero-section' className={styles.logoIcon} onClick={() => setDeployed(false)} />
         <div
           className={`${styles.menuIcon} ${deployed ? styles.deployed : null}`}

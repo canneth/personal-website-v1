@@ -10,12 +10,14 @@
   position: fixed;
   width: 100%;
   height: 60px;
+  backdrop-filter: blur(6px);
   filter: var(--drop-shadow-mouseoff);
   transition:
     opacity 200ms linear,
     transform 200ms linear,
     height 200ms linear,
-    filter 200ms linear;
+    filter 200ms linear,
+    backdrop-filter 200ms linear;
 }
 .navBar::before {
   position: absolute;
@@ -29,7 +31,6 @@
     filter 200ms linear,
     opacity 200ms linear;
 }
-
 .logoIcon {
   position: relative;
   margin-left: -14px;
@@ -54,8 +55,7 @@
   background-color: var(--color-secondary-base);
   transition:
     background-color 200ms linear,
-    transform 200ms linear,
-    opacity 200ms linear;
+    transform 200ms linear;
 }
 .menuIcon::before {
   position: absolute;
@@ -63,7 +63,7 @@
   width: 100%;
   height: 2px;
   background-color: var(--color-secondary-base);
-  top: 20%;
+  transform: translateY(-6px);
   transition:
     background-color 200ms linear,
     transform 200ms linear;
@@ -74,12 +74,13 @@
   width: 100%;
   height: 2px;
   background-color: var(--color-secondary-base);
-  bottom: 20%;
+  transform: translateY(6px);
   transition:
     background-color 200ms linear,
     transform 200ms linear;
 }
 
+/* State-specific styles */
 .retracted {
   opacity: 0;
   transform: translateY(-50px);
@@ -106,33 +107,34 @@
   background-color: var(--color-highlight-base);
 }
 
+/* Overlay styles */
 .navOverlay {
   transform: translateX(100%);
   filter: none;
   transition:
     transform 200ms ease-out,
     filter 200ms ease-out;
-  z-index: -1;
+  z-index: 2;
 }
 
-/* Deployed styles */
+/* Overlay deployed styles */
 .navBar.deployed {
   filter: none;
+  backdrop-filter: none;
 }
 .navBar.deployed::before {
   opacity: 0;
 }
 .menuIcon.deployed .middleLine {
-  opacity: 0;
   transform: scaleX(0);
 }
 .menuIcon.deployed::before {
   top: unset;
-  transform: rotate(225deg);
+  transform: rotate(135deg);
 }
 .menuIcon.deployed::after {
   bottom: unset;
-  transform: rotate(315deg);
+  transform: rotate(-135deg);
 }
 .navOverlay.deployed {
   transform: unset;
