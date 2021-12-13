@@ -16,18 +16,20 @@ function useScrollYDirection() {
 
   useEffect(() => {
     let oldScrollY = window.scrollY;
-    let thresholdY = 50;
     let updated = false;
-    const normalise = x => x ? (x / Math.abs(x)) : 0;
     function updateScrollDirection() {
       const newScrollY = window.scrollY;
-      const diffY = newScrollY - oldScrollY;
       if (newScrollY === 0) {
         setScrollYDirection(0);
         oldScrollY = newScrollY;
-      } else if (Math.abs(diffY) >= thresholdY) {
-        setScrollYDirection(normalise(diffY));
-        oldScrollY = newScrollY;
+      } else {
+        if (newScrollY > oldScrollY) {
+          setScrollYDirection(1);
+          oldScrollY = newScrollY;
+        } else {
+          setScrollYDirection(-1);
+          oldScrollY = newScrollY;
+        }
       }
       updated = false;
     }
