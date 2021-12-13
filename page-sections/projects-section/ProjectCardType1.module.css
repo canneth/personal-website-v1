@@ -111,6 +111,9 @@
     gap: 10px;
     min-width: 80%;
   }
+  .linkButtonsContainer {
+    gap: 10px;
+  }
   .techHeader {
     font-size: var(--font-size-mobile-regular);
   }
