@@ -10,25 +10,21 @@
   --stagger-duration: 200ms;
   --list-header-entry-duration: 500ms;
 }
-
 .sectionTitle { 
   width: 50vw;
 }
-
 .contentContainer {
   display: flex;
   flex-direction: column;
   margin-top: 60px;
   gap: 40px;
 }
-
 .categoryContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 60px;
 }
-
 .listHeader {
   display: inline-block;
   width: 150px;
@@ -93,7 +89,7 @@
   animation: fade-in 500ms ease-out calc(var(--list-header-entry-duration) + 100ms + 4 * var(--stagger-duration)) both;
 }
 
-
+/* Keyframes */
 @keyframes grow-in {
   0% { transform: scale(0); }
 }
@@ -107,6 +103,7 @@
   };
 }
 
+/* Media queries */
 @media only screen and (max-width: 600px) {
   .sectionTitle {
     width: 68vw;
@@ -133,5 +130,22 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+
+  .categoryContainer.animate .listHeader,
+  .categoryContainer.animate .listItem:nth-child(1) svg,
+  .categoryContainer.animate .listItem:nth-child(2) svg,
+  .categoryContainer.animate .listItem:nth-child(3) svg,
+  .categoryContainer.animate .listItem:nth-child(4) svg,
+  .categoryContainer.animate .listItem:nth-child(5) svg,
+  .categoryContainer.animate .listItem:nth-child(1) p,
+  .categoryContainer.animate .listItem:nth-child(2) p,
+  .categoryContainer.animate .listItem:nth-child(3) p,
+  .categoryContainer.animate .listItem:nth-child(4) p,
+  .categoryContainer.animate .listItem:nth-child(5) p {
+    animation: none;
+  }
+  .categoryContainer.animate {
+    animation: slide-fade-in 500ms ease-out both; 
   }
 }

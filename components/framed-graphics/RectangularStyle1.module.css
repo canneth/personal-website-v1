@@ -30,7 +30,6 @@
   filter: var(--drop-shadow-mouseoff);
   transition: filter 200ms ease-out, transform 200ms ease-out;
 }
-
 .circle {
   z-index: -1;
   position: absolute;
@@ -56,26 +55,6 @@
   width: 12%;
   border-color: var(--color-secondary-base);
   left: -20%;
-}
-
-
-/* Interactable styles */
-.overallContainer.interactable:hover .imageContainer span {
-  filter: grayscale(0%) var(--drop-shadow-mouseon);
-  transform: rotateY(0deg) scale(1.05);
-}
-.overallContainer.interactable:hover .imageContainer::before {
-  filter: var(--drop-shadow-mouseon);
-  transform: none;
-}
-.overallContainer.interactable .circle-1 {
-  animation: translate-loop 3000ms ease-in-out calc(800ms + 2 * var(--stagger-duration)) alternate infinite;
-}
-.overallContainer.interactable .circle-2 {
-  animation: translate-loop 2500ms ease-in-out calc(800ms + 1 * var(--stagger-duration)) alternate infinite;
-}
-.overallContainer.interactable .circle-3 {
-  animation: translate-loop 3500ms ease-in-out calc(800ms + 0 * var(--stagger-duration)) alternate infinite;
 }
 
 /* Hidden styles */
@@ -110,6 +89,26 @@
   animation: translate-in 500ms var(--bounce-timing-function) calc(800ms + 0 * var(--stagger-duration)) both;
 }
 
+/* Interactable styles */
+.overallContainer.interactable:hover .imageContainer span {
+  filter: grayscale(0%) var(--drop-shadow-mouseon);
+  transform: rotateY(0deg) scale(1.05);
+}
+.overallContainer.interactable:hover .imageContainer::before {
+  filter: var(--drop-shadow-mouseon);
+  transform: none;
+}
+.overallContainer.interactable .circle-1 {
+  animation: translate-loop 3000ms ease-in-out calc(800ms + 2 * var(--stagger-duration)) alternate infinite;
+}
+.overallContainer.interactable .circle-2 {
+  animation: translate-loop 2500ms ease-in-out calc(800ms + 1 * var(--stagger-duration)) alternate infinite;
+}
+.overallContainer.interactable .circle-3 {
+  animation: translate-loop 3500ms ease-in-out calc(800ms + 0 * var(--stagger-duration)) alternate infinite;
+}
+
+/* Keyframes */
 @keyframes img-approach-fade-in {
   0% {
     opacity: 0;
@@ -134,6 +133,7 @@
   }
 }
 
+/* Media queries */
 @media only screen and (max-width: 500px) {
   .overallContainer .circle-1 {
     border-width: 2px;
@@ -143,5 +143,10 @@
   }
   .overallContainer .circle-3 {
     border-width: 1px;
+  }
+  .overallContainer.interactable .circle-1,
+  .overallContainer.interactable .circle-2,
+  .overallContainer.interactable .circle-3 {
+    animation: none;
   }
 }

@@ -92,6 +92,7 @@
   animation: translate-loop 3500ms ease-in-out calc(800ms + 0 * var(--stagger-duration)) alternate infinite;
 }
 
+/* Keyframes */
 @keyframes img-translate-fade-in {
   0% {
     opacity: 0;
@@ -116,6 +117,7 @@
   }
 }
 
+/* Media queries */
 @media only screen and (max-width: 600px) {
   .circle-1 {
     border-width: 1px;
@@ -125,5 +127,14 @@
   }
   .circle-3 {
     border-width: 2px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .overallContainer.interactable .imageContainer,
+  .overallContainer.interactable::before,
+  .overallContainer.interactable .circle-1,
+  .overallContainer.interactable .circle-2,
+  .overallContainer.interactable .circle-3 {
+    animation: none;
   }
 }

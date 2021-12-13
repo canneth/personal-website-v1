@@ -35,7 +35,6 @@
 }
 
 /* Hidden styles */
-
 .firstTextBlock.hidden {
   opacity: 0;
   transform: translateX(-5%);
@@ -45,6 +44,7 @@
   transform: translateX(5%);
 }
 
+/* Media queries */
 @media only screen and (max-width: 800px) {
   .sectionTitle {
     width: 64vw;
