@@ -18,7 +18,7 @@
   background: var(--color-grey-darkest);
   filter: var(--drop-shadow-regular);
 }
-.imageContainer span {
+.imageContainer > span {
   border-radius: 50%;
   filter: var(--drop-shadow-regular);
 }

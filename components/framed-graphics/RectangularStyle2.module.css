@@ -11,7 +11,7 @@
   perspective-origin: bottom right;
   perspective: 500px;
 }
-.imageContainer span {
+.imageContainer > span {
   filter: grayscale(50%) var(--drop-shadow-mouseoff);
   border-radius: 2% / 3%;
   transform: rotateY(-5deg);
