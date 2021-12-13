@@ -46,11 +46,12 @@
 
 /* Media queries */
 @media only screen and (max-width: 800px) {
+  .overallContainer {
+    margin-top: 10vh;
+    gap: 50px;
+  }
   .sectionTitle {
     width: 64vw;
-  }
-  .overallContainer {
-    gap: 50px;
   }
   .contentContainer {
     gap: 50px;
