@@ -20,7 +20,7 @@ function Projects(props) {
             { icon: 'extlink', text: 'Try It!' }
           ]}
           techList={['nextjs', 'redux', 'nodejs', 'postgresql']}
-          posterSrc='/posters/projects-section/mountain.jpg'
+          posterSrc='/posters/projects-section/landscape.jpg'
           posterAlt='Landing page of JustGo!'
         >
           {`Ever felt like getting out of the house,
