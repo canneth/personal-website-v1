@@ -10,9 +10,12 @@
   position: fixed;
   width: 100%;
   height: 60px;
-  backdrop-filter: blur(2px);
   filter: var(--drop-shadow-mouseoff);
-  transition: all 120ms linear;
+  transition:
+    opacity 200ms linear,
+    transform 200ms linear,
+    height 200ms linear,
+    filter 200ms linear;
 }
 .navBar::before {
   position: absolute;
@@ -22,7 +25,9 @@
   z-index: -1;
   opacity: 0.9;
   background-color: var(--color-primary-dark);
-  transition: all 200ms linear;
+  transition:
+    filter 200ms linear,
+    opacity 200ms linear;
 }
 
 .logoIcon {
@@ -41,30 +46,38 @@
   height: 24px;
   aspect-ratio: 1 / 1;
   filter: var(--drop-shadow-mouseoff);
+  transition: filter 200ms linear;
 }
 .menuIcon .middleLine {
   height: 2px;
   width: 100%;
-  background: var(--color-secondary-base);
-  transition: all 200ms linear;
+  background-color: var(--color-secondary-base);
+  transition:
+    background-color 200ms linear,
+    transform 200ms linear,
+    opacity 200ms linear;
 }
 .menuIcon::before {
   position: absolute;
   content: ' ';
   width: 100%;
   height: 2px;
-  background: var(--color-secondary-base);
+  background-color: var(--color-secondary-base);
   top: 20%;
-  transition: all 200ms linear;
+  transition:
+    background-color 200ms linear,
+    transform 200ms linear;
 }
 .menuIcon::after {
   position: absolute;
   content: ' ';
   width: 100%;
   height: 2px;
-  background: var(--color-secondary-base);
+  background-color: var(--color-secondary-base);
   bottom: 20%;
-  transition: all 200ms linear;
+  transition:
+    background-color 200ms linear,
+    transform 200ms linear;
 }
 
 .retracted {
@@ -84,25 +97,26 @@
   filter: var(--drop-shadow-mouseon);
 }
 .menuIcon:hover .middleLine {
-  background: var(--color-highlight-base);
+  background-color: var(--color-highlight-base);
 }
 .menuIcon:hover::before {
-  background: var(--color-highlight-base);
+  background-color: var(--color-highlight-base);
 }
 .menuIcon:hover::after {
-  background: var(--color-highlight-base);
+  background-color: var(--color-highlight-base);
 }
 
 .navOverlay {
   transform: translateX(100%);
   filter: none;
-  transition: all 500ms ease-out;
+  transition:
+    transform 200ms ease-out,
+    filter 200ms ease-out;
   z-index: -1;
 }
 
 /* Deployed styles */
 .navBar.deployed {
-  backdrop-filter: none;
   filter: none;
 }
 .navBar.deployed::before {
@@ -110,7 +124,7 @@
 }
 .menuIcon.deployed .middleLine {
   opacity: 0;
-  width: 0px;
+  transform: scaleX(0);
 }
 .menuIcon.deployed::before {
   top: unset;

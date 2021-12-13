@@ -7,19 +7,16 @@
   gap: 20px;
 }
 
-.iconSvg {
-
-}
-
 .label {
   color: var(--color-highlight-dull);
   width: 120px;
 }
 
-.tooltipEnabled,
-.tooltipEnabled * {
+.tooltipEnabled {
   filter: var(--drop-shadow-mouseoff);
-  transition: all 200ms ease-out;
+}
+.tooltipEnabled svg {
+  transition: filter 200ms ease-out, transform 200ms ease-out;
 }
 .tooltip {
   position: absolute;
@@ -34,6 +31,8 @@
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
+  filter: var(--drop-shadow-mouseoff);
+  transition: opacity 200ms ease-out, visibility 200ms ease-out;
 }
 .tooltip::after {
   position: absolute;
@@ -44,6 +43,8 @@
   border-width: 5px;
   margin-left: -5px;
   border-color: transparent transparent var(--color-grey-darkest) transparent;
+  filter: var(--drop-shadow-mouseoff);
+  transition: opacity 200ms ease-out, visibility 200ms ease-out;
 }
 
 .tooltipEnabled:hover svg {
@@ -54,7 +55,6 @@
   opacity: 1;
   visibility: visible;
 }
-
 
 @media only screen and (max-width: 600px) {
   .label {

@@ -15,7 +15,7 @@
   filter: grayscale(50%) var(--drop-shadow-mouseoff);
   border-radius: 2% / 3%;
   transform: rotateY(-5deg);
-  transition: all 200ms ease-out;
+  transition: filter 200ms ease-out, transform 200ms ease-out;
 }
 .imageContainer::before {
   content: '';
@@ -26,9 +26,9 @@
   z-index: -1;
   border-radius: 2% / 3%;
   transform: rotateY(-5deg) scale(1.08) translateZ(-100px);
-  transition: all 200ms ease-out;
   opacity: 0.5;
   filter: var(--drop-shadow-mouseoff);
+  transition: filter 200ms ease-out, transform 200ms ease-out;
 }
 
 .circle {
@@ -37,7 +37,6 @@
   aspect-ratio: 1;
   border-radius: 50%;
   border-style: solid;
-  transition: all 500ms ease-out;
 }
 .circle-1 {
   width: 40%;

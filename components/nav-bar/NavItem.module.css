@@ -16,19 +16,19 @@
   stroke-dasharray: 20;
   stroke-dashoffset: -20;
   stroke: var(--color-secondary-base);
-  transition: all 200ms ease-out;
+  transition: stroke-dashoffset 200ms ease-out;
 }
 .navItemContainer svg .rightLine {
   stroke-dasharray: 20;
   stroke-dashoffset: 20;
   stroke: var(--color-secondary-base);
-  transition: all 200ms ease-out;
+  transition: stroke-dashoffset 200ms ease-out;
 }
 .text {
   color: var(--color-highlight-dull);
   margin-left: 12px;
   margin-right: 12px;
-  transition: all 200ms ease-out;
+  transition: color 200ms ease-out;
 }
 
 .navItemContainer:hover {
@@ -53,13 +53,12 @@
   transform-origin: center;
   transform: scale(0.45);
   filter: var(--drop-shadow-mouseoff);
-}
-.logoContainer * {
-  transition: all 80ms ease-out;
+  transition: filter 80ms ease-out;
 }
 .logoSvg g {
   transform-origin: center;
   stroke: var(--color-secondary-base);
+  transition: stroke 80ms ease-out, transform 80ms ease-out;
 }
 .logoContainer:hover {
   cursor: pointer;

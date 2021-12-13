@@ -7,9 +7,12 @@
   height: 60px;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
   filter: var(--drop-shadow-mouseoff);
-  transition: all 200ms linear;
+  transition:
+    opacity 200ms linear,
+    height 200ms linear,
+    transform 200ms linear;
 }
 .navBar::before {
   position: absolute;
@@ -19,7 +22,7 @@
   z-index: -1;
   opacity: 0.9;
   background-color: var(--color-primary-dark);
-  transition: all 200ms linear;
+  transition: opacity 200ms linear, filter 200ms linear;
 }
 .navBar ul {
   display: flex;
@@ -36,7 +39,6 @@
   opacity: 0;
   transform: translateY(-60px);
 }
-
 .integrated {
   height: 100px;
 }

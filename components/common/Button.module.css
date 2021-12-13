@@ -5,14 +5,11 @@
   align-items: center;
   justify-content: center;
   color: var(--color-grey-base);
-  background: var(--color-grey-darkest);
+  background-color: var(--color-grey-darkest);
   border-radius: 6px;
   gap: 12%;
   filter: var(--drop-shadow-mouseoff);
-}
-.button,
-.button * {
-  transition: all 80ms ease-out;
+  transition: background-color 80ms ease-out;
 }
 .button.large {
   width: 154px;
@@ -32,16 +29,18 @@
 }
 .text {
   font-size: var(--font-size-web-regular);
+  transition: transform 80ms ease-out;
 }
 
 .iconContainer {
   margin-top: 2px;
+  transition: transform 80ms ease-out;
 }
 
 .button:hover {
   transform-origin: center;
   transform: scale(1.01) !important;
-  background: var(--color-highlight-dark);
+  background-color: var(--color-highlight-dark);
   filter: var(--drop-shadow-mouseon);
   cursor: pointer;
 }

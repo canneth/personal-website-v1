@@ -2,13 +2,11 @@
 
 .itemContainer {
   filter: var(--drop-shadow-mouseoff);
-}
-.itemContainer,
-.itemContainer * {
-  transition: all 80ms ease-out;
+  transition: filter 80ms ease-out;
 }
 .iconSvg {
   color: var(--color-highlight-base);
+  transition: transform 80ms ease-out, color 80ms ease-out;
 }
 
 .itemContainer:hover {
