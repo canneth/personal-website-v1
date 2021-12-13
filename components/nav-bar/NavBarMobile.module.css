@@ -1,7 +1,4 @@
 
-.overallContainer {
-  position: absolute;
-}
 .navBar {
   display: flex;
   flex-direction: row;

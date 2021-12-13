@@ -40,8 +40,8 @@ function NavBarMobile(props) {
   }, [deployed]);
 
   return (
-    <nav className={styles.overallContainer}>
-      <div
+    <>
+      <nav
         ref={navBarRef}
         className={`${styles.navBar} ${props.className} ${deployed ? styles.deployed : null}`}
       >
@@ -52,9 +52,9 @@ function NavBarMobile(props) {
         >
           <div className={styles.middleLine} />
         </div>
-      </div>
+      </nav>
       <NavOverlay className={`${styles.navOverlay} ${deployed ? styles.deployed : null}`} setDeployed={setDeployed}/>
-    </nav>
+    </>
   );
 }
 
