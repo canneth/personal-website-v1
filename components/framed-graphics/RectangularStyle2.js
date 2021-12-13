@@ -18,8 +18,8 @@ function RectangularStyle2(props) {
           className={styles.image}
           src={props.imgSrc}
           alt={props.imgAlt}
-          width={600}
-          height={400}
+          width={1200}
+          height={800}
           priority
         />
       </div>
