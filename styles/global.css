@@ -95,6 +95,10 @@ ol {
   padding: 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
 button {
   margin: 0px;
   padding: 0px;

@@ -10,11 +10,12 @@ const DATA_ICON_FOR = {
 
 function Button(props) {
   return (
-    <button className={
-      `${styles.button}
-      ${props.small ? styles.small : styles.large}
-      ${props.className}`
-    }>
+    <a
+      className={`${styles.button} ${props.small ? styles.small : styles.large} ${props.className}`}
+      href={props.link}
+      target='_blank'
+      rel='noreferrer'
+    >
       {
         props.icon ?
           <span className={styles.iconContainer}>
@@ -29,13 +30,14 @@ function Button(props) {
       <span className={styles.text}>
         {props.text}
       </span>
-    </button>
+    </a>
   );
 }
 
 Button.propTypes = {
   icon: PropTypes.string,
   text: PropTypes.string,
+  link: PropTypes.string,
   small: PropTypes.bool,
   className: PropTypes.string
 };

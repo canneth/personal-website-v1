@@ -16,8 +16,8 @@ function Projects(props) {
           title={`JustGo!`}
           devStatus='in-progress'
           buttonList={[
-            { icon: 'github', text: 'GitHub' },
-            { icon: 'extlink', text: 'Try It!' }
+            { icon: 'github', text: 'GitHub', link: null }, // TODO: Link when project is ready!
+            { icon: 'extlink', text: 'Try It!', link: null } // TODO: Link when project is ready!
           ]}
           techList={['nextjs', 'redux', 'nodejs', 'postgresql']}
           posterSrc='/posters/projects-section/landscape.jpg'
@@ -31,7 +31,7 @@ function Projects(props) {
           title={`Personal Site v1`}
           devStatus='complete'
           buttonList={[
-            { icon: 'github', text: 'GitHub' }
+            { icon: 'github', text: 'GitHub', link: 'https://github.com/canneth/personal-website-v1' }
           ]}
           techList={['nextjs']}
           posterSrc='/posters/projects-section/personal-website-v1-poster.png'
@@ -46,8 +46,8 @@ function Projects(props) {
           title={`Personal Site v0`}
           devStatus='complete'
           buttonList={[
-            { icon: 'github', text: 'GitHub' },
-            { icon: 'extlink', text: 'View It!' }
+            { icon: 'github', text: 'GitHub', link: 'https://github.com/canneth/canneth.github.io' },
+            { icon: 'extlink', text: 'View It!', link: 'https://canneth.github.io/' }
           ]}
           techList={['html5', 'css3', 'js']}
           posterSrc='/posters/projects-section/personal-website-v0-poster.png'

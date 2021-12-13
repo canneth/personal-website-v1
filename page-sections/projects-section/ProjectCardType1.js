@@ -28,7 +28,7 @@ function ProjectCardType1(props) {
         </p>
         <div className={styles.linkButtonsContainer}>
           {props.buttonList.map((buttonItem, i) => (
-            <Button key={i} icon={buttonItem.icon} text={buttonItem.text} small />
+            <Button key={i} icon={buttonItem.icon} text={buttonItem.text} link={buttonItem.link} small />
           ))}
         </div>
         <div className={styles.techContainer}>
