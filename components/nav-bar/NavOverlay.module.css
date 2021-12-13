@@ -3,12 +3,13 @@
   position: fixed;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   height: 100vh;
   width: 70vw;
   right: 0px;
   background: var(--color-primary-dark);
+  gap: 50px;
 }
 
 .navList {

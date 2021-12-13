@@ -1,6 +1,7 @@
 
 import PropTypes from 'prop-types';
 import NavItem from '@/components/nav-bar/NavItem';
+import Button from '@/components/common/Button';
 import styles from './NavOverlay.module.css';
 
 function NavOverlay(props) {
@@ -12,6 +13,7 @@ function NavOverlay(props) {
         <li><NavItem text='Projects' href='/#projects-section' onClick={() => props.setDeployed(false)}/></li>
         <li><NavItem text='Contact' href='/#contact-section' onClick={() => props.setDeployed(false)}/></li>
       </ul>
+      <Button className={styles.resumeButton} icon='resume' text='Resume' link='/Canneth.pdf'/>
     </aside>
   );
 }
