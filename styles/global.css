@@ -107,7 +107,7 @@ button {
   display: none !important;
 }
 .blur {
-  filter: blur(4px) !important;
+  /* filter: blur(4px) !important; */
 }
 .no-scroll {
   overflow: hidden !important;
