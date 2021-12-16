@@ -18,6 +18,7 @@ export default function MyApp({ Component, pageProps }) {
         <link rel="mask-icon" href="/favicon/generated/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="apple-mobile-web-app-title" content="Canneth" />
         <meta name="application-name" content="Canneth" />
+        <meta name="msapplication-config" content="/favicon/generated/browserconfig.xml" />
         <meta name="msapplication-TileColor" content="#282828" />
         <meta name="theme-color" content="#282828" />
       </Head>
