@@ -13,7 +13,7 @@ function NavOverlay(props) {
         <li><NavItem text='Projects' href='/#projects-section' onClick={() => props.setDeployed(false)}/></li>
         <li><NavItem text='Contact' href='/#contact-section' onClick={() => props.setDeployed(false)}/></li>
       </ul>
-      <Button className={styles.resumeButton} icon='resume' text='Resume' link='/Canneth.pdf'/>
+      <Button className={styles.resumeButton} icon='resume' text='Resume' link='/documents/Canneth.pdf'/>
     </aside>
   );
 }

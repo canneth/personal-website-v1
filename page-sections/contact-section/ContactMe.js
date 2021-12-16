@@ -30,7 +30,7 @@ function ContactMe(props) {
         >
           canneth@gmail.com
         </a>
-        <Button className={styles.resumeButton} icon='resume' text='Resume' link='/Canneth.pdf'/>
+        <Button className={styles.resumeButton} icon='resume' text='Resume' link='/documents/Canneth.pdf'/>
       </div>
     </section>
   );
