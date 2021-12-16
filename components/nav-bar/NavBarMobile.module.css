@@ -80,7 +80,7 @@
 /* State-specific styles */
 .retracted {
   opacity: 0;
-  transform: translateY(-50px);
+  transform: translateY(-60px);
 }
 .integrated {
   height: 80px;
