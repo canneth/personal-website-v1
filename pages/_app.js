@@ -24,7 +24,7 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       <Script src='https://code.iconify.design/2/2.1.0/iconify.min.js' />
       <LoadingPage />
-      <Layout>
+      <Layout className='hidden'>
         <Component {...pageProps} />
       </Layout>
     </>

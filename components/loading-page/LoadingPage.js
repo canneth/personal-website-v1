@@ -9,7 +9,6 @@ function LoadingPage() {
 
   useEffect(() => {
     const layoutElement = document.getElementById('layout-container');
-    layoutElement.classList.add('hidden');
     setTimeout(() => {
       layoutElement.classList.remove('hidden');
       setExists(false);

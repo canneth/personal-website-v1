@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import NavBar from '@/components/nav-bar/NavBar';
 import NavBarMobile from '@/components/nav-bar/NavBarMobile';
 import Footer from '@/components/footer/Footer';
@@ -23,7 +24,7 @@ function Layout(props) {
   }, []);
 
   return (
-    <div id='layout-container' className={styles.layoutContainer}>
+    <div id='layout-container' className={`${styles.layoutContainer} ${props.className}`}>
       {
         mobileLayout ?
           <NavBarMobile className={styles.navBar} />
@@ -36,6 +37,10 @@ function Layout(props) {
       </main>
     </div>
   );
+}
+
+Layout.propTypes = {
+  className: PropTypes.string
 }
 
 export default Layout;
