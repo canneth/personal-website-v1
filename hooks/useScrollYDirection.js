@@ -19,18 +19,12 @@ function useScrollYDirection() {
     let updated = false;
     function updateScrollDirection() {
       const newScrollY = window.scrollY;
-      if (newScrollY === 0) {
-        setScrollYDirection(0);
-        oldScrollY = newScrollY;
-      } else {
-        if (newScrollY > oldScrollY) {
-          setScrollYDirection(1);
-          oldScrollY = newScrollY;
-        } else {
-          setScrollYDirection(-1);
-          oldScrollY = newScrollY;
-        }
+      switch (true) {
+        case (newScrollY === 0 && scrollYDirection !== 0): { setScrollYDirection(0); break; }
+        case (newScrollY > oldScrollY && scrollYDirection !== 1): { setScrollYDirection(1); break; }
+        case (newScrollY < oldScrollY && scrollYDirection !== -1): { setScrollYDirection(-1); break; }
       }
+      oldScrollY = newScrollY;
       updated = false;
     }
     function handleScroll() {
@@ -41,7 +35,7 @@ function useScrollYDirection() {
     }
     window.addEventListener('scroll', handleScroll);
     return () => { window.removeEventListener('scroll', handleScroll) };
-  }, []);
+  }, [scrollYDirection]);
 
   return scrollYDirection;
 }
