@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types';
-import useAnimateInRef from '@/hooks/useAnimateInRef';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import styles from './SectionTitle.module.css';
 
 function SectionTitle(props) {
@@ -11,7 +11,7 @@ function SectionTitle(props) {
     gridTemplateColumns: `${leftLineFraction} auto ${rightLineFraction}`
   };
 
-  const selfRef = useAnimateInRef(styles);
+  const selfRef = useIntersectionObserver(styles);
 
   return (
     <header

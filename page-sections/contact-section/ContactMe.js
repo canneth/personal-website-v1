@@ -2,12 +2,12 @@
 import PropTypes from 'prop-types';
 import SectionTitle from '@/components/common/SectionTitle';
 import Button from '@/components/common/Button';
-import useAnimateInRef from '@/hooks/useAnimateInRef';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import styles from './ContactMe.module.css';
 
 function ContactMe(props) {
 
-  const selfRef = useAnimateInRef(styles);
+  const selfRef = useIntersectionObserver(styles);
 
   return (
     <section id={props.id} ref={selfRef} className={styles.overallContainer}>

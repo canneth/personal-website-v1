@@ -1,12 +1,12 @@
 
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import useAnimateInRef from '@/hooks/useAnimateInRef';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import styles from './CircularStyle1.module.css';
 
 function CircularStyle1(props) {
 
-  const selfRef = useAnimateInRef(styles, { animateInDuration: 1400 });
+  const selfRef = useIntersectionObserver(styles, 1400);
 
   return (
     <div ref={selfRef} className={`${styles.overallContainer} ${props.className}`}>

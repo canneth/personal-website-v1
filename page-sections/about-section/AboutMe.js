@@ -1,16 +1,16 @@
 
 import PropTypes from 'prop-types';
-import useAnimateInRef from '@/hooks/useAnimateInRef';
 import SectionTitle from '@/components/common/SectionTitle';
 import CircularStyle1 from '@/components/framed-graphics/CircularStyle1';
 import CircularStyle2 from '@/components/framed-graphics/CircularStyle2';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import styles from './AboutMe.module.css';
 
 function AboutMe(props) {
 
-  const selfRef = useAnimateInRef(styles);
-  const firstTextBlock = useAnimateInRef(styles);
-  const secondTextBlock = useAnimateInRef(styles);
+  const selfRef = useIntersectionObserver(styles);
+  const firstTextBlock = useIntersectionObserver(styles);
+  const secondTextBlock = useIntersectionObserver(styles);
 
   return (
     <section ref={selfRef} id={props.id} className={styles.overallContainer}>

@@ -2,20 +2,21 @@
 import PropTypes from 'prop-types';
 import SectionTitle from '@/components/common/SectionTitle';
 import TechItem from '@/components/common/TechItem';
-import useAnimateInRef from '@/hooks/useAnimateInRef';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import styles from './Skills.module.css';
 
 function Skills(props) {
 
-  const frontendRef = useAnimateInRef(styles, { triggerProportionFromTop: 0.9 });
-  const backendRef = useAnimateInRef(styles, { triggerProportionFromTop: 0.9 });
-  const fullstackRef = useAnimateInRef(styles, { triggerProportionFromTop: 0.9 });
-  const testingRef = useAnimateInRef(styles, { triggerProportionFromTop: 0.9 });
-  const verControlRef = useAnimateInRef(styles, { triggerProportionFromTop: 0.9 });
-  const designRef = useAnimateInRef(styles, { triggerProportionFromTop: 0.9 });
+  const selfRef = useIntersectionObserver(styles);
+  const frontendRef = useIntersectionObserver(styles);
+  const backendRef = useIntersectionObserver(styles);
+  const fullstackRef = useIntersectionObserver(styles);
+  const testingRef = useIntersectionObserver(styles);
+  const verControlRef = useIntersectionObserver(styles);
+  const designRef = useIntersectionObserver(styles);
 
   return (
-    <section id={props.id} className={styles.overallContainer}>
+    <section ref={selfRef} id={props.id} className={styles.overallContainer}>
       <SectionTitle className={styles.sectionTitle}>
         In My Toolbox
       </SectionTitle>

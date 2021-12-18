@@ -1,12 +1,12 @@
 
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import useAnimateInRef from '@/hooks/useAnimateInRef';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import styles from './RectangularStyle2.module.css';
 
 function RectangularStyle2(props) {
 
-  const selfRef = useAnimateInRef(styles, { animateInDuration: 1500 });
+  const selfRef = useIntersectionObserver(styles, 1500);
 
   return (
     <div ref={selfRef} className={`${styles.overallContainer} ${props.className}`}>

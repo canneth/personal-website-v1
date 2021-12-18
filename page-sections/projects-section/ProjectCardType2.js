@@ -4,12 +4,12 @@ import DevStatusBadge from '@/page-sections/projects-section/DevStatusBadge';
 import Button from '@/components/common/Button';
 import TechItem from '@/components/common/TechItem';
 import RectangularStyle2 from '@/components/framed-graphics/RectangularStyle2';
-import useAnimateInRef from '@/hooks/useAnimateInRef';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import styles from './ProjectCardType2.module.css';
 
 function ProjectCardType2(props) {
 
-  const selfRef = useAnimateInRef(styles);
+  const selfRef = useIntersectionObserver(styles);
 
   return (
     <div ref={selfRef} className={styles.overallContainer}>

@@ -1,6 +1,8 @@
 
 import { useEffect, useRef } from 'react';
 
+// NOTE: Deprecated!! Use useIntersectionObserver() instead.
+
 function useAnimateInRef(styles, { triggerProportionFromTop = 0.6, animateInDuration = undefined } = {}) {
   /*
     DESCRIPTION:
