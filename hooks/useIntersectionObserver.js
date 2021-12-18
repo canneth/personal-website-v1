@@ -41,25 +41,25 @@ function useIntersectionObserver(styles, animateInDuration = 0) {
   }, [styles, animateInDuration]);
 
   useEffect(() => {
-    function handleIntersect(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const currentElement = entry.target;
-        observer.unobserve(currentElement);
-        const hiddenClass = currentElement.dataset.hiddenClass;
-        const animateClass = currentElement.dataset.animateClass;
-        const interactableClass = currentElement.dataset.interactableClass;
-        const animateInDuration = +currentElement.dataset.animateInDuration;
-        currentElement.classList.remove(hiddenClass);
-        currentElement.classList.add(animateClass);
-        setTimeout(() => {
-          currentElement.classList.add(interactableClass);
-          if (animateInDuration) currentElement.classList.remove(animateClass);
-        }, animateInDuration);
-      });
-    }
     if (!observer) {
-        observer = new IntersectionObserver(handleIntersect, {
+      function handleIntersect(entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const currentElement = entry.target;
+          observer.unobserve(currentElement);
+          const hiddenClass = currentElement.dataset.hiddenClass;
+          const animateClass = currentElement.dataset.animateClass;
+          const interactableClass = currentElement.dataset.interactableClass;
+          const animateInDuration = +currentElement.dataset.animateInDuration;
+          currentElement.classList.remove(hiddenClass);
+          currentElement.classList.add(animateClass);
+          setTimeout(() => {
+            currentElement.classList.add(interactableClass);
+            if (animateInDuration) currentElement.classList.remove(animateClass);
+          }, animateInDuration);
+        });
+      }
+      observer = new IntersectionObserver(handleIntersect, {
         root: null,
         rootMargin: `0px 0px -20% 0px`,
         threshold: 0
