@@ -1,11 +1,10 @@
 
 import Head from 'next/head';
 import Script from 'next/script';
-
 import Layout from '@/components/layout/Layout';
 import LoadingPage from '@/components/loading-page/LoadingPage';
 
-import '@/styles/global.css'
+import '@/styles/global.css';
 
 export default function MyApp({ Component, pageProps }) {
   return (
