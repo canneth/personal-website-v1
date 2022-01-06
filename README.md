@@ -4,4 +4,5 @@
 </h1>
 <p align='center'>Welcome to my current personal website!</p>
 <p align='center'>It's primary purpose at the moment is to serve as a portfolio website where I present a lil' about me and exhibit my personal projects, but that might change in the future.
+  <br />
 This was my first ever serious attempt at making a website. The development process </p>
