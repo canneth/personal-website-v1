@@ -1,1 +1,1 @@
-<h1>[canneth.dev](https://canneth.dev) ![logo]()</h1>
+<h1 align='center'>[canneth.dev](https://canneth.dev) ![logo]()</h1>
