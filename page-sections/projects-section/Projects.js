@@ -20,7 +20,7 @@ function Projects(props) {
             { icon: 'extlink', text: 'Try It!', link: 'https://justgo.dev' }
           ]}
           techList={['nextjs', 'nestjs', 'mongodb', 'passportjs']}
-          posterSrc='/posters/projects-section/landscape.jpg'
+          posterSrc='/posters/projects-section/just-go-poster.png'
           posterAlt='Landing page of JustGo!'
         >
           {`Ever felt like getting out of the house,
