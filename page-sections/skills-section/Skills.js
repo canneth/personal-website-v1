@@ -32,7 +32,9 @@ function Skills(props) {
           <h1 className={styles.listHeader}>Backend</h1>
           <ol className={styles.list}>
             <li className={styles.listItem}><TechItem for='nodejs' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
+            <li className={styles.listItem}><TechItem for='nestjs' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
             <li className={styles.listItem}><TechItem for='postgresql' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
+            <li className={styles.listItem}><TechItem for='mongodb' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
           </ol>
         </div>
         <div ref={fullstackRef} className={styles.categoryContainer}>

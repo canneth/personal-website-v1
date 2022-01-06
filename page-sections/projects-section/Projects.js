@@ -16,10 +16,10 @@ function Projects(props) {
           title={`JustGo!`}
           devStatus='in-progress'
           buttonList={[
-            { icon: 'github', text: 'GitHub', link: null }, // TODO: Link when project is ready!
-            { icon: 'extlink', text: 'Try It!', link: null } // TODO: Link when project is ready!
+            { icon: 'github', text: 'GitHub', link: 'https://github.com/canneth/just-go-frontend' },
+            { icon: 'extlink', text: 'Try It!', link: 'https://justgo.dev' }
           ]}
-          techList={['nextjs', 'redux', 'nodejs', 'postgresql']}
+          techList={['nextjs', 'nestjs', 'mongodb']}
           posterSrc='/posters/projects-section/landscape.jpg'
           posterAlt='Landing page of JustGo!'
         >

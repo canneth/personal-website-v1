@@ -29,9 +29,17 @@ const DATA_FOR = {
     icon: 'logos:nodejs-icon',
     label: 'NodeJS'
   },
+  nestjs: {
+    icon: 'logos:nestjs',
+    label: 'NestJS'
+  },
   postgresql: {
     icon: 'logos:postgresql',
     label: 'PostgreSQL'
+  },
+  mongodb: {
+    icon: 'vscode-icons:file-type-mongo',
+    label: 'MongoDB'
   },
   // Fullstack
   nextjs: {
