@@ -2,7 +2,7 @@
 <h1 align='center'>
   <div align='center'><a href='https://canneth.dev' rel='noreferrer'>canneth.dev</a></div>
 </h1>
-<h3'>Welcome to my current personal website!</h3>
+<h3>Welcome to my current personal website!</h3>
 <p'>This mainly serves as a portfolio website where I present a lil' about me and exhibit my personal projects, but that might change in the future.</p>
 
 <h3>This repo is public, but please use it fairly</h3>
