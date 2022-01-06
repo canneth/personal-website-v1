@@ -13,5 +13,5 @@
   That being said, please keep in mind that behind any open source project are real people who have invested non-trivial amounts of effort and time to bring these things to you. This project is no different, so it would really suck if the fruits of my labour were to be plagiarised.
   <br />
   <br />
-  However, there is nothing stopping you from forking this repo. If you wish to fork this repo and use this as, perhaps, a starting base for a website of your own, you may, but <strong>please provide attribution</strong> by providing a link back to <a href='https://canneth.dev' rel='noreferrer'>canneth.dev</a>. It would be very much appreciated! &#128522;
+  However, there is nothing stopping you from forking this repo. If you wish to fork this repo and use this as, perhaps, a starting base for a website of your own, you may, but <b>please provide attribution</b> by providing a link back to <a href='https://canneth.dev' rel='noreferrer'>canneth.dev</a>. It would be very much appreciated! &#128522;
 </p>
