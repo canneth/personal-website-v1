@@ -19,7 +19,7 @@ function Projects(props) {
             { icon: 'github', text: 'GitHub', link: 'https://github.com/canneth/just-go-frontend' },
             { icon: 'extlink', text: 'Try It!', link: 'https://justgo.dev' }
           ]}
-          techList={['nextjs', 'nestjs', 'mongodb']}
+          techList={['nextjs', 'nestjs', 'mongodb', 'passportjs']}
           posterSrc='/posters/projects-section/landscape.jpg'
           posterAlt='Landing page of JustGo!'
         >

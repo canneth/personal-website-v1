@@ -33,7 +33,6 @@ function Skills(props) {
           <ol className={styles.list}>
             <li className={styles.listItem}><TechItem for='nodejs' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
             <li className={styles.listItem}><TechItem for='nestjs' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
-            <li className={styles.listItem}><TechItem for='postgresql' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
             <li className={styles.listItem}><TechItem for='mongodb' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
           </ol>
         </div>

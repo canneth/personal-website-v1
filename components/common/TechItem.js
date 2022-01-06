@@ -33,6 +33,10 @@ const DATA_FOR = {
     icon: 'logos:nestjs',
     label: 'NestJS'
   },
+  passportjs: {
+    icon: 'logos:passport',
+    label: 'PassportJS'
+  },
   postgresql: {
     icon: 'logos:postgresql',
     label: 'PostgreSQL'

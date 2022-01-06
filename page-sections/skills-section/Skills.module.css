@@ -114,12 +114,11 @@
     width: 94px;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   .listHeader {
     margin-top: 6px;
   }
   .contentContainer {
-    margin-top: 40px;
     gap: 20px;
   }
   .categoryContainer {
