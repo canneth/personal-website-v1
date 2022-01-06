@@ -2,10 +2,10 @@
 <h1 align='center'>
   <div align='center'><a href='https://canneth.dev' rel='noreferrer'>canneth.dev</a></div>
 </h1>
-<h3>Welcome to my current personal website!</h3>
+<h2>&#128075; Welcome to my current personal website!</h3>
 <p'>This mainly serves as a portfolio website where I present a lil' about me and exhibit my personal projects, but that might change in the future.</p>
 
-<h3>This repo is public, but please use it fairly</h3>
+<h2>&#9888; This repo is public, but please use it fairly</h3>
 <p>
   I have made this repo public and wish to keep it that way so that others can view the source code, offer constructive feedback, and maybe even learn a little something or two. Like many, I am the beneficiary of countless such open source projects, and I guess this is my little way of giving back.
   <br />
