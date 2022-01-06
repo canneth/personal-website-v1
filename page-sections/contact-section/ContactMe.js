@@ -12,14 +12,14 @@ function ContactMe(props) {
   return (
     <section id={props.id} ref={selfRef} className={styles.overallContainer}>
       <SectionTitle className={styles.sectionTitle}>
-        Let's Chat!
+        Let&apos;s Chat!
       </SectionTitle>
       <div className={styles.contentContainer}>
         <p className={styles.text}>
           If you have an enticing opportunity to share, a burning question to ask,
           or just simply wish to say hello, my inbox is always open.
           <br /><br />
-          I am currently actively seeking job opportunities, so if I've piqued your
+          I am currently actively seeking job opportunities, so if I&apos;ve piqued your
           interest, my resume is available for download as well.
         </p>
         <a
@@ -30,7 +30,7 @@ function ContactMe(props) {
         >
           canneth@gmail.com
         </a>
-        <Button className={styles.resumeButton} icon='resume' text='Resume' link='/documents/Canneth.pdf'/>
+        <Button className={styles.resumeButton} icon='resume' text='Resume' link='/documents/Canneth.pdf' />
       </div>
     </section>
   );

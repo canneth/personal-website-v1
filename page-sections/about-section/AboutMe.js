@@ -20,7 +20,7 @@ function AboutMe(props) {
       <div className={styles.contentContainer}>
         <div className={`${styles.firstContentBlockContainer} ${styles.contentBlockContainer}`}>
           <p ref={firstTextBlock} className={`${styles.text} ${styles.firstTextBlock}`}>
-            I'm Canneth, a self-taught developer who's just beginning his journey in the exciting world of web development.
+            I&apos;m Canneth, a self-taught developer who&apos;s just beginning his journey in the exciting world of web development.
             <br /><br />
             When I was just a young, starry-eyed kid, I came to love this gem of a pixel-art platformer called Cave Story,
             which incidentally led to my first ever foray into programming. Having had the fortune of joining a devoted,
@@ -39,12 +39,12 @@ function AboutMe(props) {
           <CircularStyle2 className={styles.graphic} imgSrc='/posters/about-section/skateboarding-pic.jpg' imgAlt='Me performing a skateboard ollie' />
           <div className={styles.spacer} />
           <p ref={secondTextBlock} className={`${styles.text} ${styles.secondTextBlock}`}>
-            There's more to life than just a career. I re-energise through sport and basking in the great outdoors. I'm on my skateboard
+            There&apos;s more to life than just a career. I re-energise through sport and basking in the great outdoors. I&apos;m on my skateboard
             almost everywhere I go, and I dabble in parkour from time to time. I also enjoy reading about psychology and philosophy,
             and listening to podcasts on Roman and medieval history. Spending time alone with my thoughts is a natural hobby of mine,
             but nothing can replace a shared experience with quality company.
             <br /><br />
-            And there's more to a career than just slogging for salary. A major reason fullstack development appeals to me is in the
+            And there&apos;s more to a career than just slogging for salary. A major reason fullstack development appeals to me is in the
             meaningful everyday opportunities it presents. Problem solving is a core life skill, and honing this faculty for a living
             enriches the way I navigate my life. Its design component also allows me a space to express myself in the things I craft. The
             collaborative nature of the work exposes me to new ideas that challenge my preconceptions and broaden my horizons. It is for
