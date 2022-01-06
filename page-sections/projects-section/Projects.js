@@ -24,8 +24,8 @@ function Projects(props) {
           posterAlt='Landing page of JustGo!'
         >
           {`Ever felt like getting out of the house,
-          but can't decide where to go? This app helps
-          you find that perfect spot.`}
+          but couldn't decide where to go? This app helps
+          you find that perfect spot!`}
         </ProjectCardType1>
         <ProjectCardType2
           title={`Personal Site v1`}
