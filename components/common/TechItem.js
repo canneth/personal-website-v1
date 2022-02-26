@@ -24,6 +24,10 @@ const DATA_FOR = {
     icon: 'logos:redux',
     label: 'Redux'
   },
+  mobx: {
+    icon: 'logos:mobx',
+    label: 'MobX'
+  },
   // Backend
   nodejs: {
     icon: 'logos:nodejs-icon',
@@ -44,6 +48,11 @@ const DATA_FOR = {
   mongodb: {
     icon: 'vscode-icons:file-type-mongo',
     label: 'MongoDB'
+  },
+  expressjs: {
+    icon: 'simple-icons:express',
+    label: 'ExpressJS',
+    color: '#C0C0C0'
   },
   // Fullstack
   nextjs: {
