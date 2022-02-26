@@ -11,7 +11,7 @@ function Skills(props) {
   const frontendRef = useIntersectionObserver(styles);
   const backendRef = useIntersectionObserver(styles);
   const fullstackRef = useIntersectionObserver(styles);
-  const testingRef = useIntersectionObserver(styles);
+  // const testingRef = useIntersectionObserver(styles);
   const verControlRef = useIntersectionObserver(styles);
   const designRef = useIntersectionObserver(styles);
 
@@ -26,14 +26,16 @@ function Skills(props) {
           <ol className={styles.list}>
             <li className={styles.listItem}><TechItem for='react' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
             <li className={styles.listItem}><TechItem for='redux' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
+            <li className={styles.listItem}><TechItem for='mobx' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
           </ol>
         </div>
         <div ref={backendRef} className={styles.categoryContainer}>
           <h1 className={styles.listHeader}>Backend</h1>
           <ol className={styles.list}>
             <li className={styles.listItem}><TechItem for='nodejs' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
-            <li className={styles.listItem}><TechItem for='nestjs' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
-            <li className={styles.listItem}><TechItem for='mongodb' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
+            <li className={styles.listItem}><TechItem for='expressjs' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
+            {/* <li className={styles.listItem}><TechItem for='nestjs' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
+            <li className={styles.listItem}><TechItem for='mongodb' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li> */}
           </ol>
         </div>
         <div ref={fullstackRef} className={styles.categoryContainer}>
@@ -42,13 +44,13 @@ function Skills(props) {
             <li className={styles.listItem}><TechItem for='nextjs' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
           </ol>
         </div>
-        <div ref={testingRef} className={styles.categoryContainer}>
+        {/* <div ref={testingRef} className={styles.categoryContainer}>
           <h1 className={styles.listHeader}>Testing</h1>
           <ol className={styles.list}>
             <li className={styles.listItem}><TechItem for='jest' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
             <li className={styles.listItem}><TechItem for='testingLibrary' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
           </ol>
-        </div>
+        </div> */}
         <div ref={verControlRef} className={styles.categoryContainer}>
           <h1 className={styles.listHeader}>Version Control</h1>
           <ol className={styles.list}>
