@@ -44,13 +44,13 @@ function Skills(props) {
             <li className={styles.listItem}><TechItem for='nextjs' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
           </ol>
         </div>
-        {/* <div ref={testingRef} className={styles.categoryContainer}>
+        <div ref={testingRef} className={styles.categoryContainer}>
           <h1 className={styles.listHeader}>Testing</h1>
           <ol className={styles.list}>
             <li className={styles.listItem}><TechItem for='jest' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
             <li className={styles.listItem}><TechItem for='testingLibrary' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
           </ol>
-        </div> */}
+        </div>
         <div ref={verControlRef} className={styles.categoryContainer}>
           <h1 className={styles.listHeader}>Version Control</h1>
           <ol className={styles.list}>
