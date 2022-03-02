@@ -11,7 +11,7 @@ function Skills(props) {
   const frontendRef = useIntersectionObserver(styles);
   const backendRef = useIntersectionObserver(styles);
   const fullstackRef = useIntersectionObserver(styles);
-  // const testingRef = useIntersectionObserver(styles);
+  const testingRef = useIntersectionObserver(styles);
   const verControlRef = useIntersectionObserver(styles);
   const designRef = useIntersectionObserver(styles);
 
