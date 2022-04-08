@@ -19,7 +19,7 @@ function Projects(props) {
             { icon: 'github', text: 'GitHub', link: 'https://github.com/canneth/just-go-frontend' },
             { icon: 'extlink', text: 'Try It!', link: 'https://justgo.dev' }
           ]}
-          techList={['nextjs', 'mobx', 'expressjs', 'passportjs']}
+          techList={['ts', 'nextjs', 'mobx', 'expressjs', 'passportjs']}
           posterSrc='/posters/projects-section/just-go-poster.png'
           posterAlt='Landing page of JustGo!'
         >
@@ -33,7 +33,7 @@ function Projects(props) {
           buttonList={[
             { icon: 'github', text: 'GitHub', link: 'https://github.com/canneth/personal-website-v1' }
           ]}
-          techList={['nextjs']}
+          techList={['js', 'nextjs']}
           posterSrc='/posters/projects-section/personal-website-v1-poster.png'
           posterAlt='Landing page of personal website v1'
         >
