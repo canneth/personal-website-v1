@@ -28,7 +28,7 @@ function AboutMe(props) {
             that I fell into a rabbit hole of hexadecimal offsets, assembly instructions, event scripting and pixel art.
             It was there that I discovered my love for art, problem solving, and sharing the joys of both with others.
             <br /><br />
-            Kindling that initial spark from such a long time ago, I have since found my passion in fullstack development--a
+            Kindling that initial spark from such a long time ago, I have since found a passion in web development - a
             field in which I can do what I love for a living.
           </p>
           <div className={styles.spacer} />
@@ -44,11 +44,11 @@ function AboutMe(props) {
             and listening to podcasts on Roman and medieval history. Spending time alone with my thoughts is a natural hobby of mine,
             but nothing can replace a shared experience with quality company.
             <br /><br />
-            And there&apos;s more to a career than just slogging for salary. A major reason fullstack development appeals to me is in the
+            And there&apos;s more to a career than just slogging for salary. A major reason web development appeals to me is in the
             meaningful everyday opportunities it presents. Problem solving is a core life skill, and honing this faculty for a living
             enriches the way I navigate my life. Its design component also allows me a space to express myself in the things I craft. The
             collaborative nature of the work exposes me to new ideas that challenge my preconceptions and broaden my horizons. It is for
-            these reasons and more that I find fulfilment in fullstack development.
+            these reasons and more that I find fulfilment in web development.
           </p>
         </div>
       </div>
