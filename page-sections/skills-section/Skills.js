@@ -25,7 +25,6 @@ function Skills(props) {
           <h1 className={styles.listHeader}>Frontend</h1>
           <ol className={styles.list}>
             <li className={styles.listItem}><TechItem for='react' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
-            <li className={styles.listItem}><TechItem for='redux' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
             <li className={styles.listItem}><TechItem for='mobx' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
           </ol>
         </div>
@@ -34,8 +33,6 @@ function Skills(props) {
           <ol className={styles.list}>
             <li className={styles.listItem}><TechItem for='nodejs' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
             <li className={styles.listItem}><TechItem for='expressjs' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
-            {/* <li className={styles.listItem}><TechItem for='nestjs' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li>
-            <li className={styles.listItem}><TechItem for='mongodb' iconWidthExpression='clamp(22px, 5vw, 30px)' /></li> */}
           </ol>
         </div>
         <div ref={fullstackRef} className={styles.categoryContainer}>
