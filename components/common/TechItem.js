@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './TechItem.module.css';
 
 const DATA_FOR = {
-  // Frontend
+  // Languages
   html5: {
     icon: 'vscode-icons:file-type-html',
     label: 'HTML 5'
@@ -13,9 +13,14 @@ const DATA_FOR = {
     label: 'CSS 3'
   },
   js: {
-    icon: 'vscode-icons:file-type-js-official',
+    icon: 'logos:javascript',
     label: 'JS (ES6+)'
   },
+  ts: {
+    icon: 'logos:typescript-icon',
+    label: 'TypeScript'
+  },
+  // Frontend
   react: {
     icon: 'vscode-icons:file-type-reactjs',
     label: 'React'
