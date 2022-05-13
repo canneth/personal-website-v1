@@ -25,6 +25,10 @@ const DATA_FOR = {
     icon: 'vscode-icons:file-type-reactjs',
     label: 'React'
   },
+  vue: {
+    icon: 'vscode-icons:file-type-vue',
+    label: 'Vue'
+  },
   redux: {
     icon: 'logos:redux',
     label: 'Redux'
