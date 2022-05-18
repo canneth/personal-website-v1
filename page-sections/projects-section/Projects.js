@@ -12,14 +12,28 @@ function Projects(props) {
         My Works
       </SectionTitle>
       <div className={styles.contentContainer}>
+        <ProjectCardType2
+          title={`HelloFriend!`}
+          devStatus='in-progress'
+          buttonList={[
+            { icon: 'github', text: 'GitHub', link: 'https://github.com/canneth/hello-friend' },
+            { icon: 'extlink', text: 'Try It!', link: 'https://hello-friend-chat.vercel.app' }
+          ]}
+          techList={['ts', 'vue', 'mobx', 'expressjs', 'postgresql']}
+          posterSrc='/posters/projects-section/hello-friend-poster.png'
+          posterAlt='Landing page of HelloFriend!'
+        >
+          {`A humble chat app. This is primarily a learning project where I
+          get my hands dirty with Vue and WebSockets.`}
+        </ProjectCardType2>
         <ProjectCardType1
           title={`JustGo!`}
-          devStatus='in-progress'
+          devStatus='kiv'
           buttonList={[
             { icon: 'github', text: 'GitHub', link: 'https://github.com/canneth/just-go-frontend' },
             { icon: 'extlink', text: 'Try It!', link: 'https://justgo.dev' }
           ]}
-          techList={['ts', 'nextjs', 'mobx', 'expressjs', 'passportjs']}
+          techList={['ts', 'nextjs', 'mobx']}
           posterSrc='/posters/projects-section/just-go-poster.png'
           posterAlt='Landing page of JustGo!'
         >

@@ -32,7 +32,7 @@ function ProjectCardType2(props) {
             {
               props.techList.map((techItem, i) => (
                 <li key={i} className={styles.techListItem}>
-                  <TechItem for={techItem} iconWidthExpression='clamp(24px, 5vw, 30px)' noLabel/>
+                  <TechItem for={techItem} iconWidthExpression='clamp(24px, 5vw, 30px)' noLabel />
                 </li>
               ))
             }
