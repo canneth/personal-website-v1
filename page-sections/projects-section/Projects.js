@@ -19,7 +19,7 @@ function Projects(props) {
             { icon: 'github', text: 'GitHub', link: 'https://github.com/canneth/hello-friend' },
             { icon: 'extlink', text: 'Try It!', link: 'https://hello-friend-chat.vercel.app' }
           ]}
-          techList={['ts', 'vue', 'mobx', 'expressjs', 'postgresql']}
+          techList={['ts', 'vue', 'mobx', 'expressjs', 'postgresql', 'jest']}
           posterSrc='/posters/projects-section/hello-friend-poster.png'
           posterAlt='Landing page of HelloFriend!'
         >
@@ -33,7 +33,7 @@ function Projects(props) {
             { icon: 'github', text: 'GitHub', link: 'https://github.com/canneth/just-go-frontend' },
             { icon: 'extlink', text: 'Try It!', link: 'https://justgo.dev' }
           ]}
-          techList={['ts', 'nextjs', 'mobx']}
+          techList={['ts', 'nextjs', 'mobx', 'jest']}
           posterSrc='/posters/projects-section/just-go-poster.png'
           posterAlt='Landing page of JustGo!'
         >
