@@ -17,14 +17,14 @@ function ContactBar(props) {
         <ContactItem
           for='linkedin'
           widthExpression='clamp(18px, 2.5vw, 26px)'
-          link='https://www.linkedin.com/in/canneth-ho-1bb754160/'
+          link='https://www.linkedin.com/in/canneth-ho'
         />
       </li>
       <li className={styles.listItem}>
         <ContactItem
           for='instagram'
           widthExpression='clamp(18px, 2.5vw, 26px)'
-          link='https://www.instagram.com/chjrwithac/'
+          link='https://www.instagram.com/chjrwithac'
         />
       </li>
       <li className={styles.listItem}>
